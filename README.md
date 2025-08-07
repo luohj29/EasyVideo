@@ -69,8 +69,8 @@ cd easy2create
 ```bash
 pip install -r requirements.txt
 ```
-tips：
-diffsynth库的安装需要从最新的github仓库下载：<https://github.com/modelscope/DiffSynth-Studio>
+Tips：
+diffsynth库需要从最新的github仓库下载：<https://github.com/modelscope/DiffSynth-Studio>
 ```bash
 git clone https://github.com/modelscope/DiffSynth-Studio.git  
 cd DiffSynth-Studio
