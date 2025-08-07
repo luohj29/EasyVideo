@@ -41,7 +41,7 @@
 
 ### 模型支持
 - **Prompt优化**：Qwen2.5-VL-3B-Instruct
-- **图像生成**：FLUX.1-dev, FLUX.1-Kontext-dev
+- **图像生成**：FLUX.1-Krea-dev, FLUX.1-Kontext-dev
 - **视频生成**：Wan2.2-T2V-A14B, Wan2.2-I2V-A14B, Wan2.2-TI2V-5B
 
 ### 框架依赖
