@@ -69,6 +69,13 @@ cd easy2create
 ```bash
 pip install -r requirements.txt
 ```
+tips：
+diffsynth库的安装需要从最新的github仓库下载：<https://github.com/modelscope/DiffSynth-Studio>
+```bash
+git clone https://github.com/modelscope/DiffSynth-Studio.git  
+cd DiffSynth-Studio
+pip install -e .
+```
 
 3. **验证模型路径**
 确保以下模型已下载到指定位置：
