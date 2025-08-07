@@ -82,7 +82,7 @@ pip install -e .
 - `./Qwen/Qwen2.5-VL-3B-Instruct`
 - `./Wan-AI/Wan2.2-T2V-A14B`
 - `./Wan-AI/Wan2.2-I2V-A14B`
-- `./black-forest-labs/FLUX.1-dev`
+- `./black-forest-labs/FLUX.1-Krea-dev`
 - `./black-forest-labs/FLUX.1-Kontext-dev`
 
 4. **启动应用**
