@@ -1,315 +1,512 @@
-# EasyVideo - AI视频制作软件
+# EasyVideo - AI-Powered Video Creation Platform
 
-一个基于AI的视频制作软件，支持文生图、图生视频、剧本生成等功能。
+> **[中文文档](README_zh-CN.md) | English**
 
-## 🚀 功能特性
+A comprehensive AI-powered video creation platform that transforms text into images and images into videos using state-of-the-art AI models including FLUX and Wan-AI.
 
-- **文生图功能**: 基于FLUX模型的高质量图像生成
-- **图生视频**: 将静态图像转换为动态视频
-- **剧本生成**: AI辅助生成视频剧本和故事板
-- **项目管理**: 完整的项目创建、编辑、导出功能
-- **实时预览**: 支持生成过程的实时预览
-- **多格式支持**: 支持多种图像和视频格式
+[![GitHub Stars](https://img.shields.io/github/stars/username/EasyVideo?style=flat-square)](https://github.com/username/EasyVideo/stargazers)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
+[![Node.js](https://img.shields.io/badge/node.js-12.22.9+-green.svg?style=flat-square)](https://nodejs.org/)
+[![Python](https://img.shields.io/badge/python-3.7+-blue.svg?style=flat-square)](https://python.org/)
+[![React](https://img.shields.io/badge/react-17.0.2-blue.svg?style=flat-square)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/typescript-4.7.4-blue.svg?style=flat-square)](https://typescriptlang.org/)
 
-## 📋 系统要求
+## 🎯 Key Features
 
-### 基础要求
-- Node.js 12.22.9+ (已针对此版本优化)
-- Python 3.7+
-- npm 6+
-- 4GB+ RAM
-- 10GB+ 可用磁盘空间
+- **🎨 Text-to-Image Generation**: High-quality image generation using FLUX models
+- **🎬 Image-to-Video Conversion**: Transform static images into dynamic videos with Wan-AI models
+- **📝 AI Storyboard Creation**: Automated storyboard and script generation
+- **📁 Project Management**: Complete project lifecycle management with export capabilities
+- **⚡ Real-time Preview**: Live preview during generation process
+- **🔧 Multi-format Support**: Support for various image and video formats
 
-### GPU要求（可选，用于AI模型加速）
-- NVIDIA GPU with CUDA support
-- 8GB+ VRAM (推荐)
-- CUDA 11.0+
+## 📋 Table of Contents
 
-## 🛠️ 安装与启动
+- [Quick Start](#-quick-start)
+- [Architecture Overview](#-architecture-overview)
+- [Project Structure](#-project-structure)
+- [Feature Mapping](#-feature-mapping)
+- [Technical Documentation](#-technical-documentation)
+- [Configuration](#-configuration)
+- [Development](#-development)
+- [Deployment](#-deployment)
+- [FAQ](#-faq)
+- [Contributing](#-contributing)
+- [License](#-license)
 
-### 快速启动
+## 🚀 Quick Start
 
-1. **克隆项目**
-   ```bash
-   git clone <repository-url>
-   cd EasyVideo
-   ```
+### Prerequisites
 
-2. **一键启动**
-   ```bash
-   ./start.sh
-   ```
-   
-   首次运行会自动安装所有依赖，然后启动所有服务。
+- **Node.js** 12.22.9+ (optimized for this version)
+- **Python** 3.7+
+- **npm** 6+
+- **4GB+ RAM**
+- **10GB+ available disk space**
+- **NVIDIA GPU** with 8GB+ VRAM (recommended for AI acceleration)
 
-3. **访问应用**
-   - 前端界面: http://localhost:5173
-   - 后端API: http://localhost:3001
-   - AI服务: http://localhost:8001
+### One-Click Setup
 
-### 手动安装
+```bash
+# Clone the repository
+git clone <repository-url>
+cd EasyVideo
 
-如果需要手动安装各个组件：
+# One-click startup (installs dependencies and starts all services)
+./start.sh
+```
 
-1. **安装前端依赖**
-   ```bash
-   cd frontend
-   npm install --legacy-peer-deps
-   ```
+### Access the Application
 
-2. **安装后端依赖**
-   ```bash
-   cd backend
-   npm install
-   ```
+- **Frontend**: http://localhost:5173
+- **Backend API**: http://localhost:3001
+- **AI Service**: http://localhost:8001
 
-3. **安装AI服务依赖**
-   ```bash
-   cd ai-service
-   pip install -r requirements.txt
-   ```
+### Quick Demo
 
-## ⚙️ 配置
+1. **Text-to-Image**: Enter "A beautiful sunset over mountains" → Generate high-quality image
+2. **Image-to-Video**: Upload the generated image → Create 4-second video
+3. **Project Export**: Save and export your creation
 
-### 环境变量配置
+## 🏗️ Architecture Overview
 
-1. 复制环境变量模板：
+```mermaid
+graph TB
+    subgraph "Frontend Layer"
+        A[React App<br/>Port: 5173]
+        A1[Pages]
+        A2[Components]
+        A3[State Management]
+        A --> A1
+        A --> A2
+        A --> A3
+    end
+    
+    subgraph "Backend Layer"
+        B[Node.js API<br/>Port: 3001]
+        B1[Routes]
+        B2[Middleware]
+        B3[Services]
+        B --> B1
+        B --> B2
+        B --> B3
+    end
+    
+    subgraph "AI Service Layer"
+        C[Python FastAPI<br/>Port: 8001]
+        C1[Prompt Optimizer]
+        C2[Image Generator]
+        C3[Video Generator]
+        C4[Storyboard Generator]
+        C --> C1
+        C --> C2
+        C --> C3
+        C --> C4
+    end
+    
+    subgraph "AI Models"
+        D[FLUX Models]
+        E[Wan-AI Models]
+        F[Qwen Models]
+    end
+    
+    subgraph "Storage"
+        G[File System]
+        G1[Projects]
+        G2[Outputs]
+        G3[Temp Files]
+        G --> G1
+        G --> G2
+        G --> G3
+    end
+    
+    A --> B
+    B --> C
+    C --> D
+    C --> E
+    C --> F
+    B --> G
+    C --> G
+```
+
+## 📁 Project Structure
+
+```
+EasyVideo/
+├── frontend/                 # React frontend application
+│   ├── src/
+│   │   ├── components/      # Reusable UI components
+│   │   ├── pages/          # Application pages
+│   │   ├── hooks/          # Custom React hooks
+│   │   ├── services/       # API service layer
+│   │   ├── store/          # State management (Zustand)
+│   │   └── utils/          # Utility functions
+│   ├── package.json        # Frontend dependencies
+│   └── vite.config.ts      # Vite configuration
+├── backend/                 # Node.js backend service
+│   ├── src/
+│   │   ├── routes/         # API route definitions
+│   │   ├── controllers/    # Request handlers
+│   │   ├── middleware/     # Express middleware
+│   │   ├── services/       # Business logic
+│   │   └── utils/          # Backend utilities
+│   ├── package.json        # Backend dependencies
+│   └── tsconfig.json       # TypeScript configuration
+├── ai-service/             # Python AI service
+│   ├── modules/            # AI processing modules
+│   │   ├── image_generator.py    # FLUX image generation
+│   │   ├── video_generator.py    # Wan-AI video generation
+│   │   ├── prompt_optimizer.py   # Prompt optimization
+│   │   └── storyboard_generator.py # Storyboard creation
+│   ├── api_server.py       # FastAPI server
+│   └── requirements.txt    # Python dependencies
+├── config/                 # Configuration files
+│   ├── config.json         # Main configuration
+│   └── default.json        # Default settings
+├── outputs/                # Generated content
+│   ├── images/            # Generated images
+│   └── videos/            # Generated videos
+├── projects/              # User projects
+├── scripts/               # Utility scripts
+├── start.sh              # One-click startup script
+├── stop.sh               # Service stop script
+└── .env.example          # Environment variables template
+```
+
+## 🎯 Feature Mapping
+
+| Feature | Entry Point | Core Module | Configuration |
+|---------|-------------|-------------|---------------|
+| **Text-to-Image** | [`frontend/src/pages/TextToImagePage.tsx`](frontend/src/pages/TextToImagePage.tsx) | [`ai-service/modules/image_generator.py`](ai-service/modules/image_generator.py) | [`config/config.json`](config/config.json) |
+| **Image-to-Video** | [`frontend/src/pages/ImageToVideoPage.tsx`](frontend/src/pages/ImageToVideoPage.tsx) | [`ai-service/modules/video_generator.py`](ai-service/modules/video_generator.py) | [`config/config.json`](config/config.json) |
+| **Storyboard Generation** | [`frontend/src/pages/StoryboardPage.tsx`](frontend/src/pages/StoryboardPage.tsx) | [`ai-service/modules/storyboard_generator.py`](ai-service/modules/storyboard_generator.py) | [`config/config.json`](config/config.json) |
+| **Project Management** | [`frontend/src/pages/ProjectPage.tsx`](frontend/src/pages/ProjectPage.tsx) | [`backend/src/routes/projects.ts`](backend/src/routes/projects.ts) | [`backend/src/services/`](backend/src/services/) |
+| **Prompt Optimization** | API Integration | [`ai-service/modules/prompt_optimizer.py`](ai-service/modules/prompt_optimizer.py) | [`config/config.json`](config/config.json) |
+
+## 📚 Technical Documentation
+
+### Module Documentation
+
+For detailed technical documentation of each module, please refer to:
+
+- **[AI Service](ai-service/README.md)** - Python-based AI processing service with FLUX and Wan-AI models
+- **[Backend](backend/README.md)** - Node.js API server and middleware layer
+- **[Frontend](frontend/README.md)** - React-based web application interface
+- **[Configuration](config/README.md)** - System configuration and model management
+
+<details>
+<summary><strong>Frontend Architecture</strong></summary>
+
+### Technology Stack
+- **Framework**: React 17.0.2 with TypeScript
+- **Build Tool**: Vite 2.9.18
+- **Styling**: Tailwind CSS 3.1.8
+- **State Management**: Zustand 4.1.5
+- **Routing**: React Router DOM 6.3.0
+- **HTTP Client**: Axios 0.27.2
+- **UI Components**: Lucide React, Framer Motion
+
+### Key Features
+- Component-based architecture
+- TypeScript for type safety
+- Responsive design with Tailwind CSS
+- Real-time progress tracking
+- Error boundary implementation
+- Hot module replacement for development
+
+### Development Commands
+```bash
+cd frontend
+npm run dev     # Start development server
+npm run build   # Build for production
+npm run preview # Preview production build
+```
+
+</details>
+
+<details>
+<summary><strong>Backend Services</strong></summary>
+
+### Technology Stack
+- **Runtime**: Node.js with Express.js 4.17.1
+- **Language**: TypeScript 4.3.5
+- **File Upload**: Multer 1.4.2
+- **CORS**: Enabled for cross-origin requests
+- **Static Files**: Served from outputs and projects directories
+
+### API Endpoints
+- `GET /api/system/status` - System health check
+- `POST /api/generation/text-to-image` - Text-to-image generation
+- `POST /api/generation/image-to-video` - Image-to-video conversion
+- `GET /api/projects` - List user projects
+- `POST /api/projects` - Create new project
+
+### Development Commands
+```bash
+cd backend
+npm run dev     # Start development server
+npm run build   # Compile TypeScript
+npm start       # Start production server
+```
+
+</details>
+
+<details>
+<summary><strong>AI Models & Processing</strong></summary>
+
+### Supported Models
+- **FLUX.1-Krea-dev**: High-quality image generation
+- **FLUX.1-Kontext-dev**: Image editing and enhancement
+- **Wan2.2-I2V-A14B**: Image-to-video conversion
+- **Qwen2.5-VL-3B-Instruct**: Prompt optimization
+
+### Model Configuration
+Models are configured in [`config/config.json`](config/config.json):
+```json
+{
+  "models": {
+    "flux": {
+      "path": "/path/to/flux/model",
+      "enabled": true,
+      "description": "Image generation model"
+    }
+  }
+}
+```
+
+### Performance Optimization
+- Lazy model loading to reduce memory usage
+- GPU memory management with configurable limits
+- Automatic model unloading after generation
+- Batch processing support
+
+</details>
+
+<details>
+<summary><strong>Configuration & Environment</strong></summary>
+
+### Environment Setup
+1. Copy environment template:
    ```bash
    cp .env.example .env
    ```
 
-2. 编辑 `.env` 文件，配置必要的参数：
+2. Configure essential variables:
    ```bash
-   # 服务端口
    BACKEND_PORT=3001
    AI_SERVICE_PORT=8001
    FRONTEND_PORT=5173
-   
-   # AI模型路径（可选）
-   FLUX_MODEL_PATH=/path/to/flux/model
-   VIDEO_MODEL_PATH=/path/to/video/model
-   
-   # GPU配置
    CUDA_VISIBLE_DEVICES=0
    ```
 
-### 系统配置
+### System Configuration
+Main configuration in [`config/config.json`](config/config.json):
+- Model paths and settings
+- GPU memory limits
+- Generation parameters
+- Output directories
 
-主配置文件位于 `config/config.json`，包含以下配置项：
+</details>
 
-- **系统配置**: 日志级别、并发任务数、目录路径等
-- **模型配置**: AI模型的启用状态、路径、设备等
-- **生成配置**: 图像和视频生成的默认参数
-- **API配置**: 服务端口、CORS、限流等
-- **存储配置**: 自动清理、备份等
+## ⚙️ Configuration
 
-## 🎯 使用指南
+### Model Setup
 
-### 基本工作流程
+1. **Download AI Models** (optional for full functionality):
+   - FLUX models for image generation
+   - Wan-AI models for video generation
+   - Qwen models for prompt optimization
 
-1. **创建项目**
-   - 在首页点击"新建项目"
-   - 填写项目名称和描述
-   - 选择项目模板
-
-2. **生成内容**
-   - **文生图**: 输入描述文字，生成图像
-   - **图生视频**: 上传图像，生成动态视频
-   - **剧本生成**: 输入主题，生成完整剧本
-
-3. **编辑和优化**
-   - 调整生成参数
-   - 预览和编辑结果
-   - 添加特效和转场
-
-4. **导出项目**
-   - 选择导出格式
-   - 设置输出质量
-   - 下载最终作品
-
-### 高级功能
-
-#### AI模型配置
-
-如果您有本地AI模型，可以在配置中启用：
-
-1. 编辑 `config/config.json`
-2. 设置模型路径和参数：
+2. **Update Configuration**:
+   Edit [`config/config.json`](config/config.json) with your model paths:
    ```json
    {
      "models": {
        "flux": {
-         "enabled": true,
-         "path": "/path/to/flux/model",
-         "device": "cuda",
-         "precision": "fp16"
+         "path": "/path/to/your/flux/model",
+         "enabled": true
        }
      }
    }
    ```
 
-#### 批量处理
+### Environment Variables
 
-支持批量生成图像和视频：
-
-1. 准备批量任务配置文件
-2. 使用API接口提交批量任务
-3. 监控任务进度和结果
-
-## 🔧 开发指南
-
-### 项目结构
-
-```
-EasyVideo/
-├── frontend/          # React前端应用
-│   ├── src/
-│   │   ├── components/    # 组件
-│   │   ├── pages/        # 页面
-│   │   ├── hooks/        # 自定义Hook
-│   │   └── utils/        # 工具函数
-│   └── package.json
-├── backend/           # Node.js后端服务
-│   ├── src/
-│   │   ├── routes/       # 路由
-│   │   ├── middleware/   # 中间件
-│   │   └── utils/        # 工具函数
-│   └── package.json
-├── ai-service/        # Python AI服务
-│   ├── modules/          # AI模块
-│   ├── api_server.py     # API服务器
-│   └── requirements.txt
-├── config/            # 配置文件
-├── outputs/           # 输出文件
-├── projects/          # 项目文件
-└── docs/             # 文档
-```
-
-### 开发模式启动
-
-1. **前端开发**
-   ```bash
-   cd frontend
-   npm run dev
-   ```
-
-2. **后端开发**
-   ```bash
-   cd backend
-   npm run dev
-   ```
-
-3. **AI服务开发**
-   ```bash
-   cd ai-service
-   python api_server.py
-   ```
-
-### API文档
-
-#### 后端API (http://localhost:3001)
-
-- `GET /api/system/status` - 系统状态
-- `POST /api/generation/optimize-prompt` - 优化提示词
-- `POST /api/generation/text-to-image` - 文生图
-- `POST /api/generation/image-to-video` - 图生视频
-- `GET /api/projects` - 获取项目列表
-- `POST /api/projects` - 创建项目
-
-#### AI服务API (http://localhost:8001)
-
-- `GET /health` - 健康检查
-- `POST /optimize-prompt` - 优化提示词
-- `POST /generate-image` - 生成图像
-- `POST /generate-video` - 生成视频
-- `POST /generate-storyboard` - 生成故事板
-
-## 🐛 故障排除
-
-### 常见问题
-
-1. **依赖安装失败**
-   ```bash
-   # 清理缓存重新安装
-   npm cache clean --force
-   rm -rf node_modules package-lock.json
-   npm install --legacy-peer-deps
-   ```
-
-2. **端口被占用**
-   ```bash
-   # 检查端口占用
-   lsof -i :3001
-   lsof -i :5173
-   lsof -i :8001
-   
-   # 停止所有服务
-   ./stop.sh
-   ```
-
-3. **GPU内存不足**
-   - 降低批处理大小
-   - 使用较小的模型
-   - 启用模型量化
-
-4. **生成速度慢**
-   - 检查GPU驱动和CUDA版本
-   - 优化模型精度设置
-   - 增加系统内存
-
-### 日志查看
+Copy [`.env.example`](.env.example) to `.env` and configure:
 
 ```bash
-# 查看所有服务日志
-tail -f logs/*.log
+# Service Ports
+BACKEND_PORT=3001
+AI_SERVICE_PORT=8001
+FRONTEND_PORT=5173
 
-# 查看特定服务日志
-tail -f logs/frontend.log
-tail -f logs/backend.log
-tail -f logs/ai-service.log
+# GPU Configuration
+CUDA_VISIBLE_DEVICES=0
+
+# Storage Paths
+OUTPUT_DIR=./outputs
+PROJECT_DIR=./projects
 ```
 
-### 性能优化
+## 🛠️ Development
 
-1. **系统优化**
-   - 增加系统内存
-   - 使用SSD存储
-   - 优化GPU设置
+### Manual Installation
 
-2. **应用优化**
-   - 调整并发任务数
-   - 启用缓存机制
-   - 优化模型参数
+If you prefer manual setup over the one-click script:
 
-## 🤝 贡献指南
+```bash
+# Install frontend dependencies
+cd frontend
+npm install --legacy-peer-deps
 
-1. Fork 项目
-2. 创建功能分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 打开 Pull Request
+# Install backend dependencies
+cd ../backend
+npm install
 
-## 📄 许可证
+# Install AI service dependencies
+cd ../ai-service
+pip install -r requirements.txt
+```
 
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
+### Development Mode
 
-## 🙏 致谢
+Start each service in development mode:
 
-- [React](https://reactjs.org/) - 前端框架
-- [Express](https://expressjs.com/) - 后端框架
-- [FastAPI](https://fastapi.tiangolo.com/) - AI服务框架
-- [Tailwind CSS](https://tailwindcss.com/) - CSS框架
-- [Vite](https://vitejs.dev/) - 构建工具
+```bash
+# Terminal 1: Frontend
+cd frontend && npm run dev
 
-## 📞 支持
+# Terminal 2: Backend
+cd backend && npm run dev
 
-如果您遇到问题或有建议，请：
+# Terminal 3: AI Service
+cd ai-service && python api_server.py
+```
 
-1. 查看 [FAQ](docs/FAQ.md)
-2. 搜索 [Issues](../../issues)
-3. 创建新的 [Issue](../../issues/new)
-4. 联系开发团队
+### Testing
+
+```bash
+# Test AI functions
+python test_functions.py
+
+# Test video generation
+python test_video_generation.py
+```
+
+## 🚀 Deployment
+
+### Production Build
+
+```bash
+# Build frontend
+cd frontend && npm run build
+
+# Build backend
+cd backend && npm run build
+
+# Start production services
+./start.sh
+```
+
+### Docker Deployment (Coming Soon)
+
+```bash
+# Build and run with Docker Compose
+docker-compose up -d
+```
+
+## ❓ FAQ
+
+<details>
+<summary><strong>Installation Issues</strong></summary>
+
+**Q: Dependencies installation fails**
+```bash
+# Clear cache and reinstall
+npm cache clean --force
+rm -rf node_modules package-lock.json
+npm install --legacy-peer-deps
+```
+
+**Q: Port already in use**
+```bash
+# Check port usage
+lsof -i :3001
+lsof -i :5173
+lsof -i :8001
+
+# Stop all services
+./stop.sh
+```
+
+</details>
+
+<details>
+<summary><strong>Performance Issues</strong></summary>
+
+**Q: GPU out of memory**
+- Reduce batch size in configuration
+- Lower GPU memory limit in [`config/config.json`](config/config.json)
+- Use smaller models or enable model quantization
+
+**Q: Slow generation speed**
+- Verify GPU drivers and CUDA installation
+- Check model precision settings
+- Increase system RAM
+
+</details>
+
+<details>
+<summary><strong>Model Issues</strong></summary>
+
+**Q: Models not loading**
+- Verify model paths in [`config/config.json`](config/config.json)
+- Check model file permissions
+- Ensure sufficient disk space
+
+**Q: Generation quality issues**
+- Adjust generation parameters
+- Try prompt optimization
+- Verify model versions
+
+</details>
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+### Development Workflow
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Make your changes and test thoroughly
+4. Commit with conventional commits: `git commit -m 'feat: add amazing feature'`
+5. Push to your branch: `git push origin feature/amazing-feature`
+6. Open a Pull Request
+
+### Code Standards
+
+- **Frontend**: ESLint + Prettier for TypeScript/React
+- **Backend**: TypeScript strict mode
+- **AI Service**: PEP 8 for Python
+- **Commits**: Conventional Commits specification
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **[React](https://reactjs.org/)** - Frontend framework
+- **[Express.js](https://expressjs.com/)** - Backend framework
+- **[FastAPI](https://fastapi.tiangolo.com/)** - AI service framework
+- **[Tailwind CSS](https://tailwindcss.com/)** - CSS framework
+- **[Vite](https://vitejs.dev/)** - Build tool
+- **FLUX Models** - Image generation capabilities
+- **Wan-AI Models** - Video generation capabilities
 
 ---
 
-**EasyVideo** - 让AI视频制作变得简单！ 🎬✨
+**EasyVideo** - Transforming ideas into visual stories with AI! 🎬✨
+
+For support, please [open an issue](../../issues) or contact the development team.
