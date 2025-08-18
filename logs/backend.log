@@ -1,0 +1,248 @@
+
+> easyvideo-backend@1.0.0 dev
+> ts-node src/app.ts
+
+🚀 EasyVideo Backend Server running on port 3002
+📁 Static files served from outputs and projects directories
+🔗 API endpoints available at http://localhost:3002/api
+Sending request to AI service: {
+  "prompt": "一只小猫坐在花园里, 温柔的摇头笑着, 8k分辨率",
+  "negative_prompt": "",
+  "width": 512,
+  "height": 512,
+  "seed": 188911,
+  "num_images": 1,
+  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/images",
+  "task_id": "00e0bdd1-696a-4422-80ca-4ba6c673cd96"
+}
+AI service not available, checking local config: timeout of 3000ms exceeded
+AI service response: {
+  images: [
+    '/root/autodl-tmp/EasyVideo/outputs/images/img_00e0bdd1-696a-4422-80ca-4ba6c673cd96_20250818_232551_1_seed188911.jpg'
+  ],
+  task_id: '00e0bdd1-696a-4422-80ca-4ba6c673cd96'
+}
+Sending request to AI service: {
+  "prompt": "一只小猫坐在花园里",
+  "negative_prompt": "",
+  "width": 512,
+  "height": 512,
+  "seed": 688496,
+  "num_images": 1,
+  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/images",
+  "task_id": "2acb4925-b2ee-482e-88a2-2ef25924e25f"
+}
+Error optimizing prompt: Error: timeout of 30000ms exceeded
+    at createError (/root/autodl-tmp/EasyVideo/backend/node_modules/axios/lib/core/createError.js:16:15)
+    at RedirectableRequest.handleRequestTimeout (/root/autodl-tmp/EasyVideo/backend/node_modules/axios/lib/adapters/http.js:303:16)
+    at RedirectableRequest.emit (events.js:314:20)
+    at RedirectableRequest.EventEmitter.emit (domain.js:483:12)
+    at Timeout.<anonymous> (/root/autodl-tmp/EasyVideo/backend/node_modules/follow-redirects/index.js:221:12)
+    at listOnTimeout (internal/timers.js:554:17)
+    at processTimers (internal/timers.js:497:7) {
+  config: {
+    url: 'http://localhost:8000/prompt/optimize',
+    method: 'post',
+    data: '{"prompt":"一只小猫坐在花园里","optimize_type":"text_to_image","enhance_details":true}',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      'User-Agent': 'axios/0.21.4',
+      'Content-Length': 95
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 30000,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    }
+  },
+  code: 'ECONNABORTED',
+  request: Writable {
+    _writableState: WritableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      finalCalled: false,
+      needDrain: false,
+      ending: false,
+      ended: false,
+      finished: false,
+      destroyed: false,
+      decodeStrings: true,
+      defaultEncoding: 'utf8',
+      length: 0,
+      writing: false,
+      corked: 0,
+      sync: true,
+      bufferProcessing: false,
+      onwrite: [Function: bound onwrite],
+      writecb: null,
+      writelen: 0,
+      afterWriteTickInfo: null,
+      bufferedRequest: null,
+      lastBufferedRequest: null,
+      pendingcb: 0,
+      prefinished: false,
+      errorEmitted: false,
+      emitClose: true,
+      autoDestroy: false,
+      bufferedRequestCount: 0,
+      corkedRequestsFree: [Object]
+    },
+    writable: true,
+    _events: [Object: null prototype] {
+      response: [Function: handleResponse],
+      error: [Function: handleRequestError],
+      socket: [Function: destroyOnTimeout]
+    },
+    _eventsCount: 3,
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: 10485760,
+      protocol: 'http:',
+      path: '/prompt/optimize',
+      method: 'POST',
+      headers: [Object],
+      agent: undefined,
+      agents: [Object],
+      auth: undefined,
+      hostname: 'localhost',
+      port: '8000',
+      nativeProtocols: [Object],
+      pathname: '/prompt/optimize'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 95,
+    _requestBodyBuffers: [ [Object] ],
+    _onNativeResponse: [Function],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: null,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      socket: [Socket],
+      connection: [Socket],
+      _header: 'POST /prompt/optimize HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/json\r\n' +
+        'User-Agent: axios/0.21.4\r\n' +
+        'Content-Length: 95\r\n' +
+        'Host: localhost:8000\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: noopPendingOutput],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      insecureHTTPParser: undefined,
+      path: '/prompt/optimize',
+      _ended: false,
+      res: null,
+      aborted: true,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: [HTTPParser],
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'localhost',
+      protocol: 'http:',
+      _redirectable: [Circular],
+      [Symbol(kCapture)]: false,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype]
+    },
+    _currentUrl: 'http://localhost:8000/prompt/optimize',
+    _timeout: null,
+    [Symbol(kCapture)]: false
+  },
+  response: undefined,
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}
+AI service response: {
+  images: [
+    '/root/autodl-tmp/EasyVideo/outputs/images/img_2acb4925-b2ee-482e-88a2-2ef25924e25f_20250818_232930_1_seed688496.jpg'
+  ],
+  task_id: '2acb4925-b2ee-482e-88a2-2ef25924e25f'
+}
+Error processing image generation: TypeError: Cannot set property 'status' of undefined
+    at processImageGeneration (/root/autodl-tmp/EasyVideo/backend/src/routes/generation.ts:270:21)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+(node:6222) UnhandledPromiseRejectionWarning: TypeError: Cannot set property 'status' of undefined
+    at processImageGeneration (/root/autodl-tmp/EasyVideo/backend/src/routes/generation.ts:296:16)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+(node:6222) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
+(node:6222) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined

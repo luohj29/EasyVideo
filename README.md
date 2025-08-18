@@ -1,246 +1,315 @@
-# EasyVideo - AI视频可视化创作应用
+# EasyVideo - AI视频制作软件
 
-一个完整的AI视频创作平台，集成了Prompt优化、图像生成、视频生成、分镜创作和项目管理等功能。
+一个基于AI的视频制作软件，支持文生图、图生视频、剧本生成等功能。
 
-## 功能特性
+## 🚀 功能特性
 
-### 🎬 分镜创作
-- **智能分镜脚本生成**：基于故事描述自动生成详细分镜脚本
-- **分镜图像生成**：为每个分镜生成首尾关键帧图像
-- **分镜视频制作**：将分镜图像转换为流畅视频
-- **视频拼接合成**：自动合并所有分镜为完整视频
-- **转场效果**：支持添加专业转场效果
+- **文生图功能**: 基于FLUX模型的高质量图像生成
+- **图生视频**: 将静态图像转换为动态视频
+- **剧本生成**: AI辅助生成视频剧本和故事板
+- **项目管理**: 完整的项目创建、编辑、导出功能
+- **实时预览**: 支持生成过程的实时预览
+- **多格式支持**: 支持多种图像和视频格式
 
-### 🖼️ 图像生成
-- **文本到图像**：使用FLUX模型生成高质量图像
-- **图像编辑**：支持图像修改和优化
-- **图像变体**：生成同一主题的多种变体
-- **超分辨率**：提升图像分辨率和质量
-- **批量生成**：一次生成多张图像
+## 📋 系统要求
 
-### 🎥 视频生成
-- **文本到视频**：使用Wan2.2模型生成视频
-- **图像到视频**：将静态图像转换为动态视频
-- **视频合并**：合并多个视频片段
-- **视频信息获取**：查看视频详细信息
+### 基础要求
+- Node.js 12.22.9+ (已针对此版本优化)
+- Python 3.7+
+- npm 6+
+- 4GB+ RAM
+- 10GB+ 可用磁盘空间
 
-### ✨ Prompt优化
-- **智能优化**：使用Qwen2.5-VL模型优化提示词
-- **多种公式**：支持通用型、细节型、剧情型、艺术型四种优化公式
-- **批量优化**：一次优化多个提示词
-- **优化历史**：保存和查看优化记录
+### GPU要求（可选，用于AI模型加速）
+- NVIDIA GPU with CUDA support
+- 8GB+ VRAM (推荐)
+- CUDA 11.0+
 
-### 📁 项目管理
-- **项目创建**：创建和管理多个项目
-- **文件组织**：自动整理图像、视频和脚本文件
-- **项目导出**：导出完整项目包
-- **项目导入**：导入已有项目
-- **统计信息**：查看项目详细统计
+## 🛠️ 安装与启动
 
-## 技术架构
-
-### 模型支持
-- **Prompt优化**：Qwen2.5-VL-3B-Instruct
-- **图像生成**：FLUX.1-dev, FLUX.1-Kontext-dev
-- **视频生成**：Wan2.2-T2V-A14B, Wan2.2-I2V-A14B, Wan2.2-TI2V-5B
-
-### 框架依赖
-- **UI框架**：Streamlit
-- **AI框架**：DiffSynth-Studio
-- **图像处理**：PIL, OpenCV
-- **视频处理**：OpenCV, FFmpeg
-
-## 安装部署
-
-### 环境要求
-- Python 3.8+
-- CUDA 11.8+ (GPU推荐)
-- 32GB GPU显存 (推荐)
-- 16GB+ 系统内存
-
-### 安装步骤
+### 快速启动
 
 1. **克隆项目**
-```bash
-cd easy2create
-```
+   ```bash
+   git clone <repository-url>
+   cd EasyVideo
+   ```
 
-2. **安装依赖**
-```bash
-pip install -r requirements.txt
-```
+2. **一键启动**
+   ```bash
+   ./start.sh
+   ```
+   
+   首次运行会自动安装所有依赖，然后启动所有服务。
 
-3. **验证模型路径**
-确保以下模型已下载到指定位置：
-- `./Qwen/Qwen2.5-VL-3B-Instruct`
-- `./Wan-AI/Wan2.2-T2V-A14B`
-- `./Wan-AI/Wan2.2-I2V-A14B`
-- `./black-forest-labs/FLUX.1-dev`
-- `./black-forest-labs/FLUX.1-Kontext-dev`
+3. **访问应用**
+   - 前端界面: http://localhost:5173
+   - 后端API: http://localhost:3001
+   - AI服务: http://localhost:8001
 
-4. **启动应用**
-```bash
-streamlit run app.py --server.port 8501 --server.address 0.0.0.0
-```
+### 手动安装
 
-## 使用指南
+如果需要手动安装各个组件：
 
-### 快速开始
+1. **安装前端依赖**
+   ```bash
+   cd frontend
+   npm install --legacy-peer-deps
+   ```
 
-1. **访问应用**
-   - 打开浏览器访问 `http://localhost:8501`
+2. **安装后端依赖**
+   ```bash
+   cd backend
+   npm install
+   ```
 
-2. **创建项目**
-   - 在项目管理页面创建新项目
-   - 设置项目名称和描述
+3. **安装AI服务依赖**
+   ```bash
+   cd ai-service
+   pip install -r requirements.txt
+   ```
 
-3. **分镜创作**
-   - 进入分镜创作页面
-   - 输入故事描述
-   - 设置分镜数量和风格
-   - 点击"一键生成完整分镜视频"
+## ⚙️ 配置
 
-4. **基础创作**
-   - 使用图像生成页面创建单张图像
-   - 使用视频生成页面创建单个视频
-   - 使用Prompt优化页面优化提示词
+### 环境变量配置
+
+1. 复制环境变量模板：
+   ```bash
+   cp .env.example .env
+   ```
+
+2. 编辑 `.env` 文件，配置必要的参数：
+   ```bash
+   # 服务端口
+   BACKEND_PORT=3001
+   AI_SERVICE_PORT=8001
+   FRONTEND_PORT=5173
+   
+   # AI模型路径（可选）
+   FLUX_MODEL_PATH=/path/to/flux/model
+   VIDEO_MODEL_PATH=/path/to/video/model
+   
+   # GPU配置
+   CUDA_VISIBLE_DEVICES=0
+   ```
+
+### 系统配置
+
+主配置文件位于 `config/config.json`，包含以下配置项：
+
+- **系统配置**: 日志级别、并发任务数、目录路径等
+- **模型配置**: AI模型的启用状态、路径、设备等
+- **生成配置**: 图像和视频生成的默认参数
+- **API配置**: 服务端口、CORS、限流等
+- **存储配置**: 自动清理、备份等
+
+## 🎯 使用指南
+
+### 基本工作流程
+
+1. **创建项目**
+   - 在首页点击"新建项目"
+   - 填写项目名称和描述
+   - 选择项目模板
+
+2. **生成内容**
+   - **文生图**: 输入描述文字，生成图像
+   - **图生视频**: 上传图像，生成动态视频
+   - **剧本生成**: 输入主题，生成完整剧本
+
+3. **编辑和优化**
+   - 调整生成参数
+   - 预览和编辑结果
+   - 添加特效和转场
+
+4. **导出项目**
+   - 选择导出格式
+   - 设置输出质量
+   - 下载最终作品
 
 ### 高级功能
 
-#### 分镜创作工作流
-1. **脚本生成**：输入故事描述，AI自动生成分镜脚本
-2. **图像生成**：为每个分镜生成首尾关键帧
-3. **视频制作**：将关键帧转换为流畅视频
-4. **后期合成**：合并所有分镜，添加转场效果
+#### AI模型配置
 
-#### Prompt优化策略
-- **通用型**：适用于一般场景描述
-- **细节型**：强调细节和质感
-- **剧情型**：适用于故事情节描述
-- **艺术型**：强调艺术风格和美感
+如果您有本地AI模型，可以在配置中启用：
 
-#### 项目管理最佳实践
-- 为每个创作主题创建独立项目
-- 定期清理临时文件
-- 导出重要项目进行备份
-- 使用统计功能监控资源使用
+1. 编辑 `config/config.json`
+2. 设置模型路径和参数：
+   ```json
+   {
+     "models": {
+       "flux": {
+         "enabled": true,
+         "path": "/path/to/flux/model",
+         "device": "cuda",
+         "precision": "fp16"
+       }
+     }
+   }
+   ```
 
-## 目录结构
+#### 批量处理
+
+支持批量生成图像和视频：
+
+1. 准备批量任务配置文件
+2. 使用API接口提交批量任务
+3. 监控任务进度和结果
+
+## 🔧 开发指南
+
+### 项目结构
 
 ```
-easy2create/
-├── app.py                 # 主应用入口
-├── requirements.txt       # 依赖包列表
-├── prompt_way.md         # Prompt优化指南
-├── README.md             # 项目说明文档
-├── modules/              # 核心模块
-│   ├── __init__.py
-│   ├── utils.py          # 工具函数
-│   ├── prompt_optimizer.py    # Prompt优化器
-│   ├── image_generator.py     # 图像生成器
-│   ├── video_generator.py     # 视频生成器
-│   ├── storyboard_generator.py # 分镜生成器
-│   └── project_manager.py     # 项目管理器
-├── outputs/              # 输出文件目录
-│   ├── images/           # 生成的图像
-│   ├── videos/           # 生成的视频
-│   └── storyboards/      # 分镜文件
-├── projects/             # 项目文件目录
-├── templates/            # 模板文件
-├── exports/              # 导出文件
-└── logs/                 # 日志文件
+EasyVideo/
+├── frontend/          # React前端应用
+│   ├── src/
+│   │   ├── components/    # 组件
+│   │   ├── pages/        # 页面
+│   │   ├── hooks/        # 自定义Hook
+│   │   └── utils/        # 工具函数
+│   └── package.json
+├── backend/           # Node.js后端服务
+│   ├── src/
+│   │   ├── routes/       # 路由
+│   │   ├── middleware/   # 中间件
+│   │   └── utils/        # 工具函数
+│   └── package.json
+├── ai-service/        # Python AI服务
+│   ├── modules/          # AI模块
+│   ├── api_server.py     # API服务器
+│   └── requirements.txt
+├── config/            # 配置文件
+├── outputs/           # 输出文件
+├── projects/          # 项目文件
+└── docs/             # 文档
 ```
 
-## 性能优化
+### 开发模式启动
 
-### GPU内存管理
-- 自动显存管理，限制使用32GB
-- 模型按需加载和卸载
-- 支持模型offload到CPU
+1. **前端开发**
+   ```bash
+   cd frontend
+   npm run dev
+   ```
 
-### 生成时间估算
-- 图像生成：约30-60秒/张
-- 视频生成：约2-5分钟/段
-- 分镜视频：根据场景数量线性增长
+2. **后端开发**
+   ```bash
+   cd backend
+   npm run dev
+   ```
 
-### 质量设置建议
-- **高质量**：适用于最终作品
-- **标准质量**：适用于预览和测试
-- **快速模式**：适用于概念验证
+3. **AI服务开发**
+   ```bash
+   cd ai-service
+   python api_server.py
+   ```
 
-## 故障排除
+### API文档
+
+#### 后端API (http://localhost:3001)
+
+- `GET /api/system/status` - 系统状态
+- `POST /api/generation/optimize-prompt` - 优化提示词
+- `POST /api/generation/text-to-image` - 文生图
+- `POST /api/generation/image-to-video` - 图生视频
+- `GET /api/projects` - 获取项目列表
+- `POST /api/projects` - 创建项目
+
+#### AI服务API (http://localhost:8001)
+
+- `GET /health` - 健康检查
+- `POST /optimize-prompt` - 优化提示词
+- `POST /generate-image` - 生成图像
+- `POST /generate-video` - 生成视频
+- `POST /generate-storyboard` - 生成故事板
+
+## 🐛 故障排除
 
 ### 常见问题
 
-1. **模型加载失败**
-   - 检查模型路径是否正确
-   - 确认模型文件完整性
-   - 检查GPU显存是否充足
+1. **依赖安装失败**
+   ```bash
+   # 清理缓存重新安装
+   npm cache clean --force
+   rm -rf node_modules package-lock.json
+   npm install --legacy-peer-deps
+   ```
 
-2. **生成质量不佳**
-   - 优化Prompt描述
-   - 调整生成参数
-   - 尝试不同的优化公式
+2. **端口被占用**
+   ```bash
+   # 检查端口占用
+   lsof -i :3001
+   lsof -i :5173
+   lsof -i :8001
+   
+   # 停止所有服务
+   ./stop.sh
+   ```
 
-3. **内存不足**
-   - 降低批量生成数量
-   - 启用模型offload
-   - 清理临时文件
+3. **GPU内存不足**
+   - 降低批处理大小
+   - 使用较小的模型
+   - 启用模型量化
 
 4. **生成速度慢**
-   - 检查GPU使用率
-   - 优化Prompt长度
-   - 使用快速模式
+   - 检查GPU驱动和CUDA版本
+   - 优化模型精度设置
+   - 增加系统内存
 
 ### 日志查看
-```bash
-# 查看应用日志
-tail -f logs/operations.log
 
-# 查看错误日志
-tail -f logs/errors.log
+```bash
+# 查看所有服务日志
+tail -f logs/*.log
+
+# 查看特定服务日志
+tail -f logs/frontend.log
+tail -f logs/backend.log
+tail -f logs/ai-service.log
 ```
 
-## 更新日志
+### 性能优化
 
-### v1.0.0 (2024-12-19)
-- 初始版本发布
-- 支持完整分镜创作工作流
-- 集成Qwen2.5-VL Prompt优化
-- 支持FLUX图像生成
-- 支持Wan2.2视频生成
-- 完整的项目管理系统
-- Streamlit可视化界面
+1. **系统优化**
+   - 增加系统内存
+   - 使用SSD存储
+   - 优化GPU设置
 
-## 贡献指南
+2. **应用优化**
+   - 调整并发任务数
+   - 启用缓存机制
+   - 优化模型参数
 
-欢迎提交Issue和Pull Request来改进这个项目。
+## 🤝 贡献指南
 
-### 开发环境设置
-1. Fork项目
-2. 创建功能分支
-3. 提交更改
-4. 创建Pull Request
+1. Fork 项目
+2. 创建功能分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 打开 Pull Request
 
-## 许可证
+## 📄 许可证
 
-本项目采用MIT许可证，详见LICENSE文件。
+本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
 
-## 联系方式
+## 🙏 致谢
 
-如有问题或建议，请通过以下方式联系：
-- 提交GitHub Issue
-- 发送邮件至项目维护者
+- [React](https://reactjs.org/) - 前端框架
+- [Express](https://expressjs.com/) - 后端框架
+- [FastAPI](https://fastapi.tiangolo.com/) - AI服务框架
+- [Tailwind CSS](https://tailwindcss.com/) - CSS框架
+- [Vite](https://vitejs.dev/) - 构建工具
 
-## 致谢
+## 📞 支持
 
-感谢以下开源项目的支持：
-- [DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio)
-- [Streamlit](https://streamlit.io/)
-- [Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5)
-- [FLUX](https://github.com/black-forest-labs/flux)
-- [Wan-AI](https://github.com/Wan-AI)
+如果您遇到问题或有建议，请：
+
+1. 查看 [FAQ](docs/FAQ.md)
+2. 搜索 [Issues](../../issues)
+3. 创建新的 [Issue](../../issues/new)
+4. 联系开发团队
 
 ---
 
-**EasyVideo** - 让AI视频创作变得简单高效！
+**EasyVideo** - 让AI视频制作变得简单！ 🎬✨

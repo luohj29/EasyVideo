@@ -1,0 +1,59 @@
+{
+  "models": {
+    "qwen": {
+      "path": "/root/autodl-tmp/Qwen/Qwen2.5-VL-3B-Instruct",
+      "enabled": true,
+      "description": "Prompt优化模型"
+    },
+    "flux": {
+      "path": "/root/autodl-tmp/black-forest-labs/FLUX.1-Krea-dev",
+      "enabled": true,
+      "description": "图像生成模型"
+    },
+    "flux_kontext": {
+      "path": "/root/autodl-tmp/black-forest-labs/FLUX.1-Kontext-dev",
+      "enabled": true,
+      "description": "图像编辑模型"
+    },
+    "wan_i2v": {
+      "path": "/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B",
+      "enabled": true,
+      "description": "图生视频模型"
+    }
+  },
+  "paths": {
+    "diffsynth_path": "../DiffSynth-Studio",
+    "output_dir": "./outputs",
+    "projects_dir": "./projects",
+    "img_dir": "./img",
+    "temp_dir": "/tmp/easyvideo"
+  },
+  "system": {
+    "gpu_memory_limit": 49,
+    "max_concurrent_tasks": 2,
+    "auto_cleanup": true,
+    "log_level": "info",
+    "api_port": 8000,
+    "frontend_port": 3000
+  },
+  "generation": {
+    "image": {
+      "default_size": [1024, 1024],
+      "max_batch_size": 5,
+      "default_steps": 30,
+      "default_guidance": 7.5
+    },
+    "video": {
+      "default_fps": 15,
+      "default_duration": 4,
+      "max_batch_size": 3,
+      "default_steps": 50
+    }
+  },
+  "prompt_optimization": {
+    "enabled": true,
+    "default_type": "通用型",
+    "max_length": 500,
+    "cache_results": true
+  }
+}
