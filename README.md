@@ -255,10 +255,9 @@ npm start       # Start production server
 <summary><strong>AI Models & Processing</strong></summary>
 
 ### Supported Models
-- **FLUX.1-Krea-dev**: High-quality image generation
-- **FLUX.1-Kontext-dev**: Image editing and enhancement
-- **Wan2.2-I2V-A14B**: Image-to-video conversion
-- **Qwen2.5-VL-3B-Instruct**: Prompt optimization
+- **Prompt优化**: Qwen2.5-VL-3B-Instruct
+- **图像生成**: FLUX.1-Krea-dev, FLUX.1-Kontext-dev
+- **视频生成**: Wan2.2-T2V-A14B, Wan2.2-I2V-A14B, Wan2.2-TI2V-5B
 
 ### Model Configuration
 Models are configured in [`config/config.json`](config/config.json):
@@ -367,6 +366,21 @@ npm install
 cd ../ai-service
 pip install -r requirements.txt
 ```
+Tips：
+diffsynth库需要从最新的github仓库下载：<https://github.com/modelscope/DiffSynth-Studio>
+```bash
+git clone https://github.com/modelscope/DiffSynth-Studio.git  
+cd DiffSynth-Studio
+pip install -e .
+```
+
+3. **验证模型路径**
+确保以下模型已下载到指定位置：
+- `./Qwen/Qwen2.5-VL-3B-Instruct`
+- `./Wan-AI/Wan2.2-T2V-A14B`
+- `./Wan-AI/Wan2.2-I2V-A14B`
+- `./black-forest-labs/FLUX.1-Krea-dev`
+- `./black-forest-labs/FLUX.1-Kontext-dev`
 
 ### Development Mode
 
