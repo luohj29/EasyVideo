@@ -67,8 +67,8 @@ const Sidebar: React.FC = () => {
   return (
     <aside
       className={clsx(
-        'fixed left-0 top-16 bottom-0 z-30 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 transition-all duration-300 ease-in-out',
-        collapsed ? 'w-16' : 'w-64'
+        'fixed left-0 top-16 bottom-0 z-30 w-64 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 transition-transform duration-300 ease-in-out',
+        collapsed ? '-translate-x-full' : 'translate-x-0'
       )}
     >
       {/* Sidebar Header */}
@@ -78,7 +78,7 @@ const Sidebar: React.FC = () => {
             导航菜单
           </h2>
         )}
-        <button
+        {/* <button
           onClick={toggle}
           className="p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
           aria-label={collapsed ? '展开侧边栏' : '收起侧边栏'}
@@ -88,7 +88,7 @@ const Sidebar: React.FC = () => {
           ) : (
             <ChevronLeft className="w-4 h-4 text-gray-600 dark:text-gray-300" />
           )}
-        </button>
+        </button> */}
       </div>
 
       {/* Navigation */}

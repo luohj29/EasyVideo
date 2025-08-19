@@ -52,11 +52,13 @@ const styleOptions = [
   { value: 'artistic', label: '艺术创作', description: '适合实验性和艺术作品' },
 ];
 
+const showSettings = true;
+
 const StoryboardPage: React.FC = () => {
   const [concept, setConcept] = useState('');
   const [settings, setSettings] = useState<StoryboardSettings>(defaultSettings);
   const [generating, setGenerating] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
+  // const [showSettings, setShowSettings] = useState(false);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('list');
   const [storyboards, setStoryboards] = useState<Storyboard[]>([]);
   const [currentTask, setCurrentTask] = useState<GenerationTask | null>(null);
@@ -271,7 +273,7 @@ const StoryboardPage: React.FC = () => {
           </p>
         </div>
         
-        <div className="flex items-center space-x-3">
+        {/* <div className="flex items-center space-x-3">
           <button
             onClick={() => setShowSettings(!showSettings)}
             className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
@@ -283,7 +285,7 @@ const StoryboardPage: React.FC = () => {
             <Settings className="w-4 h-4" />
             <span>设置</span>
           </button>
-        </div>
+        </div> */}
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

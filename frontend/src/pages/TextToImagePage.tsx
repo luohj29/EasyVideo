@@ -56,12 +56,13 @@ const presetSizes = [
   { label: '宽屏', width: 1024, height: 576 },
 ];
 
+const showSettings = true;
 const TextToImagePage: React.FC = () => {
   const [prompt, setPrompt] = useState('');
   const [settings, setSettings] = useState<GenerationSettings>(defaultSettings);
   const [generating, setGenerating] = useState(false);
   const [optimizingPrompt, setOptimizingPrompt] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
+  // const [showSettings, setShowSettings] = useState(false);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [generatedImages, setGeneratedImages] = useState<GeneratedImage[]>([]);
   const [currentTask, setCurrentTask] = useState<GenerationTask | null>(null);
@@ -295,7 +296,8 @@ const TextToImagePage: React.FC = () => {
           </p>
         </div>
         
-        <div className="flex items-center space-x-3">
+        
+        {/* <div className="flex items-center space-x-3">
           <button
             onClick={() => setShowSettings(!showSettings)}
             className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
@@ -307,7 +309,7 @@ const TextToImagePage: React.FC = () => {
             <Settings className="w-4 h-4" />
             <span>设置</span>
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Generation Panel */}

@@ -1,0 +1,34 @@
+Transformers not available: No module named 'transformers'
+INFO:__main__:AI service started with lazy loading support
+INFO:     Will watch for changes in these directories: ['/home/rogers/Documents/project/EasyVideo/EasyVideo/ai-service']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [138396] using WatchFiles
+Warning: Could not import AI modules: No module named 'torch'
+AI service will run in mock mode
+Transformers not available: No module named 'transformers'
+INFO:__mp_main__:AI service started with lazy loading support
+INFO:api_server:AI service started with lazy loading support
+INFO:     Started server process [138400]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Warning: Could not import AI modules: No module named 'torch'
+AI service will run in mock mode
+Warning: Could not import AI modules: No module named 'torch'
+AI service will run in mock mode
+INFO:     127.0.0.1:42772 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42786 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42786 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59758 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59770 - "GET /api/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:43778 - "GET /api/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:43788 - "GET /api/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:46758 - "GET /api/notifications/stream HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59968 - "GET /api/projects HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:34028 - "GET /api/projects HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:34030 - "GET /api/config HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51116 - "GET /api/events HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:47824 - "GET /api/notifications/send HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:41170 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42924 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42936 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42936 - "GET /health HTTP/1.1" 200 OK

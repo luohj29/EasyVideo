@@ -52,13 +52,15 @@ const presetDurations = [
   { label: '10秒', value: 10 },
 ];
 
+const showSettings = true;
+
 const ImageToVideoPage: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [motionPrompt, setMotionPrompt] = useState('');
   const [settings, setSettings] = useState<VideoSettings>(defaultSettings);
   const [generating, setGenerating] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
+  // const [showSettings, setShowSettings] = useState(false);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [generatedVideos, setGeneratedVideos] = useState<GeneratedVideo[]>([]);
   const [currentTask, setCurrentTask] = useState<GenerationTask | null>(null);
@@ -307,7 +309,7 @@ const ImageToVideoPage: React.FC = () => {
           </p>
         </div>
         
-        <div className="flex items-center space-x-3">
+        {/* <div className="flex items-center space-x-3">
           <button
             onClick={() => setShowSettings(!showSettings)}
             className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
@@ -319,7 +321,7 @@ const ImageToVideoPage: React.FC = () => {
             <Settings className="w-4 h-4" />
             <span>设置</span>
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Generation Panel */}
@@ -421,10 +423,20 @@ const ImageToVideoPage: React.FC = () => {
                 <span>{optimizingPrompt ? '优化中...' : 'AI优化'}</span>
               </button>
             </div>
+            <span
+              className="block text-xs text-gray-500 dark:text-gray-400 mb-2 select-all cursor-pointer"
+              onClick={e => {
+                const text = (e.target as HTMLElement).innerText;
+                navigator.clipboard.writeText(text);
+              }}
+              title="点击复制"
+            >
+              描述您想要生成的图像，例如：一只可爱的小猫坐在花园里，阳光明媚，高质量，8K分辨率
+            </span>
             <textarea
               value={motionPrompt}
               onChange={(e) => setMotionPrompt(e.target.value)}
-              placeholder="描述您希望图像中的运动效果，例如：轻柔的风吹动头发，水面波纹荡漾，云朵缓慢飘动"
+              // placeholder="描述您希望图像中的运动效果，例如：轻柔的风吹动头发，水面波纹荡漾，云朵缓慢飘动"
               className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none"
               rows={3}
             />

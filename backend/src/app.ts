@@ -1,16 +1,17 @@
+// server.ts (在已有代码基础上添加)
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
 import fs from 'fs-extra';
 import dotenv from 'dotenv';
+import EventEmitter from 'events';
 
-// Import routes
+// 导入原有路由
 import systemRoutes from './routes/system';
 import configRoutes from './routes/config';
 import generationRoutes from './routes/generation';
 import projectRoutes from './routes/projects';
 
-// Load environment variables
 dotenv.config();
 
 const app = express();
@@ -30,6 +31,43 @@ app.use('/api/system', systemRoutes);
 app.use('/api/config', configRoutes);
 app.use('/api/generation', generationRoutes);
 app.use('/api/projects', projectRoutes);
+
+// --------------------- SSE 消息推送 ---------------------
+const notificationEmitter = new EventEmitter();
+
+// SSE 路由
+app.get('/api/notifications/stream', (req, res) => {
+  res.setHeader('Content-Type', 'text/event-stream');
+  res.setHeader('Cache-Control', 'no-cache');
+  res.setHeader('Connection', 'keep-alive');
+  res.flushHeaders(); // 立即发送头部
+
+  console.log('Client connected to SSE');
+
+  const onNotification = (data: any) => {
+    res.write(`data: ${JSON.stringify(data)}\n\n`);
+  };
+
+  notificationEmitter.on('notification', onNotification);
+
+  req.on('close', () => {
+    console.log('Client disconnected from SSE');
+    notificationEmitter.off('notification', onNotification);
+    res.end();
+  });
+});
+
+// 模拟发送通知接口（前端可 POST 调用或内部调用）
+app.post('/api/notifications/send', (req, res) => {
+  const message = {
+    id: Date.now(),
+    content: req.body.content || `新消息 ${new Date().toLocaleTimeString()}`,
+    read: false,
+  };
+  notificationEmitter.emit('notification', message);
+  res.json({ status: 'ok', message });
+});
+// ---------------------------------------------------------
 
 // Health check
 app.get('/health', (req, res) => {
@@ -74,6 +112,7 @@ const startServer = async () => {
       console.log(`🚀 EasyVideo Backend Server running on port ${PORT}`);
       console.log(`📁 Static files served from outputs and projects directories`);
       console.log(`🔗 API endpoints available at http://localhost:${PORT}/api`);
+      console.log(`🔔 SSE notifications available at http://localhost:${PORT}/api/notifications/stream`);
     });
   } catch (error) {
     console.error('Failed to start server:', error);
