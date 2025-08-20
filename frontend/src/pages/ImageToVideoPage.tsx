@@ -54,6 +54,28 @@ const presetDurations = [
 
 const showSettings = true;
 
+const exampleVideo: GeneratedVideo = {
+  id: "video_001",
+  url: "/video/FLFKJ_00021.mp4",
+  thumbnail_url: "/images/test.jpg",
+  filename: "FLFKJ_00021.mp4",
+  duration: 12.5,      // 秒
+  fps: 30,
+  width: 1920,
+  height: 1080,
+  file_size: 25_000_000, // 字节
+  source_image_url: "/home/rogers/Documents/project/EasyVideo/test.jpg",
+  motion_prompt: "A cat walking in a park, sunny day",
+  seed: 12345,
+  created_at: "2025-08-20T17:00:00Z",
+  metadata: {
+    model: "StableMotion-v1",
+    motion_strength: 0.8,
+    guidance_scale: 7.5,
+    steps: 50,
+  },
+};
+
 const ImageToVideoPage: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
@@ -62,7 +84,7 @@ const ImageToVideoPage: React.FC = () => {
   const [generating, setGenerating] = useState(false);
   // const [showSettings, setShowSettings] = useState(false);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [generatedVideos, setGeneratedVideos] = useState<GeneratedVideo[]>([]);
+  const [generatedVideos, setGeneratedVideos] = useState<GeneratedVideo[]>([exampleVideo]);
   const [currentTask, setCurrentTask] = useState<GenerationTask | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedVideos, setSelectedVideos] = useState<Set<string>>(new Set());
@@ -294,6 +316,29 @@ const ImageToVideoPage: React.FC = () => {
     searchQuery === '' || 
     (video.motion_prompt && video.motion_prompt.toLowerCase().includes(searchQuery.toLowerCase()))
   );
+
+  const handlePreviewVideo = (video: GeneratedVideo) => {
+    const videoUrl = video.url;
+    const videoWindow = window.open('', '_blank');
+    if (videoWindow) {
+      videoWindow.document.write(`
+        <html>
+          <head>
+            <title>视频预览</title>   
+          </head>
+          <body style="margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #000;">
+            <video controls autoplay style="max-width: 100%; max-height: 100%;">
+              <source src="${videoUrl}" type="video/mp4">
+              您的浏览器不支持视频播放
+            </video>
+          </body>
+        </html>
+      `);
+      videoWindow.document.close();
+    } else {
+      toast.error('无法打开新窗口，请检查浏览器设置');
+    }
+  };
 
   return (
     <div className="max-w-7xl mx-auto space-y-6">
@@ -738,7 +783,7 @@ const ImageToVideoPage: React.FC = () => {
                   </div>
                   
                   {/* Overlay Actions */}
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-200 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                  {/* <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-200 flex items-center justify-center opacity-0 group-hover:opacity-100">
                     <div className="flex space-x-2">
                       <button
                         onClick={() => handleDownloadVideo(video)}
@@ -755,7 +800,7 @@ const ImageToVideoPage: React.FC = () => {
                         <Trash2 className="w-4 h-4" />
                       </button>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 
                 {/* Video Info */}

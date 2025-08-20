@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 import multer from 'multer';
 import path from 'path';
 import fs from 'fs-extra';
@@ -7,6 +7,13 @@ import axios from 'axios';
 import { EventEmitter } from 'events';
 
 const router = express.Router();
+
+// 假设本地存储路径
+const STORAGE_PATH = {
+  video: path.join(__dirname, 'video'),
+  image: path.join(__dirname, 'image'),
+  storyboard: path.join(__dirname, 'storyboard'),
+};
 
 // Task management
 interface Task {
@@ -793,6 +800,53 @@ router.get('/queue/status', async (req, res) => {
       error: 'Failed to get queue status' 
     });
   }
+});
+
+// download generated files
+router.get('/generation/:type/:id/download', async (req: Request, res: Response) => {
+  const { type, id } = req.params;
+  const filename = req.query.filename as string | undefined;
+
+  const dir = STORAGE_PATH[type as keyof typeof STORAGE_PATH];
+  if (!dir) return res.status(400).send('Invalid type');
+
+  // 推断文件名
+  let ext = '';
+  switch (type) {
+    case 'video': ext = '.mp4'; break;
+    case 'image': ext = '.png'; break;
+    case 'storyboard': ext = '.json'; break;
+  }
+
+  const filePath = path.join(dir, `${id}${ext}`);
+  if (!fs.existsSync(filePath)) return res.status(404).send('File not found');
+
+  res.setHeader('Content-Disposition', `attachment; filename="${filename || id + ext}"`);
+  const mimeType = type === 'video' ? 'video/mp4' : type === 'image' ? 'image/png' : 'application/json';
+  res.setHeader('Content-Type', mimeType);
+
+  const stream = fs.createReadStream(filePath);
+  stream.pipe(res);
+});
+
+// delete generated files
+router.delete('/generation/:type/:id', async (req: Request, res: Response) => {
+  const { type, id } = req.params;
+  const dir = STORAGE_PATH[type as keyof typeof STORAGE_PATH];
+  if (!dir) return res.status(400).send('Invalid type');
+
+  let ext = '';
+  switch (type) {
+    case 'video': ext = '.mp4'; break;
+    case 'image': ext = '.png'; break;
+    case 'storyboard': ext = '.json'; break;
+  }
+
+  const filePath = path.join(dir, `${id}${ext}`);
+  if (!fs.existsSync(filePath)) return res.status(404).send('File not found');
+
+  fs.unlinkSync(filePath);
+  res.json({ success: true });
 });
 
 async function saveToProject(projectId: string, type: string, data: any) {
