@@ -181,35 +181,51 @@ const ImageToVideoPage: React.FC = () => {
 
       const response = await GenerationService.generateImageToVideo(request);
       
-      if (response.status === 'completed' && response.videos) {
-        setGeneratedVideos(prev => [...prev, ...response.videos!]);
-        setGenerating(false);
-        toast.success(`成功生成 ${response.videos.length} 个视频`);
-      } else {
-        // 轮询任务状态
-        const pollTask = async () => {
-          try {
-            const task = await GenerationService.getTaskStatus(response.task_id);
-            setCurrentTask(task);
-            
-            if (task.status === 'completed' && task.result?.videos) {
-              setGeneratedVideos(prev => [...prev, ...task.result!.videos!]);
-              setGenerating(false);
-              toast.success(`成功生成 ${task.result.videos.length} 个视频`);
-            } else if (task.status === 'failed') {
-              setGenerating(false);
-              toast.error(task.error || '生成失败');
-            } else if (task.status === 'running') {
-              pollTimeoutRef.current = setTimeout(pollTask, 3000);
-            }
-          } catch (err) {
+      // 使用SSE监听进度
+      const eventSource = new EventSource(`/api/generation/progress/${response.task_id}`);
+      
+      eventSource.onmessage = (event) => {
+        try {
+          const data = JSON.parse(event.data);
+          
+          if (data.error) {
+            console.error('Task error:', data.error);
+            eventSource.close();
             setGenerating(false);
-            toast.error('获取任务状态失败');
+            toast.error('视频生成失败');
+            return;
           }
-        };
-        
-        pollTimeoutRef.current = setTimeout(pollTask, 2000);
-      }
+          
+          setCurrentTask(data);
+          
+          if (data.status === 'completed') {
+            eventSource.close();
+            setGenerating(false);
+            
+            if (data.result?.videos) {
+              setGeneratedVideos(prev => [...prev, ...data.result.videos]);
+              toast.success(`成功生成 ${data.result.videos.length} 个视频`);
+            }
+          } else if (data.status === 'failed') {
+            eventSource.close();
+            setGenerating(false);
+            toast.error(data.error || '生成失败');
+          }
+        } catch (err) {
+          console.error('Error parsing SSE data:', err);
+          eventSource.close();
+          setGenerating(false);
+          toast.error('获取任务状态失败');
+        }
+      };
+      
+      eventSource.onerror = (error) => {
+        console.error('SSE error:', error);
+        eventSource.close();
+        setGenerating(false);
+        toast.error('连接中断，请重试');
+      };
+      
     } catch (err) {
       setGenerating(false);
       const errorMessage = err instanceof Error ? err.message : '生成失败';

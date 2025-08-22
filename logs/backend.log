@@ -1,0 +1,3238 @@
+
+> easyvideo-backend@1.0.0 dev
+> ts-node src/app.ts
+
+🚀 EasyVideo Backend Server running on port 3002
+📁 Static files served from outputs and projects directories
+🔗 API endpoints available at http://localhost:3002/api
+🔔 SSE notifications available at http://localhost:3002/api/notifications/stream
+Error optimizing prompt: Error: Request failed with status code 500
+    at createError (/home/hongjie/ml/EasyVideo/backend/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/home/hongjie/ml/EasyVideo/backend/node_modules/axios/lib/core/settle.js:17:12)
+    at IncomingMessage.handleStreamEnd (/home/hongjie/ml/EasyVideo/backend/node_modules/axios/lib/adapters/http.js:269:11)
+    at IncomingMessage.emit (node:events:530:35)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  config: {
+    url: 'http://localhost:8000/prompt/optimize',
+    method: 'post',
+    data: '{"prompt":"zxvzx","optimize_type":"text_to_image","enhance_details":true}',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      'User-Agent': 'axios/0.21.4',
+      'Content-Length': 73
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 30000,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    }
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 73,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'POST /prompt/optimize HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'Content-Type: application/json\r\n' +
+      'User-Agent: axios/0.21.4\r\n' +
+      'Content-Length: 73\r\n' +
+      'Host: localhost:8000\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 80,
+      protocol: 'http:',
+      options: [Object: null prototype],
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype] {},
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 1,
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'POST',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/prompt/optimize',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [Socket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 3,
+      responseUrl: 'http://localhost:8000/prompt/optimize',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 8,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'localhost',
+    protocol: 'http:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 73,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'http://localhost:8000/prompt/optimize',
+      _timeout: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'localhost',
+      _closeAfterHandlingError: false,
+      _events: [Object],
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _eventsCount: 6,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: null,
+      _server: null,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      [Symbol(async_id_symbol)]: -1,
+      [Symbol(kHandle)]: [TCP],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 23221,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 52,
+        [Symbol(triggerId)]: 50,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: true,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 1,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'content-type': [Array],
+      'user-agent': [Array],
+      'content-length': [Array],
+      host: [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 65536,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  response: {
+    status: 500,
+    statusText: 'Internal Server Error',
+    headers: {
+      date: 'Fri, 22 Aug 2025 07:06:39 GMT',
+      server: 'uvicorn',
+      'content-length': '78',
+      'content-type': 'application/json'
+    },
+    config: {
+      url: 'http://localhost:8000/prompt/optimize',
+      method: 'post',
+      data: '{"prompt":"zxvzx","optimize_type":"text_to_image","enhance_details":true}',
+      headers: [Object],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 30000,
+      adapter: [Function: httpAdapter],
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      validateStatus: [Function: validateStatus],
+      transitional: [Object]
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 73,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'POST /prompt/optimize HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/json\r\n' +
+        'User-Agent: axios/0.21.4\r\n' +
+        'Content-Length: 73\r\n' +
+        'Host: localhost:8000\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/prompt/optimize',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'localhost',
+      protocol: 'http:',
+      _redirectable: [Writable],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [Socket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    data: {
+      detail: 'Transformers not available. Please install required dependencies.'
+    }
+  },
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}
+Error optimizing prompt: Error: Request failed with status code 500
+    at createError (/home/hongjie/ml/EasyVideo/backend/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/home/hongjie/ml/EasyVideo/backend/node_modules/axios/lib/core/settle.js:17:12)
+    at IncomingMessage.handleStreamEnd (/home/hongjie/ml/EasyVideo/backend/node_modules/axios/lib/adapters/http.js:269:11)
+    at IncomingMessage.emit (node:events:530:35)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  config: {
+    url: 'http://localhost:8000/prompt/optimize',
+    method: 'post',
+    data: '{"prompt":"zxvzx","optimize_type":"text_to_image","enhance_details":true}',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      'User-Agent': 'axios/0.21.4',
+      'Content-Length': 73
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 30000,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    }
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 73,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'POST /prompt/optimize HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'Content-Type: application/json\r\n' +
+      'User-Agent: axios/0.21.4\r\n' +
+      'Content-Length: 73\r\n' +
+      'Host: localhost:8000\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 80,
+      protocol: 'http:',
+      options: [Object: null prototype],
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype] {},
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 1,
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'POST',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/prompt/optimize',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [Socket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 3,
+      responseUrl: 'http://localhost:8000/prompt/optimize',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 8,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'localhost',
+    protocol: 'http:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 73,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'http://localhost:8000/prompt/optimize',
+      _timeout: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'localhost',
+      _closeAfterHandlingError: false,
+      _events: [Object],
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _eventsCount: 6,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: null,
+      _server: null,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      [Symbol(async_id_symbol)]: -1,
+      [Symbol(kHandle)]: [TCP],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 37794,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 105,
+        [Symbol(triggerId)]: 103,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: true,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 1,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'content-type': [Array],
+      'user-agent': [Array],
+      'content-length': [Array],
+      host: [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 65536,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  response: {
+    status: 500,
+    statusText: 'Internal Server Error',
+    headers: {
+      date: 'Fri, 22 Aug 2025 07:06:53 GMT',
+      server: 'uvicorn',
+      'content-length': '78',
+      'content-type': 'application/json'
+    },
+    config: {
+      url: 'http://localhost:8000/prompt/optimize',
+      method: 'post',
+      data: '{"prompt":"zxvzx","optimize_type":"text_to_image","enhance_details":true}',
+      headers: [Object],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 30000,
+      adapter: [Function: httpAdapter],
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      validateStatus: [Function: validateStatus],
+      transitional: [Object]
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 73,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'POST /prompt/optimize HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/json\r\n' +
+        'User-Agent: axios/0.21.4\r\n' +
+        'Content-Length: 73\r\n' +
+        'Host: localhost:8000\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/prompt/optimize',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'localhost',
+      protocol: 'http:',
+      _redirectable: [Writable],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [Socket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    data: {
+      detail: 'Transformers not available. Please install required dependencies.'
+    }
+  },
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}
+Error getting disk space: Error: Command failed: df -h /root/autodl-tmp --output=avail,size
+df: /root/autodl-tmp: 权限不够
+
+    at genericNodeError (node:internal/errors:983:15)
+    at wrappedFn (node:internal/errors:537:14)
+    at ChildProcess.exithandler (node:child_process:417:12)
+    at ChildProcess.emit (node:events:518:28)
+    at ChildProcess.emit (node:domain:489:12)
+    at maybeClose (node:internal/child_process:1101:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:304:5) {
+  code: 1,
+  killed: false,
+  signal: null,
+  cmd: 'df -h /root/autodl-tmp --output=avail,size',
+  stdout: '',
+  stderr: 'df: /root/autodl-tmp: 权限不够\n'
+}
+Error getting disk space: Error: Command failed: df -h /root/autodl-tmp --output=avail,size
+df: /root/autodl-tmp: 权限不够
+
+    at genericNodeError (node:internal/errors:983:15)
+    at wrappedFn (node:internal/errors:537:14)
+    at ChildProcess.exithandler (node:child_process:417:12)
+    at ChildProcess.emit (node:events:518:28)
+    at ChildProcess.emit (node:domain:489:12)
+    at maybeClose (node:internal/child_process:1101:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:304:5) {
+  code: 1,
+  killed: false,
+  signal: null,
+  cmd: 'df -h /root/autodl-tmp --output=avail,size',
+  stdout: '',
+  stderr: 'df: /root/autodl-tmp: 权限不够\n'
+}
+Error getting disk space: Error: Command failed: df -h /root/autodl-tmp --output=avail,size
+df: /root/autodl-tmp: 权限不够
+
+    at genericNodeError (node:internal/errors:983:15)
+    at wrappedFn (node:internal/errors:537:14)
+    at ChildProcess.exithandler (node:child_process:417:12)
+    at ChildProcess.emit (node:events:518:28)
+    at ChildProcess.emit (node:domain:489:12)
+    at maybeClose (node:internal/child_process:1101:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:304:5) {
+  code: 1,
+  killed: false,
+  signal: null,
+  cmd: 'df -h /root/autodl-tmp --output=avail,size',
+  stdout: '',
+  stderr: 'df: /root/autodl-tmp: 权限不够\n'
+}
+Error getting disk space: Error: Command failed: df -h /root/autodl-tmp --output=avail,size
+df: /root/autodl-tmp: 权限不够
+
+    at genericNodeError (node:internal/errors:983:15)
+    at wrappedFn (node:internal/errors:537:14)
+    at ChildProcess.exithandler (node:child_process:417:12)
+    at ChildProcess.emit (node:events:518:28)
+    at ChildProcess.emit (node:domain:489:12)
+    at maybeClose (node:internal/child_process:1101:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:304:5) {
+  code: 1,
+  killed: false,
+  signal: null,
+  cmd: 'df -h /root/autodl-tmp --output=avail,size',
+  stdout: '',
+  stderr: 'df: /root/autodl-tmp: 权限不够\n'
+}
+Sending request to AI service: {
+  "prompt": "cat",
+  "negative_prompt": "",
+  "width": 512,
+  "height": 512,
+  "seed": 36151,
+  "num_images": 1,
+  "output_dir": "/home/hongjie/ml/EasyVideo/outputs/images",
+  "task_id": "b325d00f-d1ba-4f24-bf6a-711e2e20b57a"
+}
+Error processing image generation: Error: Request failed with status code 500
+    at createError (/home/hongjie/ml/EasyVideo/backend/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/home/hongjie/ml/EasyVideo/backend/node_modules/axios/lib/core/settle.js:17:12)
+    at IncomingMessage.handleStreamEnd (/home/hongjie/ml/EasyVideo/backend/node_modules/axios/lib/adapters/http.js:269:11)
+    at IncomingMessage.emit (node:events:530:35)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  config: {
+    url: 'http://localhost:8000/image/generate',
+    method: 'post',
+    data: '{"prompt":"cat","negative_prompt":"","width":512,"height":512,"seed":36151,"num_images":1,"output_dir":"/home/hongjie/ml/EasyVideo/outputs/images","task_id":"b325d00f-d1ba-4f24-bf6a-711e2e20b57a"}',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      'User-Agent': 'axios/0.21.4',
+      'Content-Length': 196
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 300000,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    }
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 196,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'POST /image/generate HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'Content-Type: application/json\r\n' +
+      'User-Agent: axios/0.21.4\r\n' +
+      'Content-Length: 196\r\n' +
+      'Host: localhost:8000\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 80,
+      protocol: 'http:',
+      options: [Object: null prototype],
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype] {},
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 1,
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'POST',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/image/generate',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [Socket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 3,
+      responseUrl: 'http://localhost:8000/image/generate',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 8,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'localhost',
+    protocol: 'http:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 196,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'http://localhost:8000/image/generate',
+      _timeout: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'localhost',
+      _closeAfterHandlingError: false,
+      _events: [Object],
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _eventsCount: 6,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: null,
+      _server: null,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      [Symbol(async_id_symbol)]: -1,
+      [Symbol(kHandle)]: [TCP],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 365403,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 647,
+        [Symbol(triggerId)]: 645,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: true,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 1,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'content-type': [Array],
+      'user-agent': [Array],
+      'content-length': [Array],
+      host: [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 65536,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  response: {
+    status: 500,
+    statusText: 'Internal Server Error',
+    headers: {
+      date: 'Fri, 22 Aug 2025 07:12:21 GMT',
+      server: 'uvicorn',
+      'content-length': '93',
+      'content-type': 'application/json'
+    },
+    config: {
+      url: 'http://localhost:8000/image/generate',
+      method: 'post',
+      data: '{"prompt":"cat","negative_prompt":"","width":512,"height":512,"seed":36151,"num_images":1,"output_dir":"/home/hongjie/ml/EasyVideo/outputs/images","task_id":"b325d00f-d1ba-4f24-bf6a-711e2e20b57a"}',
+      headers: [Object],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 300000,
+      adapter: [Function: httpAdapter],
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      validateStatus: [Function: validateStatus],
+      transitional: [Object]
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 196,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'POST /image/generate HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/json\r\n' +
+        'User-Agent: axios/0.21.4\r\n' +
+        'Content-Length: 196\r\n' +
+        'Host: localhost:8000\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/image/generate',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'localhost',
+      protocol: 'http:',
+      _redirectable: [Writable],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [Socket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    data: {
+      detail: 'FLUX model path not found: /root/autodl-tmp/black-forest-labs/FLUX.1-Kontext-dev'
+    }
+  },
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+AI service not available, checking local config: connect ECONNREFUSED 127.0.0.1:8000
+Error getting disk space: Error: Command failed: df -h /root/autodl-tmp --output=avail,size
+df: /root/autodl-tmp: 权限不够
+
+    at genericNodeError (node:internal/errors:983:15)
+    at wrappedFn (node:internal/errors:537:14)
+    at ChildProcess.exithandler (node:child_process:417:12)
+    at ChildProcess.emit (node:events:518:28)
+    at ChildProcess.emit (node:domain:489:12)
+    at maybeClose (node:internal/child_process:1101:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:304:5) {
+  code: 1,
+  killed: false,
+  signal: null,
+  cmd: 'df -h /root/autodl-tmp --output=avail,size',
+  stdout: '',
+  stderr: 'df: /root/autodl-tmp: 权限不够\n'
+}
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+AI service not available, checking local config: connect ECONNREFUSED 127.0.0.1:8000
+Error getting disk space: Error: Command failed: df -h /root/autodl-tmp --output=avail,size
+df: /root/autodl-tmp: 权限不够
+
+    at genericNodeError (node:internal/errors:983:15)
+    at wrappedFn (node:internal/errors:537:14)
+    at ChildProcess.exithandler (node:child_process:417:12)
+    at ChildProcess.emit (node:events:518:28)
+    at ChildProcess.emit (node:domain:489:12)
+    at maybeClose (node:internal/child_process:1101:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:304:5) {
+  code: 1,
+  killed: false,
+  signal: null,
+  cmd: 'df -h /root/autodl-tmp --output=avail,size',
+  stdout: '',
+  stderr: 'df: /root/autodl-tmp: 权限不够\n'
+}
+AI service not available, checking local config: connect ECONNREFUSED 127.0.0.1:8000
+Error getting disk space: Error: Command failed: df -h /root/autodl-tmp --output=avail,size
+df: /root/autodl-tmp: 权限不够
+
+    at genericNodeError (node:internal/errors:983:15)
+    at wrappedFn (node:internal/errors:537:14)
+    at ChildProcess.exithandler (node:child_process:417:12)
+    at ChildProcess.emit (node:events:518:28)
+    at ChildProcess.emit (node:domain:489:12)
+    at maybeClose (node:internal/child_process:1101:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:304:5) {
+  code: 1,
+  killed: false,
+  signal: null,
+  cmd: 'df -h /root/autodl-tmp --output=avail,size',
+  stdout: '',
+  stderr: 'df: /root/autodl-tmp: 权限不够\n'
+}
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+AI service not available, checking local config: connect ECONNREFUSED 127.0.0.1:8000
+Error getting disk space: Error: Command failed: df -h /root/autodl-tmp --output=avail,size
+df: /root/autodl-tmp: 权限不够
+
+    at genericNodeError (node:internal/errors:983:15)
+    at wrappedFn (node:internal/errors:537:14)
+    at ChildProcess.exithandler (node:child_process:417:12)
+    at ChildProcess.emit (node:events:518:28)
+    at ChildProcess.emit (node:domain:489:12)
+    at maybeClose (node:internal/child_process:1101:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:304:5) {
+  code: 1,
+  killed: false,
+  signal: null,
+  cmd: 'df -h /root/autodl-tmp --output=avail,size',
+  stdout: '',
+  stderr: 'df: /root/autodl-tmp: 权限不够\n'
+}
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Error optimizing prompt: Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16) {
+  errno: -111,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 8000,
+  config: {
+    url: 'http://localhost:8000/prompt/optimize',
+    method: 'post',
+    data: '{"prompt":"a cat","optimize_type":"text_to_image","enhance_details":true}',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      'User-Agent': 'axios/0.21.4',
+      'Content-Length': 73
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 30000,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    }
+  },
+  request: <ref *1> Writable {
+    _events: {
+      close: undefined,
+      error: [Function: handleRequestError],
+      prefinish: undefined,
+      finish: undefined,
+      drain: undefined,
+      response: [Function: handleResponse],
+      timeout: undefined,
+      socket: [Function: destroyOnTimeout],
+      abort: undefined
+    },
+    _writableState: WritableState {
+      highWaterMark: 65536,
+      length: 0,
+      corked: 0,
+      onwrite: [Function: bound onwrite],
+      writelen: 0,
+      bufferedIndex: 0,
+      pendingcb: 0,
+      [Symbol(kState)]: 17580812,
+      [Symbol(kBufferedValue)]: null
+    },
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: 10485760,
+      protocol: 'http:',
+      path: '/prompt/optimize',
+      method: 'POST',
+      headers: [Object],
+      agent: undefined,
+      agents: [Object],
+      auth: undefined,
+      hostname: 'localhost',
+      port: '8000',
+      nativeProtocols: [Object],
+      pathname: '/prompt/optimize'
+    },
+    _ended: false,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 73,
+    _requestBodyBuffers: [ [Object] ],
+    _eventsCount: 3,
+    _onNativeResponse: [Function (anonymous)],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 73,
+      _hasBody: true,
+      _trailer: '',
+      finished: false,
+      _headerSent: true,
+      _closed: false,
+      _header: 'POST /prompt/optimize HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/json\r\n' +
+        'User-Agent: axios/0.21.4\r\n' +
+        'Content-Length: 73\r\n' +
+        'Host: localhost:8000\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/prompt/optimize',
+      _ended: false,
+      res: null,
+      aborted: false,
+      timeoutCb: [Function: emitRequestTimeout],
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'localhost',
+      protocol: 'http:',
+      _redirectable: [Circular *1],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [Socket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    _currentUrl: 'http://localhost:8000/prompt/optimize',
+    _timeout: null,
+    [Symbol(shapeMode)]: true,
+    [Symbol(kCapture)]: false
+  },
+  response: undefined,
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Error optimizing prompt: Error: Request failed with status code 500
+    at createError (/home/hongjie/ml/EasyVideo/backend/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/home/hongjie/ml/EasyVideo/backend/node_modules/axios/lib/core/settle.js:17:12)
+    at IncomingMessage.handleStreamEnd (/home/hongjie/ml/EasyVideo/backend/node_modules/axios/lib/adapters/http.js:269:11)
+    at IncomingMessage.emit (node:events:530:35)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  config: {
+    url: 'http://localhost:8000/prompt/optimize',
+    method: 'post',
+    data: '{"prompt":"a cat","optimize_type":"text_to_image","enhance_details":true}',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      'User-Agent': 'axios/0.21.4',
+      'Content-Length': 73
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 30000,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    }
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 73,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'POST /prompt/optimize HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'Content-Type: application/json\r\n' +
+      'User-Agent: axios/0.21.4\r\n' +
+      'Content-Length: 73\r\n' +
+      'Host: localhost:8000\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 80,
+      protocol: 'http:',
+      options: [Object: null prototype],
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype] {},
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 1,
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'POST',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/prompt/optimize',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [Socket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 3,
+      responseUrl: 'http://localhost:8000/prompt/optimize',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 8,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: true,
+    host: 'localhost',
+    protocol: 'http:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 73,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'http://localhost:8000/prompt/optimize',
+      _timeout: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'localhost',
+      _closeAfterHandlingError: false,
+      _events: [Object],
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _eventsCount: 6,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: null,
+      _server: null,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      [Symbol(async_id_symbol)]: -1,
+      [Symbol(kHandle)]: [TCP],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 2709960,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 13316,
+        [Symbol(triggerId)]: 13314,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: true,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 1,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [Array],
+      'content-type': [Array],
+      'user-agent': [Array],
+      'content-length': [Array],
+      host: [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 65536,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  response: {
+    status: 500,
+    statusText: 'Internal Server Error',
+    headers: {
+      date: 'Fri, 22 Aug 2025 07:51:25 GMT',
+      server: 'uvicorn',
+      'content-length': '78',
+      'content-type': 'application/json'
+    },
+    config: {
+      url: 'http://localhost:8000/prompt/optimize',
+      method: 'post',
+      data: '{"prompt":"a cat","optimize_type":"text_to_image","enhance_details":true}',
+      headers: [Object],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 30000,
+      adapter: [Function: httpAdapter],
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      validateStatus: [Function: validateStatus],
+      transitional: [Object]
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 73,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'POST /prompt/optimize HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/json\r\n' +
+        'User-Agent: axios/0.21.4\r\n' +
+        'Content-Length: 73\r\n' +
+        'Host: localhost:8000\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/prompt/optimize',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: true,
+      host: 'localhost',
+      protocol: 'http:',
+      _redirectable: [Writable],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [Socket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    data: {
+      detail: 'Transformers not available. Please install required dependencies.'
+    }
+  },
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+AI service not available, checking local config: connect ECONNREFUSED 127.0.0.1:8000
+Error getting disk space: Error: Command failed: df -h /root/autodl-tmp --output=avail,size
+df: /root/autodl-tmp: 权限不够
+
+    at genericNodeError (node:internal/errors:983:15)
+    at wrappedFn (node:internal/errors:537:14)
+    at ChildProcess.exithandler (node:child_process:417:12)
+    at ChildProcess.emit (node:events:518:28)
+    at ChildProcess.emit (node:domain:489:12)
+    at maybeClose (node:internal/child_process:1101:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:304:5) {
+  code: 1,
+  killed: false,
+  signal: null,
+  cmd: 'df -h /root/autodl-tmp --output=avail,size',
+  stdout: '',
+  stderr: 'df: /root/autodl-tmp: 权限不够\n'
+}
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000
+Progress monitoring error: connect ECONNREFUSED 127.0.0.1:8000

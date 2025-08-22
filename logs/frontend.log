@@ -1,0 +1,33 @@
+
+> easyvideo-frontend@1.0.0 dev
+> vite
+
+
+  vite v2.9.18 dev server running at:
+
+  > Local:    http://localhost:5173/
+  > Network:  http://192.168.1.246:5173/
+
+  ready in 1538ms.
+
+16:25:47 [vite] hmr update /src/pages/TextToImagePage.tsx
+hmr update /src/index.css
+hmr update /src/pages/ImageToVideoPage.tsx
+hmr update /src/index.css
+hmr update /src/pages/StoryboardPage.tsx
+hmr update /src/index.css
+hmr update /src/index.css
+16:25:48 [vite] hmr update /src/pages/TextToImagePage.tsx
+hmr update /src/index.css
+hmr update /src/pages/ImageToVideoPage.tsx
+hmr update /src/index.css
+hmr update /src/pages/StoryboardPage.tsx
+hmr update /src/index.css
+hmr update /src/index.css
+16:25:50 [vite] hmr update /src/pages/TextToImagePage.tsx
+hmr update /src/index.css
+hmr update /src/pages/ImageToVideoPage.tsx
+hmr update /src/index.css
+hmr update /src/pages/StoryboardPage.tsx
+hmr update /src/index.css
+hmr update /src/index.css

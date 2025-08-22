@@ -225,6 +225,9 @@ async def generate_image(request: ImageGenerateRequest):
         # Mark as completed
         task_progress[request.task_id] = {"progress": 100, "status": "completed"}
         
+        # Clean up task progress after a delay
+        asyncio.create_task(cleanup_task_progress(request.task_id, delay=60))
+        
         return ImageGenerateResponse(
             images=images,
             task_id=request.task_id
@@ -232,6 +235,10 @@ async def generate_image(request: ImageGenerateRequest):
     except Exception as e:
         logger.error(f"Error generating image: {e}")
         task_progress[request.task_id] = {"progress": 0, "status": "failed", "error": str(e)}
+        
+        # Clean up task progress after a delay
+        asyncio.create_task(cleanup_task_progress(request.task_id, delay=60))
+        
         raise HTTPException(status_code=500, detail=str(e))
     finally:
         # 确保模型卸载
@@ -274,6 +281,9 @@ async def generate_video(request: VideoGenerateRequest):
         # Mark as completed
         task_progress[request.task_id] = {"progress": 100, "status": "completed"}
         
+        # Clean up task progress after a delay
+        asyncio.create_task(cleanup_task_progress(request.task_id, delay=60))
+        
         return VideoGenerateResponse(
             video_path=video_path,
             task_id=request.task_id
@@ -281,6 +291,10 @@ async def generate_video(request: VideoGenerateRequest):
     except Exception as e:
         logger.error(f"Error generating video: {e}")
         task_progress[request.task_id] = {"progress": 0, "status": "failed", "error": str(e)}
+        
+        # Clean up task progress after a delay
+        asyncio.create_task(cleanup_task_progress(request.task_id, delay=60))
+        
         # Return a more detailed error response
         if "validation" in str(e).lower() or "required" in str(e).lower():
             raise HTTPException(status_code=422, detail=f"参数验证失败: {str(e)}")
@@ -297,6 +311,13 @@ async def generate_video(request: VideoGenerateRequest):
 
 # Task progress tracking
 task_progress = {}
+
+async def cleanup_task_progress(task_id: str, delay: int = 60):
+    """延迟清理任务进度记录"""
+    await asyncio.sleep(delay)
+    if task_id in task_progress:
+        del task_progress[task_id]
+        logger.info(f"Cleaned up task progress for task_id: {task_id}")
 
 @app.get("/task/progress/{task_id}")
 async def get_task_progress(task_id: str):

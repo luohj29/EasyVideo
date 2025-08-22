@@ -19,13 +19,42 @@ sys.path.append(str(project_root))
 # 导入配置管理器
 from config.config_manager import config_manager
 
-# 导入原有模块
-from modules.prompt_optimizer import PromptOptimizer
-from modules.image_generator import ImageGenerator
-from modules.image_editor import ImageEditor
-from modules.video_generator import VideoGenerator
-from modules.project_manager import ProjectManager
-from modules.storyboard_generator import StoryboardGenerator
+# 条件导入模块，处理缺少依赖的情况
+try:
+    from modules.prompt_optimizer import PromptOptimizer
+except ImportError as e:
+    print(f"Warning: Could not import PromptOptimizer: {e}")
+    PromptOptimizer = None
+
+try:
+    from modules.image_generator import ImageGenerator
+except ImportError as e:
+    print(f"Warning: Could not import ImageGenerator: {e}")
+    ImageGenerator = None
+
+try:
+    from modules.image_editor import ImageEditor
+except ImportError as e:
+    print(f"Warning: Could not import ImageEditor: {e}")
+    ImageEditor = None
+
+try:
+    from modules.video_generator import VideoGenerator
+except ImportError as e:
+    print(f"Warning: Could not import VideoGenerator: {e}")
+    VideoGenerator = None
+
+try:
+    from modules.project_manager import ProjectManager
+except ImportError as e:
+    print(f"Warning: Could not import ProjectManager: {e}")
+    ProjectManager = None
+
+try:
+    from modules.storyboard_generator import StoryboardGenerator
+except ImportError as e:
+    print(f"Warning: Could not import StoryboardGenerator: {e}")
+    StoryboardGenerator = None
 
 app = FastAPI(
     title="EasyVideo AI Service",
@@ -60,24 +89,32 @@ def ensure_service_loaded(service_name: str):
     
     try:
         if service_name == "prompt_optimizer":
+            if PromptOptimizer is None:
+                raise HTTPException(status_code=503, detail="提示词优化模块初始化失败: PromptOptimizer模块导入失败，请检查依赖")
             if not config_manager.is_model_enabled("qwen"):
                 raise HTTPException(status_code=503, detail="Qwen模型未启用")
             print(f"按需加载 {service_name} 服务...")
             services[service_name] = PromptOptimizer()
             
         elif service_name == "image_generator":
+            if ImageGenerator is None:
+                raise HTTPException(status_code=503, detail="图像生成模块初始化失败: ImageGenerator模块导入失败，请检查依赖")
             if not config_manager.is_model_enabled("flux"):
                 raise HTTPException(status_code=503, detail="FLUX模型未启用")
             print(f"按需加载 {service_name} 服务...")
             services[service_name] = ImageGenerator()
             
         elif service_name == "image_editor":
+            if ImageEditor is None:
+                raise HTTPException(status_code=503, detail="图像编辑模块初始化失败: ImageEditor模块导入失败，请检查依赖")
             if not config_manager.is_model_enabled("flux"):
                 raise HTTPException(status_code=503, detail="FLUX模型未启用")
             print(f"按需加载 {service_name} 服务...")
             services[service_name] = ImageEditor()
             
         elif service_name == "video_generator":
+            if VideoGenerator is None:
+                raise HTTPException(status_code=503, detail="视频生成模块初始化失败: VideoGenerator模块导入失败，请检查依赖")
             if not config_manager.is_model_enabled("wan_i2v"):
                 raise HTTPException(status_code=503, detail="Wan I2V模型未启用")
             print(f"按需加载 {service_name} 服务...")
@@ -118,10 +155,17 @@ class ImageEditRequest(BaseModel):
 class VideoGenerateRequest(BaseModel):
     prompt: Optional[str] = None
     image_path: Optional[str] = None
+    negative_prompt: Optional[str] = None
     fps: int = 15
     duration: int = 4
     steps: int = 50
+    num_inference_steps: int = 20
+    cfg_scale: float = 7.5
+    motion_strength: float = 0.5
+    tiled: bool = True
     seed: Optional[int] = None
+    output_dir: Optional[str] = None
+    task_id: Optional[str] = None
 
 class ProjectCreateRequest(BaseModel):
     name: str
@@ -302,11 +346,16 @@ async def generate_video(request: VideoGenerateRequest):
             result = await generator.generate_from_image(
                 image_path=request.image_path,
                 prompt=request.prompt or "",
+                negative_prompt=request.negative_prompt or "",
                 duration=float(request.duration),
                 fps=request.fps,
-                motion_strength=0.5,
-                output_dir="",
-                task_id="api_request"
+                motion_strength=request.motion_strength,
+                cfg_scale=request.cfg_scale,
+                num_inference_steps=request.num_inference_steps,
+                tiled=request.tiled,
+                seed=request.seed,
+                output_dir=request.output_dir or "",
+                task_id=request.task_id or "api_request"
             )
         else:
             # 文生视频
@@ -314,10 +363,14 @@ async def generate_video(request: VideoGenerateRequest):
                 raise HTTPException(status_code=400, detail="文生视频需要提供prompt")
             result = await generator.generate_from_text(
                 prompt=request.prompt,
+                negative_prompt=request.negative_prompt or "",
                 duration=float(request.duration),
                 fps=request.fps,
-                output_dir="",
-                task_id="api_request"
+                cfg_scale=request.cfg_scale,
+                num_inference_steps=request.num_inference_steps,
+                seed=request.seed,
+                output_dir=request.output_dir or "",
+                task_id=request.task_id or "api_request"
             )
         
         return {"video_path": result}

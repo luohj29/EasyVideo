@@ -235,12 +235,19 @@ class VideoGenerator:
             
             self._update_progress(task_id, 100, "视频生成完成")
             
+            # 清理进度回调
+            if task_id in progress_callbacks:
+                del progress_callbacks[task_id]
+            
             logger.info(f"Video generated successfully: {output_path}")
             return output_path
             
         except Exception as e:
             logger.error(f"Video generation error: {e}")
             self._update_progress(task_id, 0, f"生成失败: {str(e)}")
+            # 清理进度回调
+            if task_id in progress_callbacks:
+                del progress_callbacks[task_id]
             # 确保即使出错也卸载模型
             self.unload_model()
             raise

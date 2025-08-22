@@ -1,0 +1,240 @@
+Transformers not available: cannot import name 'Qwen2_5_VLForConditionalGeneration' from 'transformers' (/home/hongjie/anaconda3/envs/pytorch/lib/python3.10/site-packages/transformers/__init__.py)
+DiffSynth FLUX模块导入失败: No module named 'diffsynth.pipelines.flux_image_new'
+INFO:__main__:AI service started with lazy loading support
+INFO:     Will watch for changes in these directories: ['/home/hongjie/ml/EasyVideo/ai-service']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [3350183] using WatchFiles
+Transformers not available: cannot import name 'Qwen2_5_VLForConditionalGeneration' from 'transformers' (/home/hongjie/anaconda3/envs/pytorch/lib/python3.10/site-packages/transformers/__init__.py)
+DiffSynth FLUX模块导入失败: No module named 'diffsynth.pipelines.flux_image_new'
+INFO:__mp_main__:AI service started with lazy loading support
+INFO:api_server:AI service started with lazy loading support
+INFO:     Started server process [3350958]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:watchfiles.main:3 changes detected
+INFO:     127.0.0.1:43916 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55074 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55074 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55074 - "GET /health HTTP/1.1" 200 OK
+INFO:modules.image_generator:FLUX model path configured: /root/autodl-tmp/black-forest-labs/FLUX.1-Kontext-dev
+INFO:api_server:ImageGenerator initialized on demand
+ERROR:modules.image_generator:Error generating images: FLUX model path not found: /root/autodl-tmp/black-forest-labs/FLUX.1-Kontext-dev
+ERROR:api_server:Error generating image: FLUX model path not found: /root/autodl-tmp/black-forest-labs/FLUX.1-Kontext-dev
+INFO:api_server:ImageGenerator model unloaded successfully
+INFO:     127.0.0.1:55144 - "POST /image/generate HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3350958]
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
+Transformers not available: cannot import name 'Qwen2_5_VLForConditionalGeneration' from 'transformers' (/home/hongjie/anaconda3/envs/pytorch/lib/python3.10/site-packages/transformers/__init__.py)
+DiffSynth FLUX模块导入失败: No module named 'diffsynth.pipelines.flux_image_new'
+INFO:__mp_main__:AI service started with lazy loading support
+INFO:api_server:AI service started with lazy loading support
+INFO:     Started server process [3360019]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:45818 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45832 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45832 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:watchfiles.main:3 changes detected
+INFO:     127.0.0.1:45832 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3360019]
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
+Transformers not available: cannot import name 'Qwen2_5_VLForConditionalGeneration' from 'transformers' (/home/hongjie/anaconda3/envs/pytorch/lib/python3.10/site-packages/transformers/__init__.py)
+DiffSynth FLUX模块导入失败: No module named 'diffsynth.pipelines.flux_image_new'
+INFO:__mp_main__:AI service started with lazy loading support
+INFO:api_server:AI service started with lazy loading support
+INFO:     Started server process [3360420]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:39596 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39608 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39610 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:watchfiles.main:3 changes detected
+INFO:     127.0.0.1:39610 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39610 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39610 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39610 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39610 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39610 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39610 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39610 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39610 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39610 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39610 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39610 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39610 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39610 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'api_server.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3360420]
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'api_server.py'. Reloading...
+Transformers not available: cannot import name 'Qwen2_5_VLForConditionalGeneration' from 'transformers' (/home/hongjie/anaconda3/envs/pytorch/lib/python3.10/site-packages/transformers/__init__.py)
+DiffSynth FLUX模块导入失败: No module named 'diffsynth.pipelines.flux_image_new'
+INFO:__mp_main__:AI service started with lazy loading support
+INFO:api_server:AI service started with lazy loading support
+INFO:     Started server process [3361697]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:46014 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46024 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47222 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:watchfiles.main:3 changes detected
+INFO:     127.0.0.1:47222 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'api_server.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3361697]
+Transformers not available: cannot import name 'Qwen2_5_VLForConditionalGeneration' from 'transformers' (/home/hongjie/anaconda3/envs/pytorch/lib/python3.10/site-packages/transformers/__init__.py)
+DiffSynth FLUX模块导入失败: No module named 'diffsynth.pipelines.flux_image_new'
+INFO:__mp_main__:AI service started with lazy loading support
+INFO:api_server:AI service started with lazy loading support
+INFO:     Started server process [3362001]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:47224 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47232 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47240 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:watchfiles.main:3 changes detected
+INFO:     127.0.0.1:47240 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47240 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'api_server.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3362001]
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'api_server.py'. Reloading...
+Transformers not available: cannot import name 'Qwen2_5_VLForConditionalGeneration' from 'transformers' (/home/hongjie/anaconda3/envs/pytorch/lib/python3.10/site-packages/transformers/__init__.py)
+DiffSynth FLUX模块导入失败: No module named 'diffsynth.pipelines.flux_image_new'
+INFO:__mp_main__:AI service started with lazy loading support
+INFO:api_server:AI service started with lazy loading support
+INFO:     Started server process [3362460]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:48608 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48616 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48632 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:watchfiles.main:3 changes detected
+INFO:     127.0.0.1:48632 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48632 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48632 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48632 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48632 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48632 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48632 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48632 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48632 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48632 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48632 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48632 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48632 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48632 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48632 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48632 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48632 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48632 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48632 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48632 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48632 - "GET /task/progress/b325d00f-d1ba-4f24-bf6a-711e2e20b57a HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3362460]
+INFO:     Stopping reloader process [3350183]
