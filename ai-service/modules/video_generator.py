@@ -157,7 +157,7 @@ class VideoGenerator:
     
     async def generate_from_image(self, image_path: str, prompt: str = "",
                                  negative_prompt: str = "static, blurry, low quality",
-                                 duration: float = 5.0, fps: int = 24,
+                                 num_frames: int = 81, fps: int = 16,
                                  seed: Optional[int] = None,
                                  tiled: bool = True,
                                  num_inference_steps: int = 20,
@@ -224,6 +224,7 @@ class VideoGenerator:
                     negative_prompt=negative_prompt,
                     seed=seed,
                     tiled=tiled,
+                    num_frames=num_frames,
                     num_inference_steps=num_inference_steps,
                     cfg_scale=cfg_scale,
                     input_image=image,

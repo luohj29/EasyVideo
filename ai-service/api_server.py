@@ -72,8 +72,8 @@ class VideoGenerateRequest(BaseModel):
     image_path: str
     prompt: Optional[str] = ""
     negative_prompt: Optional[str] = "static, blurry, low quality"
-    fps: int = 15
-    duration: int = 4
+    fps: int = 16
+    num_frames : int = 81
     seed: Optional[int] = None
     tiled: bool = True
     num_inference_steps: int = 20
@@ -387,12 +387,12 @@ async def initialize_and_generate_video(request: VideoGenerateRequest):
         # 异步执行视频生成
         video_path = await asyncio.get_event_loop().run_in_executor(
             None,
-            lambda: asyncio.run(generatorgenerate_from_image(
+            lambda: asyncio.run(generator.generate_from_image(
                 image_path=request.image_path,
                 prompt=request.prompt,
                 negative_prompt=request.negative_prompt,
                 fps=request.fps,
-                duration=request.duration,
+                num_frames=request.num_frames,
                 seed=request.seed,
                 tiled=request.tiled,
                 num_inference_steps=request.num_inference_steps,

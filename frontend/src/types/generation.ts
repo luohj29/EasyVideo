@@ -19,7 +19,7 @@ export interface TextToImageRequest {
 export interface ImageToVideoRequest {
   image_path: string;
   motion_prompt: string;
-  duration: number;
+  num_frames: number;
   fps: number;
   motion_strength: number;
   cfg_scale: number;
@@ -98,22 +98,13 @@ export interface GeneratedVideo {
   id: string;
   url: string;
   thumbnail_url: string;
-  filename: string;
   duration: number;
   fps: number;
   width: number;
   height: number;
-  file_size: number;
-  source_image_url: string;
   motion_prompt: string;
-  seed: number;
+  file_size: number;
   created_at: string;
-  metadata: {
-    model: string;
-    motion_strength: number;
-    guidance_scale: number;
-    steps: number;
-  };
 }
 
 export interface Storyboard {

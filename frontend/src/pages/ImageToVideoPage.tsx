@@ -55,25 +55,16 @@ const presetDurations = [
 const showSettings = true;
 
 const exampleVideo: GeneratedVideo = {
-  id: "video_001",
-  url: "/outputs/videos/video_20250823_153004_video_1755934153715_4eapnf9er.mp4",
-  thumbnail_url: "/images/test.jpg",
-  filename: "FLFKJ_00021.mp4",
-  duration: 12.5,      // 秒
-  fps: 30,
-  width: 1920,
-  height: 1080,
-  file_size: 25_000_000, // 字节
-  source_image_url: "/home/rogers/Documents/project/EasyVideo/test.jpg",
-  motion_prompt: "A cat walking in a park, sunny day",
-  seed: 12345,
-  created_at: "2025-08-20T17:00:00Z",
-  metadata: {
-    model: "StableMotion-v1",
-    motion_strength: 0.8,
-    guidance_scale: 7.5,
-    steps: 50,
-  },
+  id: "vid_video_1756191442236_pskfzzfgn",
+  url: "/outputs/videos/video_20250826_145831_video_1756191442236_pskfzzfgn.mp4",
+  thumbnail_url: "/outputs/videos/video_20250826_145831_video_1756191442236_pskfzzfgn_thumb.jpg",
+  duration: 4,
+  fps: 24,
+  width: 640,
+  height: 480,
+  motion_prompt: "A beautiful girl wearing exquisite traditional Chinese clothing dancing gracefully. The attire features rich gold embroidery with intricate patterns on the sleeves and bodice. She wears red shoes that shimmer under the light, complementing her elegant movements. Soft lighting highlights her expressive face and the flowing fabric of her dress. The composition focuses on her full figure, capturing the fluidity and elegance of her dance. High resolution images are required to capture the detailed textures and vibrant colors.",
+  file_size: 0,
+  created_at: "2025-08-26T07:08:52.579Z"
 };
 
 const ImageToVideoPage: React.FC = () => {
@@ -84,7 +75,7 @@ const ImageToVideoPage: React.FC = () => {
   const [generating, setGenerating] = useState(false);
   // const [showSettings, setShowSettings] = useState(false);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [generatedVideos, setGeneratedVideos] = useState<GeneratedVideo[]>([exampleVideo]);
+  const [generatedVideos, setGeneratedVideos] = useState<GeneratedVideo[]>([]);
   const [currentTask, setCurrentTask] = useState<GenerationTask | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedVideos, setSelectedVideos] = useState<Set<string>>(new Set());
@@ -93,6 +84,25 @@ const ImageToVideoPage: React.FC = () => {
   const dragRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const pollTimeoutRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    const fetchVideos = async () => {
+      try {
+        const response = await fetch('/api/generation/storage/video'); // 后端接口
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        const data: GeneratedVideo[] = await response.json();
+        setGeneratedVideos(data); // ✅ 设置数据，触发渲染
+      } catch (err) {
+        console.log(err instanceof Error ? err.message : '未知错误')
+      } finally {
+        setGeneratedVideos([]);
+      }
+    };
+  
+    fetchVideos(); // 执行异步请求
+  }, []);
 
   // 清理定时器
   useEffect(() => {
@@ -167,7 +177,7 @@ const ImageToVideoPage: React.FC = () => {
       const request: ImageToVideoRequest = {
         image_path: uploadResponse.image_path,
         motion_prompt: motionPrompt.trim() || '',
-        duration: settings.duration,
+        num_frames: Math.ceil(settings.duration * settings.fps) + 1,
         fps: settings.fps,
         motion_strength: settings.motion_strength,
         seed: settings.seed === -1 ? undefined : settings.seed,

@@ -6,232 +6,1313 @@
 📁 Static files served from outputs and projects directories
 🔗 API endpoints available at http://localhost:3002/api
 🔔 SSE notifications available at http://localhost:3002/api/notifications/stream
+Submitting video generation task: {
+  "image_path": "/root/autodl-tmp/EasyVideo/outputs/images/9b51f04b-3f82-47d4-b153-509014b2315a.jpg",
+  "prompt": "一个女孩",
+  "negative_prompt": "static, blurry, low quality",
+  "fps": 24,
+  "duration": 3,
+  "seed": 793337,
+  "tiled": true,
+  "num_inference_steps": 20,
+  "cfg_scale": 7.5,
+  "motion_strength": 0.5,
+  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/videos",
+  "task_id": "video_1756187416546_171kawjcd"
+}
+AI service task creation response: { video_path: '', task_id: 'video_1756187416546_171kawjcd' }
+Trying to Update progress for task_id:  video_1756187416546_171kawjcd
+AI-services response:  {
+  progress: 0,
+  status: 'failed',
+  error: "name 'generatorgenerate_from_image' is not defined"
+}
+Tasks pool removing task video_1756187416546_171kawjcd from pool (reason: failed)
 Sending request to AI service: {
-  "prompt": "edge lighting, low-contrast, medium close-up shot, left-heavy composition, clean single shot, warm colors, soft lighting,  side lighting, day time.A young girl sits in a field of tall grass with two fluffy donkeys standing behind her. The girl, about eleven or twelve years old, is wearing a simple floral dress and has her hair in two pigtails, with an innocent smile on her face. She sits cross-legged, gently touching the wildflowers beside her. The small donkeys are sturdy, their ears perked up as they look curiously toward the camera. Sunlight bathes the field, creating a warm and natural scene.",
+  "prompt": "A detailed, realistic image of a young girl with long dark hair styled in loose waves, wearing a white blouse and black skirt. She is standing in a sunlit garden with lush green grass and blooming flowers around her. The girl has a gentle smile on her face, with warm sunlight casting soft shadows on her face and clothing. The background features a mix of blurred trees and clear blue sky, creating a serene atmosphere. High resolution, sharp focus, and vibrant colors to bring the scene to life.",
   "negative_prompt": "",
   "width": 512,
   "height": 512,
-  "seed": 893532,
+  "seed": 388600,
   "num_images": 1,
   "output_dir": "/root/autodl-tmp/EasyVideo/outputs/images",
-  "task_id": "0489ba21-bacc-4f96-8ff3-d6d096f21fea"
+  "task_id": "c16019a3-c49e-449d-83de-07dc98591d13"
 }
 AI service response: {
   images: [
-    '/root/autodl-tmp/EasyVideo/outputs/images/img_0489ba21-bacc-4f96-8ff3-d6d096f21fea_20250824_152402_1_seed893532.jpg'
+    '/root/autodl-tmp/EasyVideo/outputs/images/img_c16019a3-c49e-449d-83de-07dc98591d13_20250826_135206_1_seed388600.jpg'
   ],
-  task_id: '0489ba21-bacc-4f96-8ff3-d6d096f21fea'
+  task_id: 'c16019a3-c49e-449d-83de-07dc98591d13'
 }
-Removing task 0489ba21-bacc-4f96-8ff3-d6d096f21fea from pool (reason: completed)
-Removing task 0489ba21-bacc-4f96-8ff3-d6d096f21fea from pool (reason: completed)
+Tasks pool removing task c16019a3-c49e-449d-83de-07dc98591d13 from pool (reason: completed)
+Tasks pool write task c16019a3-c49e-449d-83de-07dc98591d13 to JSON for it completed
+Task c16019a3-c49e-449d-83de-07dc98591d13 已保存到 ./task_completed.json
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Submitting video generation task: {
+  "image_path": "/root/autodl-tmp/EasyVideo/outputs/images/b308692e-ea83-452f-b128-4d48b9bcfb2f.jpg",
+  "prompt": "一个女孩",
+  "negative_prompt": "static, blurry, low quality",
+  "fps": 24,
+  "duration": 3,
+  "seed": 929240,
+  "tiled": true,
+  "num_inference_steps": 20,
+  "cfg_scale": 7.5,
+  "motion_strength": 0.5,
+  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/videos",
+  "task_id": "video_1756187703117_fcb7bw4kk"
+}
+AI service task creation response: { video_path: '', task_id: 'video_1756187703117_fcb7bw4kk' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  { progress: 5, status: '正在加载模型...' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  { progress: 20, status: '正在优化提示词...' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  { progress: 80, status: '正在保存视频...' }
+Trying to Update progress for task_id:  video_1756187703117_fcb7bw4kk
+AI-services response:  {
+  progress: 100,
+  status: 'completed',
+  video_path: '/root/autodl-tmp/EasyVideo/outputs/videos/video_20250826_135559_video_1756187703117_fcb7bw4kk.mp4'
+}
+Tasks pool removing task video_1756187703117_fcb7bw4kk from pool (reason: completed)
+Tasks pool write task video_1756187703117_fcb7bw4kk to JSON for it completed
+Task video_1756187703117_fcb7bw4kk 已保存到 ./task_completed.json
+Submitting video generation task: {
+  "image_path": "/root/autodl-tmp/EasyVideo/outputs/images/bf3b6a9a-0576-409f-963a-4d8d1e1d5041.jpg",
+  "prompt": "A beautiful Chinese minority girl in an exquisite traditional attire, gracefully dancing with vibrant colors, shimmering fabrics, soft lighting, and intricate composition. High-quality image generation keywords: vivid colors, intricate patterns, sparkling fabrics, soft lighting effects, detailed textures, balanced composition, high-resolution imagery.",
+  "negative_prompt": "static, blurry, low quality",
+  "fps": 24,
+  "duration": 4,
+  "seed": 529376,
+  "tiled": true,
+  "num_inference_steps": 20,
+  "cfg_scale": 7.5,
+  "motion_strength": 0.5,
+  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/videos",
+  "task_id": "video_1756188870627_apo9p4jww"
+}
+AI service task creation response: { video_path: '', task_id: 'video_1756188870627_apo9p4jww' }
+Trying to Update progress for task_id:  video_1756188870627_apo9p4jww
+AI-services response:  {
+  progress: 0,
+  status: 'failed',
+  error: "VideoGenerator.generate_from_image() got an unexpected keyword argument 'num_frames'"
+}
+Tasks pool removing task video_1756188870627_apo9p4jww from pool (reason: failed)
+Submitting video generation task: {
+  "image_path": "/root/autodl-tmp/EasyVideo/outputs/images/82e896df-4cd0-4f64-bd14-33775ff19710.jpg",
+  "prompt": "A beautiful Chinese minority girl in an exquisite traditional attire, gracefully dancing with vibrant colors, shimmering fabrics, soft lighting, and intricate composition. High-quality image generation keywords: vivid colors, intricate patterns, sparkling fabrics, soft lighting effects, detailed textures, balanced composition, high-resolution imagery.",
+  "negative_prompt": "static, blurry, low quality",
+  "fps": 24,
+  "duration": 4,
+  "seed": 826888,
+  "tiled": true,
+  "num_inference_steps": 20,
+  "cfg_scale": 7.5,
+  "motion_strength": 0.5,
+  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/videos",
+  "task_id": "video_1756188962409_vf1t0ytel"
+}
+AI service task creation response: { video_path: '', task_id: 'video_1756188962409_vf1t0ytel' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+AI-services response:  { progress: 5, status: '正在加载模型...' }
+Tasks pool removing task video_1756188962409_vf1t0ytel from pool (reason: cancelled)
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot set property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot set property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot set property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: connect ECONNREFUSED 127.0.0.1:8000
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: connect ECONNREFUSED 127.0.0.1:8000
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Submitting video generation task: {
+  "image_path": "/root/autodl-tmp/EasyVideo/outputs/images/40d6cdd6-3676-4944-8fc3-5ae67a84f543.jpg",
+  "prompt": "A beautiful girl wearing exquisite traditional Chinese clothing dancing gracefully. The attire features rich gold embroidery with intricate patterns on the sleeves and bodice. She wears red shoes that shimmer under the light, complementing her elegant movements. Soft lighting highlights her expressive face and the flowing fabric of her dress. The composition focuses on her full figure, capturing the fluidity and elegance of her dance. High resolution images are required to capture the detailed textures and vibrant colors.",
+  "negative_prompt": "static, blurry, low quality",
+  "fps": 24,
+  "duration": 4,
+  "seed": 725091,
+  "tiled": true,
+  "num_inference_steps": 20,
+  "cfg_scale": 7.5,
+  "motion_strength": 0.5,
+  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/videos",
+  "task_id": "video_1756191442236_pskfzzfgn"
+}
+AI service task creation response: { video_path: '', task_id: 'video_1756191442236_pskfzzfgn' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  { progress: 5, status: '正在加载模型...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  { progress: 5, status: '正在加载模型...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756191442236_pskfzzfgn
+AI-services response:  {
+  progress: 100,
+  status: 'completed',
+  video_path: '/root/autodl-tmp/EasyVideo/outputs/videos/video_20250826_145831_video_1756191442236_pskfzzfgn.mp4'
+}
+Tasks pool removing task video_1756191442236_pskfzzfgn from pool (reason: completed)
+Tasks pool write task video_1756191442236_pskfzzfgn to JSON for it completed
+Task video_1756191442236_pskfzzfgn 已保存到 ./task_completed.json
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
 Sending request to AI service: {
-  "prompt": "一道新鲜烤制的烤肉串特写，高分辨率微距拍摄，展现出充满活力的红褐色香料脆皮，闪烁着花生油的光泽。串串鲜嫩的切片牛肉或鸡肉，边缘微焦，撒上花生碎、辣椒粉和芳香香料的混合物。热肉冒出蒸汽，增强了烟熏的香气。金黄色的花生碎黏附在表面，增添了质感。背景是质朴的木板或编织垫，温暖的漫射光线投射出柔和的阴影，以突出丰富的色彩。撒上切片的洋葱和番茄，增添了清爽感，背景中隐约有烟雾缭绕。风格：丰富、质朴的食物摄影，浅景深，以强调多汁、辛辣的肉",
+  "prompt": "\"High-quality, detailed image of an adorable kitten with soft gray and white fur, large expressive eyes reflecting light. The kitten is sitting on a textured fabric surface with a gentle shadow cast by its paws. The image should have sharp focus, clear details, and vibrant colors.\"",
   "negative_prompt": "",
   "width": 512,
   "height": 512,
-  "seed": 363323,
+  "seed": 810817,
   "num_images": 1,
   "output_dir": "/root/autodl-tmp/EasyVideo/outputs/images",
-  "task_id": "9d33038a-7a8d-4490-8d8f-b9dcdf354ade"
+  "task_id": "c88631cf-300e-4928-80a6-c2782ae3b727"
 }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
 AI service response: {
   images: [
-    '/root/autodl-tmp/EasyVideo/outputs/images/img_9d33038a-7a8d-4490-8d8f-b9dcdf354ade_20250824_152750_1_seed363323.jpg'
+    '/root/autodl-tmp/EasyVideo/outputs/images/img_c88631cf-300e-4928-80a6-c2782ae3b727_20250826_164405_1_seed810817.jpg'
   ],
-  task_id: '9d33038a-7a8d-4490-8d8f-b9dcdf354ade'
+  task_id: 'c88631cf-300e-4928-80a6-c2782ae3b727'
 }
-Removing task 9d33038a-7a8d-4490-8d8f-b9dcdf354ade from pool (reason: completed)
-Removing task 9d33038a-7a8d-4490-8d8f-b9dcdf354ade from pool (reason: completed)
-Sending request to AI service: {
-  "prompt": "一款以横滨和神室町霓虹闪烁的地下世界为背景的动态动作角色扮演游戏，灵感来自《如龙7：光与暗的去向》。舞台中心：春日一番，一位粗犷的前黑道成员，红发狂野，脸上带疤，意志坚定，身着破烂的西装，露出龙纹身。他周围是一群杂七杂八的伙伴——机智的纱英子，高大的足立，古怪的难波——置身于熙熙攘攘的街道，烟雾弥漫的后巷和充满活力的弹珠店中。突出春日一番标志性的缠着铁丝的棒球棒，散发着夸张的《勇者斗恶龙》般的战斗效果。捕捉游戏将粗犷写实主义与夸张幽默相结合的特点，以戏剧化的灯光，饱和的霓虹色调和电影般的街头打斗能量。情绪：高风险、混乱，但又出奇地真挚",
-  "negative_prompt": "",
-  "width": 512,
-  "height": 512,
-  "seed": 72050,
-  "num_images": 1,
-  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/images",
-  "task_id": "51d9eab9-5595-4f4a-ba94-81b47d584a27"
+Tasks pool removing task c88631cf-300e-4928-80a6-c2782ae3b727 from pool (reason: completed)
+Tasks pool write task c88631cf-300e-4928-80a6-c2782ae3b727 to JSON for it completed
+Task c88631cf-300e-4928-80a6-c2782ae3b727 已保存到 ./task_completed.json
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Progress monitoring error: Cannot set property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Submitting video generation task: {
+  "image_path": "/root/autodl-tmp/EasyVideo/outputs/images/0312e86a-a2e9-478f-8967-dc235076c2e8.jpg",
+  "prompt": "A young woman dancing, vibrant red hair, wearing a flowing white dress with intricate floral patterns, delicate lace sleeves, and sheer skirt, with soft golden highlights in the sunlight casting gentle shadows on her face and dress. The background is blurred to emphasize her movement, featuring a mix of warm earthy tones and cool blue hues, creating an ethereal atmosphere. High resolution, detailed rendering, cinematic lighting, shallow depth of field, smooth texture, dynamic composition.",
+  "negative_prompt": "static, blurry, low quality",
+  "fps": 12,
+  "duration": 4,
+  "seed": 686517,
+  "tiled": true,
+  "num_inference_steps": 20,
+  "cfg_scale": 7.5,
+  "motion_strength": 0.5,
+  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/videos",
+  "task_id": "video_1756198128284_ha324amgr"
 }
-AI service response: {
-  images: [
-    '/root/autodl-tmp/EasyVideo/outputs/images/img_51d9eab9-5595-4f4a-ba94-81b47d584a27_20250824_160723_1_seed72050.jpg'
-  ],
-  task_id: '51d9eab9-5595-4f4a-ba94-81b47d584a27'
+AI service task creation response: { video_path: '', task_id: 'video_1756198128284_ha324amgr' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  { progress: 5, status: '正在加载模型...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  { progress: 5, status: '正在加载模型...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756198128284_ha324amgr
+AI-services response:  {
+  progress: 100,
+  status: 'completed',
+  video_path: '/root/autodl-tmp/EasyVideo/outputs/videos/video_20250826_164949_video_1756198128284_ha324amgr.mp4'
 }
-Removing task 51d9eab9-5595-4f4a-ba94-81b47d584a27 from pool (reason: completed)
-Removing task 51d9eab9-5595-4f4a-ba94-81b47d584a27 from pool (reason: completed)
-Sending request to AI service: {
-  "prompt": "A serene lakeside scene at sunset, with mountains in the background, soft warm lighting, ultra-detailed, photorealistic, 8k resolution",
-  "negative_prompt": "blurry, low resolution, distorted, extra limbs, deformed hands, unrealistic colors, text, watermark, logo, cropped, bad anatomy, oversaturated\n",
-  "width": 512,
-  "height": 512,
-  "seed": 941816,
-  "num_images": 1,
-  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/images",
-  "task_id": "bdb3cb37-01f0-4af0-b1bd-d5401344585d"
+Tasks pool removing task video_1756198128284_ha324amgr from pool (reason: completed)
+Tasks pool write task video_1756198128284_ha324amgr to JSON for it completed
+Task video_1756198128284_ha324amgr 已保存到 ./task_completed.json
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Submitting video generation task: {
+  "image_path": "/root/autodl-tmp/EasyVideo/outputs/images/334e8e22-c47b-4706-83dd-188fcb6d4832.jpg",
+  "prompt": "A young woman dancing, vibrant red hair, wearing a flowing white dress with intricate floral patterns, delicate lace sleeves, and sheer skirt, with soft golden highlights in the sunlight casting gentle shadows on her face and dress. The background is blurred to emphasize her movement, featuring a mix of warm earthy tones and cool blue hues, creating an ethereal atmosphere. High resolution, detailed rendering, cinematic lighting, shallow depth of field, smooth texture, dynamic composition.",
+  "negative_prompt": "static, blurry, low quality",
+  "fps": 12,
+  "duration": 4,
+  "seed": 762615,
+  "tiled": true,
+  "num_inference_steps": 20,
+  "cfg_scale": 1,
+  "motion_strength": 0.5,
+  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/videos",
+  "task_id": "video_1756200522739_rmh2rlhj6"
 }
-AI service response: {
-  images: [
-    '/root/autodl-tmp/EasyVideo/outputs/images/img_bdb3cb37-01f0-4af0-b1bd-d5401344585d_20250824_161540_1_seed941816.jpg'
-  ],
-  task_id: 'bdb3cb37-01f0-4af0-b1bd-d5401344585d'
+AI service task creation response: { video_path: '', task_id: 'video_1756200522739_rmh2rlhj6' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756200522739_rmh2rlhj6
+AI-services response:  { progress: 5, status: '正在加载模型...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756200522739_rmh2rlhj6
+AI-services response:  { progress: 20, status: '正在优化提示词...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756200522739_rmh2rlhj6
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756200522739_rmh2rlhj6
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756200522739_rmh2rlhj6
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756200522739_rmh2rlhj6
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756200522739_rmh2rlhj6
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756200522739_rmh2rlhj6
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756200522739_rmh2rlhj6
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756200522739_rmh2rlhj6
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756200522739_rmh2rlhj6
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756200522739_rmh2rlhj6
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756200522739_rmh2rlhj6
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756200522739_rmh2rlhj6
+AI-services response:  {
+  progress: 100,
+  status: 'completed',
+  video_path: '/root/autodl-tmp/EasyVideo/outputs/videos/video_20250826_172937_video_1756200522739_rmh2rlhj6.mp4'
 }
-Removing task bdb3cb37-01f0-4af0-b1bd-d5401344585d from pool (reason: completed)
-Removing task bdb3cb37-01f0-4af0-b1bd-d5401344585d from pool (reason: completed)
-Sending request to AI service: {
-  "prompt": "A tiny red dragon sleeps curled up in a nest on a medieval wizard's table]. Shot with a macro lens (f/2.8, 50mm) and a Canon EOSR5, the soft focus captures [the cozy morning light filtering through a near by window]. The pastel colors and whimsical steam shapes enhance the serene atmosphere, evoking a DnD RPG setting. The image is rendered in 16K and 8K, highlighting [the intricate details and medieval charm",
-  "negative_prompt": "blurry, low resolution, distorted, extra limbs, deformed hands, unrealistic colors, text, watermark, logo, cropped, bad anatomy, oversaturated\n",
-  "width": 512,
-  "height": 512,
-  "seed": 310148,
-  "num_images": 1,
-  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/images",
-  "task_id": "5663cc43-7e04-4e9d-ac53-945acfd0b47e"
-}
-AI service response: {
-  images: [
-    '/root/autodl-tmp/EasyVideo/outputs/images/img_5663cc43-7e04-4e9d-ac53-945acfd0b47e_20250824_161810_1_seed310148.jpg'
-  ],
-  task_id: '5663cc43-7e04-4e9d-ac53-945acfd0b47e'
-}
-Removing task 5663cc43-7e04-4e9d-ac53-945acfd0b47e from pool (reason: completed)
-Removing task 5663cc43-7e04-4e9d-ac53-945acfd0b47e from pool (reason: completed)
-Progress monitoring error: read ECONNRESET
-Sending request to AI service: {
-  "prompt": "A tiny red dragon sleeps curled up in a nest on a medieval wizard's table]. Shot with a macro lens (f/2.8, 50mm) and a Canon EOSR5, the soft focus captures [the cozy morning light filtering through a near by window]. The pastel colors and whimsical steam shapes enhance the serene atmosphere, evoking a DnD RPG setting. The image is rendered in 16K and 8K, highlighting [the intricate details and medieval charm",
-  "negative_prompt": "blurry, low resolution, distorted, extra limbs, deformed hands, unrealistic colors, text, watermark, logo, cropped, bad anatomy, oversaturated\n",
-  "width": 1024,
-  "height": 1024,
-  "seed": 42,
-  "num_images": 1,
-  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/images",
-  "task_id": "0811b985-5c11-40ca-8e82-a32b86e720d3"
-}
-AI service response: {
-  images: [
-    '/root/autodl-tmp/EasyVideo/outputs/images/img_0811b985-5c11-40ca-8e82-a32b86e720d3_20250824_162123_1_seed42.jpg'
-  ],
-  task_id: '0811b985-5c11-40ca-8e82-a32b86e720d3'
-}
-Removing task 0811b985-5c11-40ca-8e82-a32b86e720d3 from pool (reason: completed)
-Removing task 0811b985-5c11-40ca-8e82-a32b86e720d3 from pool (reason: completed)
-Sending request to AI service: {
-  "prompt": "A tiny red dragon sleeps curled up in a nest on a medieval wizard's table]. Shot with a macro lens (f/2.8, 50mm) and a Canon EOSR5, the soft focus captures [the cozy morning light filtering through a near by window]. The pastel colors and whimsical steam shapes enhance the serene atmosphere, evoking a DnD RPG setting. The image is rendered in 16K and 8K, highlighting [the intricate details and medieval charm",
-  "negative_prompt": "blurry, low resolution, distorted, extra limbs, deformed hands, unrealistic colors, text, watermark, logo, cropped, bad anatomy, oversaturated\n",
-  "width": 768,
-  "height": 1024,
-  "seed": 42,
-  "num_images": 1,
-  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/images",
-  "task_id": "9f3f2a10-2922-4d64-9217-1f53825cac80"
-}
-AI service response: {
-  images: [
-    '/root/autodl-tmp/EasyVideo/outputs/images/img_9f3f2a10-2922-4d64-9217-1f53825cac80_20250824_162434_1_seed42.jpg'
-  ],
-  task_id: '9f3f2a10-2922-4d64-9217-1f53825cac80'
-}
-Removing task 9f3f2a10-2922-4d64-9217-1f53825cac80 from pool (reason: completed)
-Removing task 9f3f2a10-2922-4d64-9217-1f53825cac80 from pool (reason: completed)
-Sending request to AI service: {
-  "prompt": "A tiny red dragon sleeps curled up in a nest on a medieval wizard's table]. Shot with a macro lens (f/2.8, 50mm) and a Canon EOSR5, the soft focus captures [the cozy morning light filtering through a near by window]. The pastel colors and whimsical steam shapes enhance the serene atmosphere, evoking a DnD RPG setting. The image is rendered in 16K and 8K, highlighting [the intricate details and medieval charm",
-  "negative_prompt": "blurry, low resolution, distorted, extra limbs, deformed hands, unrealistic colors, text, watermark, logo, cropped, bad anatomy, oversaturated\n",
-  "width": 768,
-  "height": 1024,
-  "seed": 42,
-  "num_images": 1,
-  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/images",
-  "task_id": "f07634b7-1393-4c76-8be5-fda7bbd95f7c"
-}
-AI service response: {
-  images: [
-    '/root/autodl-tmp/EasyVideo/outputs/images/img_f07634b7-1393-4c76-8be5-fda7bbd95f7c_20250824_162842_1_seed42.jpg'
-  ],
-  task_id: 'f07634b7-1393-4c76-8be5-fda7bbd95f7c'
-}
-Removing task f07634b7-1393-4c76-8be5-fda7bbd95f7c from pool (reason: completed)
-Removing task f07634b7-1393-4c76-8be5-fda7bbd95f7c from pool (reason: completed)
-Cleaning up old task: 0489ba21-bacc-4f96-8ff3-d6d096f21fea
-Cleaning up old task: 9d33038a-7a8d-4490-8d8f-b9dcdf354ade
-Cleaned up 2 old tasks
-Sending request to AI service: {
-  "prompt": "A photograph from [the opening of the Eiffel Tower in Paris in 1889] captures the monumental occasion with a grand, historic ambiance. The image shows [the towering iron structure, still under construction, against a backdrop of a bustling Parisian skyline]. Crowds of people, dressed in late 19th-century attire, are gathered around, marveling at the iconic new landmark. The photograph exudes a sense of excitement and wonder as [Parisians celebrate the unveiling of this groundbreaking architectural feat].",
-  "negative_prompt": "blurry, low resolution, distorted, extra limbs, deformed hands, unrealistic colors, text, watermark, logo, cropped, bad anatomy, oversaturated\n",
-  "width": 768,
-  "height": 1024,
-  "seed": 42,
-  "num_images": 1,
-  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/images",
-  "task_id": "75956d92-213d-428c-86b0-86a8dbe25800"
-}
-AI service response: {
-  images: [
-    '/root/autodl-tmp/EasyVideo/outputs/images/img_75956d92-213d-428c-86b0-86a8dbe25800_20250824_171617_1_seed42.jpg'
-  ],
-  task_id: '75956d92-213d-428c-86b0-86a8dbe25800'
-}
-Removing task 75956d92-213d-428c-86b0-86a8dbe25800 from pool (reason: completed)
-Removing task 75956d92-213d-428c-86b0-86a8dbe25800 from pool (reason: completed)
-Sending request to AI service: {
-  "prompt": "A photograph from [the opening of the Eiffel Tower in Paris in 1889] captures the monumental occasion with a grand, historic ambiance. The image shows [the towering iron structure, still under construction, against a backdrop of a bustling Parisian skyline]. Crowds of people, dressed in late 19th-century attire, are gathered around, marveling at the iconic new landmark. The photograph exudes a sense of excitement and wonder as [Parisians celebrate the unveiling of this groundbreaking architectural feat].",
-  "negative_prompt": "blurry, low resolution, distorted, extra limbs, deformed hands, unrealistic colors, text, watermark, logo, cropped, bad anatomy, oversaturated\n",
-  "width": 768,
-  "height": 1024,
-  "seed": 42,
-  "num_images": 1,
-  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/images",
-  "task_id": "c42f795d-0cdf-4cd4-ad5f-6ace888d5332"
-}
-AI service response: {
-  images: [
-    '/root/autodl-tmp/EasyVideo/outputs/images/img_c42f795d-0cdf-4cd4-ad5f-6ace888d5332_20250824_171939_1_seed42.jpg'
-  ],
-  task_id: 'c42f795d-0cdf-4cd4-ad5f-6ace888d5332'
-}
-Removing task c42f795d-0cdf-4cd4-ad5f-6ace888d5332 from pool (reason: completed)
-Removing task c42f795d-0cdf-4cd4-ad5f-6ace888d5332 from pool (reason: completed)
-Progress monitoring error: read ECONNRESET
-Cleaning up old task: 51d9eab9-5595-4f4a-ba94-81b47d584a27
-Cleaning up old task: bdb3cb37-01f0-4af0-b1bd-d5401344585d
-Cleaning up old task: 5663cc43-7e04-4e9d-ac53-945acfd0b47e
-Cleaned up 3 old tasks
-Sending request to AI service: {
-  "prompt": "Title: “Echoes of the Lost City” – Bold, atmospheric text at the top, evoking mystery and adventure. Main Character: A rugged explorer with a worn leather jacket, a map in hand, standing at the edge of an ancient jungle. The character’s face is partially shadowed, adding intrigue.\nBackground: The lost city, overgrown with vines, looming through the mist. A faint, golden glow emanates from the depths of the ruins.\nSupporting Characters: A brave female archaeologist with a determined expression, a large dog companion. Weedar Branding: The branding subtly placed at the bottom corner, maintaining the realism of the scene.\nTagline: “Discover the secrets buried beneath the earth.”\nVisual Style: Dark, moody lighting with a realistic and cinematic look, utilizing muted earth tones and textures that suggest age and decay.",
-  "negative_prompt": "blurry, low resolution, distorted, extra limbs, deformed hands, unrealistic colors, text, watermark, logo, cropped, bad anatomy, oversaturated\n",
-  "width": 768,
-  "height": 1024,
-  "seed": 42,
-  "num_images": 1,
-  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/images",
-  "task_id": "d7806231-fc02-4419-8e71-5f7c6fc31d61"
-}
-AI service response: {
-  images: [
-    '/root/autodl-tmp/EasyVideo/outputs/images/img_d7806231-fc02-4419-8e71-5f7c6fc31d61_20250824_174724_1_seed42.jpg'
-  ],
-  task_id: 'd7806231-fc02-4419-8e71-5f7c6fc31d61'
-}
-Removing task d7806231-fc02-4419-8e71-5f7c6fc31d61 from pool (reason: completed)
-Removing task d7806231-fc02-4419-8e71-5f7c6fc31d61 from pool (reason: completed)
-Sending request to AI service: {
-  "prompt": "Title: “Echoes of the Lost City” – Bold, atmospheric text at the top, evoking mystery and adventure. Main Character: A rugged explorer with a worn leather jacket, a map in hand, standing at the edge of an ancient jungle. The character’s face is partially shadowed, adding intrigue.\nBackground: The lost city, overgrown with vines, looming through the mist. A faint, golden glow emanates from the depths of the ruins.\nSupporting Characters: A brave female archaeologist with a determined expression, a large dog companion. Weedar Branding: The branding subtly placed at the bottom corner, maintaining the realism of the scene.\nTagline: “Discover the secrets buried beneath the earth.”\nVisual Style: Dark, moody lighting with a realistic and cinematic look, utilizing muted earth tones and textures that suggest age and decay.",
-  "negative_prompt": "blurry, low resolution, distorted, extra limbs, deformed hands, unrealistic colors, text, watermark, logo, cropped, bad anatomy, oversaturated\n",
-  "width": 768,
-  "height": 1024,
-  "seed": 42,
-  "num_images": 1,
-  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/images",
-  "task_id": "8df8feed-feb4-4048-810c-4c2b85cd74b0"
-}
-AI service response: {
-  images: [
-    '/root/autodl-tmp/EasyVideo/outputs/images/img_8df8feed-feb4-4048-810c-4c2b85cd74b0_20250824_174927_1_seed42.jpg'
-  ],
-  task_id: '8df8feed-feb4-4048-810c-4c2b85cd74b0'
-}
-Removing task 8df8feed-feb4-4048-810c-4c2b85cd74b0 from pool (reason: completed)
-Removing task 8df8feed-feb4-4048-810c-4c2b85cd74b0 from pool (reason: completed)
-Cleaning up old task: 0811b985-5c11-40ca-8e82-a32b86e720d3
-Cleaning up old task: 9f3f2a10-2922-4d64-9217-1f53825cac80
-Cleaning up old task: f07634b7-1393-4c76-8be5-fda7bbd95f7c
-Cleaned up 3 old tasks
+Tasks pool removing task video_1756200522739_rmh2rlhj6 from pool (reason: completed)
+Tasks pool write task video_1756200522739_rmh2rlhj6 to JSON for it completed
+Task video_1756200522739_rmh2rlhj6 已保存到 ./task_completed.json
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: Cannot read property 'progress' of undefined
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: connect ECONNREFUSED 127.0.0.1:8000
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: connect ECONNREFUSED 127.0.0.1:8000
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: connect ECONNREFUSED 127.0.0.1:8000
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: connect ECONNREFUSED 127.0.0.1:8000
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: connect ECONNREFUSED 127.0.0.1:8000
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: connect ECONNREFUSED 127.0.0.1:8000
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: connect ECONNREFUSED 127.0.0.1:8000
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: connect ECONNREFUSED 127.0.0.1:8000
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: connect ECONNREFUSED 127.0.0.1:8000
+Trying to Update progress for task_id:  video_1756188962409_vf1t0ytel
+Progress check error for video_1756188962409_vf1t0ytel: connect ECONNREFUSED 127.0.0.1:8000
