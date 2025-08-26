@@ -33,6 +33,7 @@ class VideoGenerator:
         self.max_duration = 30  # 最大视频时长（秒）
         self.default_fps = 24
         self.config = None
+        self.set_step_callback = None
         
         # 尝试加载配置
         self._load_config()
@@ -118,7 +119,7 @@ class VideoGenerator:
                 torch_dtype=torch.bfloat16,
                 device="cuda",
                 redirect_common_files=False,
-                model_configs=model_configs
+                model_configs=model_configs,
             )
             
             # 启用显存管理
@@ -135,6 +136,13 @@ class VideoGenerator:
             self.is_model_loaded = False
             raise RuntimeError(f"Video generation model failed to load: {e}")
     
+    def callback_function(step: int, timestep: int or float, latents: torch.Tensor):
+        """每一扩散步的回调函数"""
+        logger.info(f"CallBackFun every step: {step+1}, timestep: {timestep}")
+
+    def set_step_callback(self, step_callback: Callable[[int, int or float, torch.Tensor], None]):
+        self.set_step_callback(step_callback)
+
     def set_progress_callback(self, task_id: str, callback: Callable[[int, str], None]):
         """设置进度回调函数"""
         progress_callbacks[task_id] = callback
@@ -218,7 +226,7 @@ class VideoGenerator:
                     tiled=tiled,
                     num_inference_steps=num_inference_steps,
                     cfg_scale=cfg_scale,
-                    input_image=image
+                    input_image=image,
                 )
             
             self._update_progress(task_id, 80, "正在保存视频...")

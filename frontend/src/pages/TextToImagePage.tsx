@@ -5,7 +5,7 @@ import {
   Download,
   Copy,
   Trash2,
-  Settings,
+  Eye,
   Pause,
   Sparkles,
   Grid,
@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { GenerationService } from '@/services/generationService';
 import LoadingSpinner from '@/components/LoadingSpinner';
+import ImagePreviewer from '@/components/ImagePreview';
 
 import { TextToImageRequest, GeneratedImage, GenerationTask } from '@/types/generation';
 import toast from 'react-hot-toast';
@@ -70,7 +71,8 @@ const TextToImagePage: React.FC = () => {
   const [selectedImages, setSelectedImages] = useState<Set<string>>(new Set());
   const [progress, setProgress] = useState(0);
   const [progressStatus, setProgressStatus] = useState('');
-  const progressCleanupRef = useRef<(() => void) | null>(null);
+    const progressCleanupRef = useRef<(() => void) | null>(null);
+const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 
   // 清理进度监听
   useEffect(() => {
@@ -276,7 +278,12 @@ const TextToImagePage: React.FC = () => {
       toast.error('批量删除失败');
     }
   };
-
+  
+  const handlePreviewImage = (image: GeneratedImage) => {
+    const imgUrl = getFullImageUrl(image.url);
+    setPreviewUrl(imgUrl);
+  };
+    
   const filteredImages = generatedImages.filter(image =>
     searchQuery === '' || 
     image.prompt.toLowerCase().includes(searchQuery.toLowerCase())
@@ -616,6 +623,7 @@ const TextToImagePage: React.FC = () => {
                     src={getFullImageUrl(image.url)}
                     alt={image.prompt}
                     className="w-full h-full object-cover"
+                    onClick={() => handlePreviewImage(image)}
                   />
                   
                   {/* Selection Checkbox */}
@@ -638,7 +646,14 @@ const TextToImagePage: React.FC = () => {
                   
                   {/* Overlay Actions */}
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-200 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <div className="flex space-x-2">
+                        <div className="flex space-x-2">
+                        <button
+                        onClick={() => handlePreviewImage(image)}
+                        className="p-2 bg-white text-gray-900 rounded-lg hover:bg-gray-100 transition-colors"
+                        title="预览"
+                      >
+                        <Eye className="w-4 h-4" />
+                      </button>
                       <button
                         onClick={() => handleDownloadImage(image)}
                         className="p-2 bg-white text-gray-900 rounded-lg hover:bg-gray-100 transition-colors"
@@ -687,7 +702,8 @@ const TextToImagePage: React.FC = () => {
             ))}
           </div>
         </div>
-      )}
+          )}
+          <ImagePreviewer url={previewUrl} onClose={() => setPreviewUrl(null)} />
     </div>
   );
 };

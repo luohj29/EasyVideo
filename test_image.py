@@ -10,14 +10,14 @@ import shutil
 import sys
 import torch
 import gc
-
+l
 logger = logging.getLogger(__name__)
 
 # Add DiffSynth-Studio to path
 sys.path.append('/root/autodl-tmp/DiffSynth-Studio')
 
 try:
-    from modelscope import FluxPipeline
+    from modelscope import FluxPipelinel
     FLUX_AVAILABLE = True
     logger.info("FLUX模块导入成功")
 except ImportError as e:
@@ -61,7 +61,7 @@ class ImageGenerator:
                     self.model_path = flux_model.get('path')
                     logger.info(f"FLUX model path configured: {self.model_path}")
                     
-        except Exception as e:
+        except Exceptionl as e:
             logger.warning(f"Could not load config: {e}")
     
     def _initialize_model(self):
@@ -132,8 +132,7 @@ class ImageGenerator:
     async def generate(self, prompt: str, negative_prompt: str = "", 
                       width: int = 1024, height: int = 1024, 
                       seed: Optional[int] = None, num_images: int = 1,
-                      output_dir: str = "", task_id: str = "", 
-                      inference_steps: int = 20, CFG_scale: int = 7.5,
+                      output_dir: str = "", task_id: str = "", inference_steps: int =20,
                       progress_callback: Optional[callable] = None) -> List[str]:
         """生成图像"""
         try:
@@ -195,7 +194,7 @@ class ImageGenerator:
             # 使用真实模型生成
             generated_paths = await self._generate_with_model(
                 optimized_prompt, full_negative_prompt, width, height, 
-                seed, num_images, image_paths, inference_steps, CFG_scale,  progress_callback
+                seed, num_images, image_paths, inference_steps, progress_callback
             )
             
             # 自动卸载模型以释放内存
@@ -211,8 +210,7 @@ class ImageGenerator:
     
     async def _generate_with_model(self, prompt: str, negative_prompt: str,
                                   width: int, height: int, seed: int,
-                                  num_images: int, image_paths: List[str],
-                                  inference_steps: int = 20, CFG_scale: int =7.0,
+                                  num_images: int, image_paths: List[str], inference_steps: int, 
                                   progress_callback: Optional[callable] = None) -> List[str]:
         """使用真实模型生成图像"""
         try:
@@ -235,16 +233,11 @@ class ImageGenerator:
                     progress_callback(progress, f"generating_image_{i+1}")
                 
                 if self.model_type == "flux_krea":
-                    gen = torch.Generator(device="cuda").manual_seed(current_seed)
                     image = self.pipe(
                         prompt,
-                        negative_prompt=negative_prompt if negative_prompt else None,
                         height=height,
                         width=width,
-                        generator = gen,
-                        num_inference_steps=inference_steps,
-                        num_images_per_prompt = num_images,
-                        guidance_scale=CFG_scale,
+                        guidance_scale=4.5,
                     ).images[0]
                 elif self.model_type == "flux_kontext":
                     image = self.pipe(
@@ -253,8 +246,9 @@ class ImageGenerator:
                         seed=current_seed,
                         width=width,
                         height=height,
+                        num_inference_steps=30,
                         embedded_guidance=4.5,
-                        num_inference_steps = inference_steps,
+                        inference_steps=inference_steps,
                         cfg_scale=2.0 if negative_prompt else None
                     )
                 else:
@@ -399,8 +393,9 @@ if __name__ == "__main__":
             prompt="一只可爱的小猫在花园里玩耍",
             width=1024,
             height=1024,
-            num_images=2,
-            output_dir="/tmp/test_images",
+            num_images=1,
+            output_dir="./test_images",
+            inference_steps = 10,
             task_id="test_001"
         )
         
@@ -414,4 +409,4 @@ if __name__ == "__main__":
         time_est = generator.estimate_generation_time(2, 1024, 1024)
         print(f"Estimated time: {time_est} seconds")
     
-    asyncio
+    asyncio.run(test_generator())

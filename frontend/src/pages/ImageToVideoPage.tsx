@@ -56,7 +56,7 @@ const showSettings = true;
 
 const exampleVideo: GeneratedVideo = {
   id: "video_001",
-  url: "/video/FLFKJ_00021.mp4",
+  url: "/outputs/videos/video_20250823_153004_video_1755934153715_4eapnf9er.mp4",
   thumbnail_url: "/images/test.jpg",
   filename: "FLFKJ_00021.mp4",
   duration: 12.5,      // 秒
