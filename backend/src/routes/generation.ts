@@ -5,31 +5,15 @@ import fs from 'fs-extra';
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 import { EventEmitter } from 'events';
-import { GeneratedImage, GeneratedVideo} from '@/types/generation';
-import { TasksPool, Task, JSON_PATH, JSON_VIDEO_PATH, JSON_IMAGE_PATH} from '@/services/task';
+import { getTypeFromJson } from '../services/storage';
+import { TasksPool, Task} from '../services/task';
+import { JSON_IMAGE_PATH, JSON_VIDEO_PATH } from '../config/storage_config';
+
 
 const router = express.Router();
 
-const tasks = new TasksPool(JSON_PATH);
+const tasks = new TasksPool();
 
-
-
-type jsonType = "image_to_video" | "text_to_image"
-type jsonResultType = GeneratedVideo[] | GeneratedImage[]
-
-const getTypeFromJson = async (
-  type: jsonType,
-  jsonPath: string = JSON_PATH
-): Promise<jsonResultType> => {
-  try {
-    const fileContent = await fs.readFile(jsonPath, "utf8");
-    const data = JSON.parse(fileContent);
-    return data || [];
-  } catch (err) {
-    console.error(`加载 ${type} 类型数据失败:`, err);
-    return []; // 出错时返回空数组，避免调用方报错
-  }
-};
 
 const taskEmitter = new EventEmitter();
 
@@ -410,7 +394,7 @@ router.post('/image-to-video', upload.single('image'), async (req, res) => {
       motion_prompt,
       negative_prompt = "static, blurry, low quality",
       fps = 15,
-      duration = 4,
+      num_frames = 4,
       seed,
       tiled = true,
       num_inference_steps = 20,
@@ -490,7 +474,7 @@ router.post('/image-to-video', upload.single('image'), async (req, res) => {
       prompt,
       negative_prompt,
       fps,
-      duration,
+      num_frames,
       seed,
       tiled,
       num_inference_steps,
@@ -610,6 +594,7 @@ async function processVideoGeneration(taskId: string, params: any) {
               }],
             };
             tasks.addTask(task);
+            tasks.removeTaskFromPool(task.id, 'completed');
 
             if (params.project_id) {
               await saveToProject(params.project_id, 'video', task.result);
@@ -846,8 +831,6 @@ async function processStoryboardGeneration(taskId: string, params: any) {
   }
 }
 
-
-
 // Get task status
 router.get('/task/:taskId', async (req, res) => {
   try {
@@ -967,13 +950,8 @@ router.get("/storage/video", async (req: Request, res: Response) => {
 
 //get storage image
 router.get("/storage/image", async (req: Request, res: Response) => {
-  const { type } = req.query;
-
-  if (!type || typeof type !== "string") {
-    return res.status(400).json({ error: "缺少参数 type" });
-  }
   const result = await getTypeFromJson("text_to_image", JSON_IMAGE_PATH);
-
+  console.log("Storage: return stored images", result);
   return res.json({data: result });
 });
 

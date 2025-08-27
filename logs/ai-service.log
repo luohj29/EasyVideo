@@ -1,132 +1,30 @@
 INFO:__main__:AI service started with lazy loading support
 INFO:     Will watch for changes in these directories: ['/root/autodl-tmp/EasyVideo/ai-service']
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [2949] using WatchFiles
+INFO:     Started reloader process [2395] using WatchFiles
 INFO:__mp_main__:AI service started with lazy loading support
 INFO:api_server:AI service started with lazy loading support
-INFO:     Started server process [3112]
+INFO:     Started server process [2508]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-INFO:     127.0.0.1:36494 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:36510 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:36518 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:35368 - "GET /health HTTP/1.1" 200 OK
-INFO:api_server:Video generation task queued for task_id: video_1756187416546_171kawjcd
-INFO:     127.0.0.1:45192 - "POST /video/generate HTTP/1.1" 200 OK
-INFO:modules.video_generator:Model path: /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B
-INFO:modules.video_generator:Output dir: /root/autodl-tmp/EasyVideo/outputs
-INFO:api_server:VideoGenerator initialized on demand
-ERROR:api_server:Error in video generation pipeline: name 'generatorgenerate_from_image' is not defined
-INFO:api_server:VideoGenerator model unloaded successfully
-INFO:     127.0.0.1:39414 - "GET /task/progress/video_1756187416546_171kawjcd HTTP/1.1" 200 OK
-INFO:api_server:Cleaned up task progress for task_id: video_1756187416546_171kawjcd
-INFO:modules.prompt_optimizer:Qwen model path configured: /root/autodl-tmp/Qwen/Qwen2.5-VL-3B-Instruct
-INFO:api_server:PromptOptimizer initialized on demand
-INFO:modules.prompt_optimizer:Optimizing prompt: 一个女孩
-INFO:modules.prompt_optimizer:Optimization type: 通用型
-INFO:modules.prompt_optimizer:Task type: image
-INFO:modules.prompt_optimizer:Model not loaded, initializing now...
-INFO:modules.prompt_optimizer:Loading Qwen2.5-VL model on demand...
-INFO:accelerate.utils.modeling:We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.99s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.75s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.78s/it]
-The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
-You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
-INFO:modules.prompt_optimizer:Qwen2.5-VL model loaded successfully
-INFO:modules.prompt_optimizer:AI optimized prompt: A detailed, realistic image of a young girl with long dark hair styled in loose waves, wearing a white blouse and black skirt. She is standing in a sunlit garden with lush green grass and blooming flowers around her. The girl has a gentle smile on her face, with warm sunlight casting soft shadows on her face and clothing. The background features a mix of blurred trees and clear blue sky, creating a serene atmosphere. High resolution, sharp focus, and vibrant colors to bring the scene to life.
-INFO:modules.prompt_optimizer:Unloading Qwen2.5-VL model to free memory...
-INFO:modules.prompt_optimizer:Qwen2.5-VL model unloaded successfully
-INFO:api_server:PromptOptimizer model unloaded successfully
-INFO:     127.0.0.1:59996 - "POST /prompt/optimize HTTP/1.1" 200 OK
-INFO:modules.image_generator:FLUX model path configured: /root/autodl-tmp/black-forest-labs/FLUX.1-Kontext-dev
-INFO:api_server:ImageGenerator initialized on demand
-INFO:modules.image_generator:Loading FLUX.1-Krea-dev model on demand from: /root/autodl-tmp/black-forest-labs/FLUX.1-Kontext-dev
-Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
-Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 18.76it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 18.71it/s]
-Loading pipeline components...:  14%|█▍        | 1/7 [00:00<00:00,  6.46it/s]You set `add_prefix_space`. The tokenizer needs to be converted from the slow tokenizers
-Loading pipeline components...:  43%|████▎     | 3/7 [00:00<00:00,  5.47it/s]
-Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s][A
-Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:00,  7.63it/s][A
-Loading checkpoint shards:  67%|██████▋   | 2/3 [00:00<00:00,  7.99it/s][ALoading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00,  9.82it/s]
-Loading pipeline components...:  71%|███████▏  | 5/7 [00:00<00:00,  4.94it/s]Loading pipeline components...: 100%|██████████| 7/7 [00:01<00:00,  6.51it/s]
-INFO:modules.image_generator:FLUX.1-Krea-dev model loaded successfully
-INFO:modules.prompt_optimizer:Qwen model path configured: /root/autodl-tmp/Qwen/Qwen2.5-VL-3B-Instruct
-INFO:modules.prompt_optimizer:Optimizing prompt: A detailed, realistic image of a young girl with long dark hair styled in loose waves, wearing a white blouse and black skirt. She is standing in a sunlit garden with lush green grass and blooming flowers around her. The girl has a gentle smile on her face, with warm sunlight casting soft shadows on her face and clothing. The background features a mix of blurred trees and clear blue sky, creating a serene atmosphere. High resolution, sharp focus, and vibrant colors to bring the scene to life.
-INFO:modules.prompt_optimizer:Optimization type: 通用型
-INFO:modules.prompt_optimizer:Task type: image
-INFO:modules.prompt_optimizer:Model not loaded, initializing now...
-INFO:modules.prompt_optimizer:Loading Qwen2.5-VL model on demand...
-INFO:accelerate.utils.modeling:We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.13s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.01it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.01s/it]
-INFO:modules.prompt_optimizer:Qwen2.5-VL model loaded successfully
-INFO:modules.prompt_optimizer:AI optimized prompt: "A detailed, realistic image of a young girl with long, dark, wavy hair, dressed in a white blouse and black skirt. She stands in a sunlit garden with lush green grass and blooming flowers surrounding her. Her gentle smile casts warm sunlight on her face and clothing, creating soft shadows. Background includes blurred trees and a clear blue sky, enhancing the serene atmosphere. High resolution, sharp focus, and vibrant colors for lifelike imagery."
-INFO:modules.prompt_optimizer:Unloading Qwen2.5-VL model to free memory...
-INFO:modules.prompt_optimizer:Qwen2.5-VL model unloaded successfully
-INFO:modules.image_generator:Original prompt: A detailed, realistic image of a young girl with long dark hair styled in loose waves, wearing a white blouse and black skirt. She is standing in a sunlit garden with lush green grass and blooming flowers around her. The girl has a gentle smile on her face, with warm sunlight casting soft shadows on her face and clothing. The background features a mix of blurred trees and clear blue sky, creating a serene atmosphere. High resolution, sharp focus, and vibrant colors to bring the scene to life.
-INFO:modules.image_generator:Optimized prompt: "A detailed, realistic image of a young girl with long, dark, wavy hair, dressed in a white blouse and black skirt. She stands in a sunlit garden with lush green grass and blooming flowers surrounding her. Her gentle smile casts warm sunlight on her face and clothing, creating soft shadows. Background includes blurred trees and a clear blue sky, enhancing the serene atmosphere. High resolution, sharp focus, and vibrant colors for lifelike imagery."
-INFO:modules.image_generator:Generating 1 images with FLUX model
-INFO:modules.image_generator:Prompt: "A detailed, realistic image of a young girl with long, dark, wavy hair, dressed in a white blouse and black skirt. She stands in a sunlit garden with lush green grass and blooming flowers surrounding her. Her gentle smile casts warm sunlight on her face and clothing, creating soft shadows. Background includes blurred trees and a clear blue sky, enhancing the serene atmosphere. High resolution, sharp focus, and vibrant colors for lifelike imagery."
-INFO:modules.image_generator:Size: 512x512, Seed: 388600
-INFO:modules.image_generator:Generating image 1/1 with seed 388600
-Token indices sequence length is longer than the specified maximum sequence length for this model (92 > 77). Running this sequence through the model will result in indexing errors
-The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: ['high resolution, sharp focus, and vibrant colors for lifelike imagery."']
-  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:10<03:24, 10.75s/it] 10%|█         | 2/20 [00:13<01:48,  6.01s/it] 15%|█▌        | 3/20 [00:16<01:16,  4.50s/it] 20%|██        | 4/20 [00:18<01:00,  3.79s/it] 25%|██▌       | 5/20 [00:21<00:50,  3.39s/it] 30%|███       | 6/20 [00:24<00:43,  3.14s/it] 35%|███▌      | 7/20 [00:26<00:38,  2.97s/it] 40%|████      | 8/20 [00:29<00:34,  2.87s/it] 45%|████▌     | 9/20 [00:32<00:30,  2.80s/it] 50%|█████     | 10/20 [00:34<00:27,  2.77s/it] 55%|█████▌    | 11/20 [00:37<00:24,  2.75s/it] 60%|██████    | 12/20 [00:40<00:21,  2.74s/it] 65%|██████▌   | 13/20 [00:42<00:19,  2.73s/it] 70%|███████   | 14/20 [00:45<00:16,  2.72s/it] 75%|███████▌  | 15/20 [00:48<00:13,  2.72s/it] 80%|████████  | 16/20 [00:51<00:10,  2.72s/it] 85%|████████▌ | 17/20 [00:53<00:08,  2.71s/it] 90%|█████████ | 18/20 [00:56<00:05,  2.71s/it] 95%|█████████▌| 19/20 [00:59<00:02,  2.71s/it]100%|██████████| 20/20 [01:01<00:00,  2.70s/it]100%|██████████| 20/20 [01:01<00:00,  3.09s/it]
-INFO:modules.image_generator:Unloading FLUX model to free memory...
-INFO:modules.image_generator:FLUX model unloaded successfully
-INFO:api_server:ImageGenerator model unloaded successfully
-INFO:     127.0.0.1:33896 - "POST /image/generate HTTP/1.1" 200 OK
-INFO:     127.0.0.1:33908 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:33914 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55050 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55060 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55064 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55070 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55076 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57030 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57034 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57038 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57050 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57066 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:37122 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:37126 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:37128 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:37134 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:37138 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:44494 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:44506 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:44512 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:44516 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:44526 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54616 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54620 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54622 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54638 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54648 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:36498 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:36500 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:36504 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:36514 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:36524 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:37432 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:37448 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:37456 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:37468 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:37480 - "GET /task/progress/c16019a3-c49e-449d-83de-07dc98591d13 HTTP/1.1" 200 OK
-INFO:api_server:Cleaned up task progress for task_id: c16019a3-c49e-449d-83de-07dc98591d13
-INFO:watchfiles.main:1 change detected
-WARNING:  WatchFiles detected changes in 'api_server.py'. Reloading...
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [3112]
-INFO:__mp_main__:AI service started with lazy loading support
-INFO:api_server:AI service started with lazy loading support
-INFO:     Started server process [5247]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-INFO:watchfiles.main:3 changes detected
-INFO:api_server:Video generation task queued for task_id: video_1756187703117_fcb7bw4kk
-INFO:     127.0.0.1:35084 - "POST /video/generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33430 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33438 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33438 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44234 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53288 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59044 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40222 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33394 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54788 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51594 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36476 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33934 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59762 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59778 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59778 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39066 - "GET /health HTTP/1.1" 200 OK
+INFO:api_server:Video generation task queued for task_id: video_1756266970311_gcskekdub
+INFO:     127.0.0.1:46214 - "POST /video/generate HTTP/1.1" 200 OK
 INFO:modules.video_generator:Model path: /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B
 INFO:modules.video_generator:Output dir: /root/autodl-tmp/EasyVideo/outputs
 INFO:api_server:VideoGenerator initialized on demand
@@ -137,19 +35,19 @@ Loading models from: ['/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/
 Loading models from: ['/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00001-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00002-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00003-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00004-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00005-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00006-of-00006.safetensors']
     model_name: wan_video_dit model_class: WanModel
         This model is initialized with extra kwargs: {'has_image_input': False, 'patch_size': [1, 2, 2], 'in_dim': 36, 'dim': 5120, 'ffn_dim': 13824, 'freq_dim': 256, 'text_dim': 4096, 'out_dim': 16, 'num_heads': 40, 'num_layers': 40, 'eps': 1e-06, 'require_clip_embedding': False}
-INFO:     127.0.0.1:43756 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
-2025-08-26 13:55:58,747 - modelscope - INFO - Target directory already exists, skipping creation.
+    The following models are loaded: ['wan_video_dit'].
+Loading models from: /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/models_t5_umt5-xxl-enc-bf16.pth
+INFO:     127.0.0.1:48782 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
+2025-08-27 11:56:54,966 - modelscope - INFO - Target directory already exists, skipping creation.
 INFO:watchfiles.main:1 change detected
 INFO:modules.video_generator:Video generation model loaded on demand successfully
 INFO:modules.prompt_optimizer:Qwen model path configured: /root/autodl-tmp/Qwen/Qwen2.5-VL-3B-Instruct
-INFO:modules.prompt_optimizer:Optimizing prompt: 一个女孩
+INFO:modules.prompt_optimizer:Optimizing prompt: 穿着中国民族传统服饰的美女,在和木门后面露出头,然后歪头温柔的笑了,眼睛眯起来像晚晚的月亮
 INFO:modules.prompt_optimizer:Optimization type: 通用型
 INFO:modules.prompt_optimizer:Task type: video
 INFO:modules.prompt_optimizer:Model not loaded, initializing now...
 INFO:modules.prompt_optimizer:Loading Qwen2.5-VL model on demand...
 INFO:accelerate.utils.modeling:We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
-    The following models are loaded: ['wan_video_dit'].
-Loading models from: /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/models_t5_umt5-xxl-enc-bf16.pth
     model_name: wan_video_text_encoder model_class: WanTextEncoder
     The following models are loaded: ['wan_video_text_encoder'].
 Loading models from: /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/Wan2.1_VAE.pth
@@ -162,281 +60,37 @@ No wan_video_image_encoder models available.
 No wan_video_motion_controller models available.
 No wan_video_vace models available.
 Downloading Model from https://www.modelscope.cn to directory: /root/autodl-tmp/EasyVideo/ai-service/models/Wan-AI/Wan2.1-T2V-1.3B
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.02it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.17it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.15it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.01s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.12it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.10it/s]
 The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
 You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
 INFO:modules.prompt_optimizer:Qwen2.5-VL model loaded successfully
-INFO:     127.0.0.1:55192 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
-INFO:modules.prompt_optimizer:AI optimized prompt: A young girl, running from left to right across the frame, with her hair flowing in the wind. She has big, expressive eyes and a determined expression on her face. Her arms are outstretched as she runs, conveying a sense of energy and joy. The camera follows her movement with a steady pan from left to right. As she reaches the end of the frame, the camera slowly zooms in on her face, capturing her wide smile. The background transitions smoothly from an open field to a vibrant sunset sky, creating a dynamic and visually appealing scene.
+INFO:modules.prompt_optimizer:AI optimized prompt: A beautiful woman wearing traditional Chinese attire stands in front of a wooden door. She slowly turns her head to the side, revealing a gentle and affectionate smile with her eyes slightly squinted like a crescent moon. The camera follows her as she moves gracefully, capturing the intricate details of her clothing and the texture of the wood. The scene transitions smoothly, focusing on her facial expressions and the subtle nuances of her movements, creating a serene and charming atmosphere.
 INFO:modules.prompt_optimizer:Unloading Qwen2.5-VL model to free memory...
 INFO:modules.prompt_optimizer:Qwen2.5-VL model unloaded successfully
-INFO:modules.video_generator:Optimized prompt: A young girl, running from left to right across the frame, with her hair flowing in the wind. She has big, expressive eyes and a determined expression on her face. Her arms are outstretched as she runs, conveying a sense of energy and joy. The camera follows her movement with a steady pan from left to right. As she reaches the end of the frame, the camera slowly zooms in on her face, capturing her wide smile. The background transitions smoothly from an open field to a vibrant sunset sky, creating a dynamic and visually appealing scene.
-INFO:modules.video_generator:Generating video with prompt: A young girl, running from left to right across the frame, with her hair flowing in the wind. She has big, expressive eyes and a determined expression on her face. Her arms are outstretched as she runs, conveying a sense of energy and joy. The camera follows her movement with a steady pan from left to right. As she reaches the end of the frame, the camera slowly zooms in on her face, capturing her wide smile. The background transitions smoothly from an open field to a vibrant sunset sky, creating a dynamic and visually appealing scene., cinematic lighting, smooth motion, realistic, high quality
-INFO:modules.video_generator:Parameters: seed=929240, tiled=True, steps=20, cfg_scale=7.5
-VAE encoding:   0%|          | 0/9 [00:00<?, ?it/s]VAE encoding:  11%|█         | 1/9 [00:00<00:07,  1.12it/s]INFO:     127.0.0.1:52696 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
-VAE encoding:  22%|██▏       | 2/9 [00:01<00:05,  1.28it/s]VAE encoding:  33%|███▎      | 3/9 [00:02<00:04,  1.34it/s]VAE encoding:  44%|████▍     | 4/9 [00:03<00:03,  1.37it/s]VAE encoding:  56%|█████▌    | 5/9 [00:03<00:02,  1.38it/s]VAE encoding:  67%|██████▋   | 6/9 [00:04<00:02,  1.39it/s]VAE encoding:  78%|███████▊  | 7/9 [00:05<00:01,  1.40it/s]VAE encoding:  89%|████████▉ | 8/9 [00:05<00:00,  1.40it/s]VAE encoding: 100%|██████████| 9/9 [00:06<00:00,  1.40it/s]VAE encoding: 100%|██████████| 9/9 [00:06<00:00,  1.37it/s]
-  0%|          | 0/20 [00:00<?, ?it/s]INFO:     127.0.0.1:53682 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
-  5%|▌         | 1/20 [00:32<10:14, 32.36s/it]INFO:     127.0.0.1:42766 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
- 10%|█         | 2/20 [00:56<08:18, 27.72s/it] 15%|█▌        | 3/20 [01:21<07:26, 26.26s/it]INFO:     127.0.0.1:38242 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
- 20%|██        | 4/20 [01:45<06:49, 25.59s/it]INFO:     127.0.0.1:36582 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
- 25%|██▌       | 5/20 [02:10<06:18, 25.22s/it]INFO:     127.0.0.1:39740 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
- 30%|███       | 6/20 [02:35<05:50, 25.00s/it]INFO:     127.0.0.1:45568 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
- 35%|███▌      | 7/20 [02:59<05:23, 24.86s/it] 40%|████      | 8/20 [03:24<04:57, 24.77s/it]INFO:     127.0.0.1:44424 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
- 45%|████▌     | 9/20 [03:48<04:31, 24.70s/it]INFO:     127.0.0.1:53756 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57368 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
- 50%|█████     | 10/20 [04:43<05:40, 34.07s/it]INFO:     127.0.0.1:39318 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
- 55%|█████▌    | 11/20 [05:08<04:40, 31.14s/it]INFO:     127.0.0.1:47760 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
- 60%|██████    | 12/20 [05:32<03:52, 29.12s/it]INFO:     127.0.0.1:54842 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
- 65%|██████▌   | 13/20 [05:57<03:14, 27.73s/it] 70%|███████   | 14/20 [06:21<02:40, 26.77s/it]INFO:     127.0.0.1:38564 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
- 75%|███████▌  | 15/20 [06:46<02:10, 26.11s/it]INFO:     127.0.0.1:58354 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
- 80%|████████  | 16/20 [07:11<01:42, 25.65s/it]INFO:     127.0.0.1:50636 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
- 85%|████████▌ | 17/20 [07:35<01:16, 25.33s/it]INFO:     127.0.0.1:50304 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
- 90%|█████████ | 18/20 [08:00<00:50, 25.12s/it]INFO:     127.0.0.1:59438 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
- 95%|█████████▌| 19/20 [08:24<00:24, 24.96s/it]100%|██████████| 20/20 [08:49<00:00, 24.85s/it]100%|██████████| 20/20 [08:49<00:00, 26.47s/it]
-INFO:     127.0.0.1:48336 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
-VAE decoding:   0%|          | 0/9 [00:00<?, ?it/s]VAE decoding:  11%|█         | 1/9 [00:01<00:10,  1.27s/it]VAE decoding:  22%|██▏       | 2/9 [00:02<00:08,  1.23s/it]VAE decoding:  33%|███▎      | 3/9 [00:03<00:07,  1.22s/it]VAE decoding:  44%|████▍     | 4/9 [00:04<00:06,  1.21s/it]VAE decoding:  56%|█████▌    | 5/9 [00:06<00:04,  1.21s/it]VAE decoding:  67%|██████▋   | 6/9 [00:07<00:03,  1.21s/it]VAE decoding:  78%|███████▊  | 7/9 [00:08<00:02,  1.21s/it]VAE decoding:  89%|████████▉ | 8/9 [00:09<00:01,  1.21s/it]VAE decoding: 100%|██████████| 9/9 [00:10<00:00,  1.21s/it]VAE decoding: 100%|██████████| 9/9 [00:10<00:00,  1.21s/it]
-Saving video:   0%|          | 0/81 [00:00<?, ?it/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+INFO:modules.video_generator:Optimized prompt: A beautiful woman wearing traditional Chinese attire stands in front of a wooden door. She slowly turns her head to the side, revealing a gentle and affectionate smile with her eyes slightly squinted like a crescent moon. The camera follows her as she moves gracefully, capturing the intricate details of her clothing and the texture of the wood. The scene transitions smoothly, focusing on her facial expressions and the subtle nuances of her movements, creating a serene and charming atmosphere.
+INFO:modules.video_generator:Generating video with prompt: A beautiful woman wearing traditional Chinese attire stands in front of a wooden door. She slowly turns her head to the side, revealing a gentle and affectionate smile with her eyes slightly squinted like a crescent moon. The camera follows her as she moves gracefully, capturing the intricate details of her clothing and the texture of the wood. The scene transitions smoothly, focusing on her facial expressions and the subtle nuances of her movements, creating a serene and charming atmosphere., cinematic lighting, smooth motion, realistic, high quality
+INFO:modules.video_generator:Parameters: seed=986849, tiled=True, steps=20, cfg_scale=7.5
+INFO:     127.0.0.1:53130 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
+VAE encoding:   0%|          | 0/9 [00:00<?, ?it/s]VAE encoding:  11%|█         | 1/9 [00:00<00:03,  2.07it/s]VAE encoding:  22%|██▏       | 2/9 [00:00<00:02,  2.55it/s]VAE encoding:  33%|███▎      | 3/9 [00:01<00:02,  2.77it/s]VAE encoding:  44%|████▍     | 4/9 [00:01<00:01,  2.88it/s]VAE encoding:  56%|█████▌    | 5/9 [00:01<00:01,  2.95it/s]VAE encoding:  67%|██████▋   | 6/9 [00:02<00:01,  2.99it/s]VAE encoding:  78%|███████▊  | 7/9 [00:02<00:00,  3.02it/s]VAE encoding:  89%|████████▉ | 8/9 [00:02<00:00,  3.02it/s]VAE encoding: 100%|██████████| 9/9 [00:03<00:00,  3.02it/s]VAE encoding: 100%|██████████| 9/9 [00:03<00:00,  2.91it/s]
+  0%|          | 0/20 [00:00<?, ?it/s]INFO:     127.0.0.1:32810 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
+  5%|▌         | 1/20 [00:17<05:28, 17.27s/it] 10%|█         | 2/20 [00:26<03:45, 12.51s/it] 15%|█▌        | 3/20 [00:35<03:07, 11.00s/it]INFO:     127.0.0.1:50844 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
+ 20%|██        | 4/20 [00:44<02:44, 10.30s/it] 25%|██▌       | 5/20 [00:54<02:28,  9.92s/it] 30%|███       | 6/20 [01:03<02:15,  9.69s/it]INFO:     127.0.0.1:48154 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
+ 35%|███▌      | 7/20 [01:12<02:04,  9.55s/it] 40%|████      | 8/20 [01:21<01:53,  9.46s/it] 45%|████▌     | 9/20 [01:31<01:43,  9.40s/it]INFO:     127.0.0.1:37642 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
+ 50%|█████     | 10/20 [02:11<03:10, 19.00s/it]INFO:     127.0.0.1:42654 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
+ 55%|█████▌    | 11/20 [02:20<02:24, 16.01s/it] 60%|██████    | 12/20 [02:30<01:51, 13.94s/it] 65%|██████▌   | 13/20 [02:39<01:27, 12.52s/it]INFO:     127.0.0.1:57974 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
+ 70%|███████   | 14/20 [02:48<01:09, 11.54s/it] 75%|███████▌  | 15/20 [02:57<00:54, 10.85s/it] 80%|████████  | 16/20 [03:07<00:41, 10.38s/it]INFO:     127.0.0.1:46198 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
+ 85%|████████▌ | 17/20 [03:16<00:30, 10.05s/it] 90%|█████████ | 18/20 [03:25<00:19,  9.82s/it] 95%|█████████▌| 19/20 [03:35<00:09,  9.66s/it]INFO:     127.0.0.1:52128 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
+100%|██████████| 20/20 [03:44<00:00,  9.54s/it]100%|██████████| 20/20 [03:44<00:00, 11.21s/it]
+VAE decoding:   0%|          | 0/9 [00:00<?, ?it/s]VAE decoding:  11%|█         | 1/9 [00:00<00:04,  1.65it/s]VAE decoding:  22%|██▏       | 2/9 [00:01<00:04,  1.75it/s]VAE decoding:  33%|███▎      | 3/9 [00:01<00:03,  1.78it/s]VAE decoding:  44%|████▍     | 4/9 [00:02<00:02,  1.78it/s]VAE decoding:  56%|█████▌    | 5/9 [00:02<00:02,  1.80it/s]VAE decoding:  67%|██████▋   | 6/9 [00:03<00:01,  1.81it/s]VAE decoding:  78%|███████▊  | 7/9 [00:03<00:01,  1.81it/s]INFO:     127.0.0.1:41802 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
+VAE decoding:  89%|████████▉ | 8/9 [00:04<00:00,  1.81it/s]VAE decoding: 100%|██████████| 9/9 [00:05<00:00,  1.81it/s]VAE decoding: 100%|██████████| 9/9 [00:05<00:00,  1.79it/s]
+Saving video:   0%|          | 0/37 [00:00<?, ?it/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-INFO:     127.0.0.1:35464 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
-Saving video:   1%|          | 1/81 [00:02<03:10,  2.38s/it]Saving video:  86%|████████▋ | 70/81 [00:02<00:00, 39.51it/s]Saving video: 100%|██████████| 81/81 [00:02<00:00, 30.79it/s]
+Saving video:   3%|▎         | 1/37 [00:02<01:22,  2.29s/it]Saving video: 100%|██████████| 37/37 [00:02<00:00, 15.78it/s]
 INFO:modules.video_generator:Unloading video generation model to free memory...
 INFO:modules.video_generator:Video generation model unloaded successfully
-INFO:modules.video_generator:Video generated successfully: /root/autodl-tmp/EasyVideo/outputs/videos/video_20250826_135559_video_1756187703117_fcb7bw4kk.mp4
-INFO:api_server:Video generation completed for task_id: video_1756187703117_fcb7bw4kk
+INFO:modules.video_generator:Video generated successfully: /root/autodl-tmp/EasyVideo/outputs/videos/video_20250827_115655_video_1756266970311_gcskekdub.mp4
+INFO:api_server:Video generation completed for task_id: video_1756266970311_gcskekdub
 INFO:api_server:VideoGenerator model unloaded successfully
-INFO:     127.0.0.1:52772 - "GET /task/progress/video_1756187703117_fcb7bw4kk HTTP/1.1" 200 OK
-INFO:watchfiles.main:1 change detected
-WARNING:  WatchFiles detected changes in 'api_server.py'. Reloading...
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [5247]
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "/root/miniconda3/envs/demo/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
-    exitcode = _main(fd, parent_sentinel)
-  File "/root/miniconda3/envs/demo/lib/python3.10/multiprocessing/spawn.py", line 125, in _main
-    prepare(preparation_data)
-  File "/root/miniconda3/envs/demo/lib/python3.10/multiprocessing/spawn.py", line 236, in prepare
-    _fixup_main_from_path(data['init_main_from_path'])
-  File "/root/miniconda3/envs/demo/lib/python3.10/multiprocessing/spawn.py", line 287, in _fixup_main_from_path
-    main_content = runpy.run_path(main_path,
-  File "/root/miniconda3/envs/demo/lib/python3.10/runpy.py", line 288, in run_path
-    code, fname = _get_code_from_file(run_name, path_name)
-  File "/root/miniconda3/envs/demo/lib/python3.10/runpy.py", line 257, in _get_code_from_file
-    code = compile(f.read(), fname, 'exec')
-  File "/root/autodl-tmp/EasyVideo/ai-service/api_server.py", line 76
-    : int = 4
-    ^
-SyntaxError: invalid syntax
-INFO:watchfiles.main:1 change detected
-WARNING:  WatchFiles detected changes in 'api_server.py'. Reloading...
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "/root/miniconda3/envs/demo/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
-    exitcode = _main(fd, parent_sentinel)
-  File "/root/miniconda3/envs/demo/lib/python3.10/multiprocessing/spawn.py", line 125, in _main
-    prepare(preparation_data)
-  File "/root/miniconda3/envs/demo/lib/python3.10/multiprocessing/spawn.py", line 236, in prepare
-    _fixup_main_from_path(data['init_main_from_path'])
-  File "/root/miniconda3/envs/demo/lib/python3.10/multiprocessing/spawn.py", line 287, in _fixup_main_from_path
-    main_content = runpy.run_path(main_path,
-  File "/root/miniconda3/envs/demo/lib/python3.10/runpy.py", line 288, in run_path
-    code, fname = _get_code_from_file(run_name, path_name)
-  File "/root/miniconda3/envs/demo/lib/python3.10/runpy.py", line 257, in _get_code_from_file
-    code = compile(f.read(), fname, 'exec')
-  File "/root/autodl-tmp/EasyVideo/ai-service/api_server.py", line 76
-    : int = 4
-    ^
-SyntaxError: invalid syntax
-INFO:watchfiles.main:1 change detected
-WARNING:  WatchFiles detected changes in 'api_server.py'. Reloading...
-INFO:watchfiles.main:1 change detected
-WARNING:  WatchFiles detected changes in 'api_server.py'. Reloading...
-INFO:watchfiles.main:1 change detected
-WARNING:  WatchFiles detected changes in 'api_server.py'. Reloading...
-INFO:__mp_main__:AI service started with lazy loading support
-INFO:api_server:AI service started with lazy loading support
-INFO:     Started server process [9896]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-INFO:watchfiles.main:3 changes detected
-INFO:watchfiles.main:1 change detected
-WARNING:  WatchFiles detected changes in 'api_server.py'. Reloading...
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [9896]
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "/root/miniconda3/envs/demo/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
-    exitcode = _main(fd, parent_sentinel)
-  File "/root/miniconda3/envs/demo/lib/python3.10/multiprocessing/spawn.py", line 125, in _main
-    prepare(preparation_data)
-  File "/root/miniconda3/envs/demo/lib/python3.10/multiprocessing/spawn.py", line 236, in prepare
-    _fixup_main_from_path(data['init_main_from_path'])
-  File "/root/miniconda3/envs/demo/lib/python3.10/multiprocessing/spawn.py", line 287, in _fixup_main_from_path
-    main_content = runpy.run_path(main_path,
-  File "/root/miniconda3/envs/demo/lib/python3.10/runpy.py", line 288, in run_path
-    code, fname = _get_code_from_file(run_name, path_name)
-  File "/root/miniconda3/envs/demo/lib/python3.10/runpy.py", line 257, in _get_code_from_file
-    code = compile(f.read(), fname, 'exec')
-  File "/root/autodl-tmp/EasyVideo/ai-service/api_server.py", line 76
-    num_frames : int = 
-                       ^
-SyntaxError: invalid syntax
-INFO:watchfiles.main:1 change detected
-WARNING:  WatchFiles detected changes in 'api_server.py'. Reloading...
-INFO:watchfiles.main:1 change detected
-WARNING:  WatchFiles detected changes in 'api_server.py'. Reloading...
-INFO:watchfiles.main:1 change detected
-WARNING:  WatchFiles detected changes in 'api_server.py'. Reloading...
-INFO:watchfiles.main:1 change detected
-WARNING:  WatchFiles detected changes in 'api_server.py'. Reloading...
-INFO:__mp_main__:AI service started with lazy loading support
-INFO:api_server:AI service started with lazy loading support
-INFO:     Started server process [10181]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-INFO:watchfiles.main:3 changes detected
-INFO:watchfiles.main:1 change detected
-WARNING:  WatchFiles detected changes in 'api_server.py'. Reloading...
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [10181]
-INFO:watchfiles.main:1 change detected
-WARNING:  WatchFiles detected changes in 'api_server.py'. Reloading...
-INFO:__mp_main__:AI service started with lazy loading support
-INFO:api_server:AI service started with lazy loading support
-INFO:     Started server process [10495]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-INFO:watchfiles.main:3 changes detected
-INFO:modules.prompt_optimizer:Qwen model path configured: /root/autodl-tmp/Qwen/Qwen2.5-VL-3B-Instruct
-INFO:api_server:PromptOptimizer initialized on demand
-INFO:modules.prompt_optimizer:Optimizing prompt: 一个美丽的中国少数民族女孩,穿着华丽的传统服饰在跳舞
-INFO:modules.prompt_optimizer:Optimization type: 通用型
-INFO:modules.prompt_optimizer:Task type: image
-INFO:modules.prompt_optimizer:Model not loaded, initializing now...
-INFO:modules.prompt_optimizer:Loading Qwen2.5-VL model on demand...
-INFO:accelerate.utils.modeling:We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.09it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.26it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.23it/s]
-The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
-You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
-INFO:modules.prompt_optimizer:Qwen2.5-VL model loaded successfully
-INFO:modules.prompt_optimizer:AI optimized prompt: A beautiful Chinese minority girl in an exquisite traditional attire, gracefully dancing with vibrant colors, shimmering fabrics, soft lighting, and intricate composition. High-quality image generation keywords: vivid colors, intricate patterns, sparkling fabrics, soft lighting effects, detailed textures, balanced composition, high-resolution imagery.
-INFO:modules.prompt_optimizer:Unloading Qwen2.5-VL model to free memory...
-INFO:modules.prompt_optimizer:Qwen2.5-VL model unloaded successfully
-INFO:api_server:PromptOptimizer model unloaded successfully
-INFO:     127.0.0.1:53882 - "POST /prompt/optimize HTTP/1.1" 200 OK
-INFO:api_server:Video generation task queued for task_id: video_1756188870627_apo9p4jww
-INFO:     127.0.0.1:51140 - "POST /video/generate HTTP/1.1" 200 OK
-INFO:modules.video_generator:Model path: /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B
-INFO:modules.video_generator:Output dir: /root/autodl-tmp/EasyVideo/outputs
-INFO:api_server:VideoGenerator initialized on demand
-ERROR:api_server:Error in video generation pipeline: VideoGenerator.generate_from_image() got an unexpected keyword argument 'num_frames'
-INFO:api_server:VideoGenerator model unloaded successfully
-INFO:     127.0.0.1:51126 - "GET /task/progress/video_1756188870627_apo9p4jww HTTP/1.1" 200 OK
-INFO:watchfiles.main:1 change detected
-WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [10495]
-INFO:watchfiles.main:1 change detected
-WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
-INFO:watchfiles.main:1 change detected
-WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
-INFO:watchfiles.main:1 change detected
-WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
-INFO:__mp_main__:AI service started with lazy loading support
-INFO:api_server:AI service started with lazy loading support
-INFO:     Started server process [12508]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-INFO:watchfiles.main:3 changes detected
-INFO:watchfiles.main:1 change detected
-WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [12508]
-INFO:__mp_main__:AI service started with lazy loading support
-INFO:api_server:AI service started with lazy loading support
-INFO:     Started server process [12666]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-INFO:watchfiles.main:3 changes detected
-INFO:watchfiles.main:1 change detected
-WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [12666]
-INFO:__mp_main__:AI service started with lazy loading support
-INFO:api_server:AI service started with lazy loading support
-INFO:     Started server process [12882]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-INFO:watchfiles.main:3 changes detected
-INFO:api_server:Video generation task queued for task_id: video_1756188962409_vf1t0ytel
-INFO:     127.0.0.1:55230 - "POST /video/generate HTTP/1.1" 200 OK
-INFO:modules.video_generator:Model path: /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B
-INFO:modules.video_generator:Output dir: /root/autodl-tmp/EasyVideo/outputs
-INFO:api_server:VideoGenerator initialized on demand
-Loading models from: ['/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00001-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00002-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00003-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00004-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00005-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00006-of-00006.safetensors']
-    model_name: wan_video_dit model_class: WanModel
-        This model is initialized with extra kwargs: {'has_image_input': False, 'patch_size': [1, 2, 2], 'in_dim': 36, 'dim': 5120, 'ffn_dim': 13824, 'freq_dim': 256, 'text_dim': 4096, 'out_dim': 16, 'num_heads': 40, 'num_layers': 40, 'eps': 1e-06, 'require_clip_embedding': False}
-    The following models are loaded: ['wan_video_dit'].
-Loading models from: ['/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00001-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00002-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00003-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00004-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00005-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00006-of-00006.safetensors']
-    model_name: wan_video_dit model_class: WanModel
-        This model is initialized with extra kwargs: {'has_image_input': False, 'patch_size': [1, 2, 2], 'in_dim': 36, 'dim': 5120, 'ffn_dim': 13824, 'freq_dim': 256, 'text_dim': 4096, 'out_dim': 16, 'num_heads': 40, 'num_layers': 40, 'eps': 1e-06, 'require_clip_embedding': False}
-INFO:     127.0.0.1:43528 - "GET /task/progress/video_1756188962409_vf1t0ytel HTTP/1.1" 200 OK
-2025-08-26 14:16:56,198 - modelscope - INFO - Target directory already exists, skipping creation.
-INFO:watchfiles.main:1 change detected
-INFO:modules.video_generator:Video generation model loaded on demand successfully
-INFO:modules.prompt_optimizer:Qwen model path configured: /root/autodl-tmp/Qwen/Qwen2.5-VL-3B-Instruct
-INFO:modules.prompt_optimizer:Optimizing prompt: A beautiful Chinese minority girl in an exquisite traditional attire, gracefully dancing with vibrant colors, shimmering fabrics, soft lighting, and intricate composition. High-quality image generation keywords: vivid colors, intricate patterns, sparkling fabrics, soft lighting effects, detailed textures, balanced composition, high-resolution imagery.
-INFO:modules.prompt_optimizer:Optimization type: 通用型
-INFO:modules.prompt_optimizer:Task type: video
-INFO:modules.prompt_optimizer:Model not loaded, initializing now...
-INFO:modules.prompt_optimizer:Loading Qwen2.5-VL model on demand...
-INFO:accelerate.utils.modeling:We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
-    The following models are loaded: ['wan_video_dit'].
-Loading models from: /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/models_t5_umt5-xxl-enc-bf16.pth
-    model_name: wan_video_text_encoder model_class: WanTextEncoder
-    The following models are loaded: ['wan_video_text_encoder'].
-Loading models from: /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/Wan2.1_VAE.pth
-    model_name: wan_video_vae model_class: WanVideoVAE
-    The following models are loaded: ['wan_video_vae'].
-Using wan_video_text_encoder from /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/models_t5_umt5-xxl-enc-bf16.pth.
-More than one wan_video_dit models are loaded in model manager: [['/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00001-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00002-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00003-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00004-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00005-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00006-of-00006.safetensors'], ['/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00001-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00002-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00003-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00004-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00005-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00006-of-00006.safetensors']]. Using wan_video_dit from [['/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00001-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00002-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00003-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00004-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00005-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00006-of-00006.safetensors'], ['/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00001-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00002-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00003-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00004-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00005-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00006-of-00006.safetensors']].
-Using wan_video_vae from /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/Wan2.1_VAE.pth.
-No wan_video_image_encoder models available.
-No wan_video_motion_controller models available.
-No wan_video_vace models available.
-Downloading Model from https://www.modelscope.cn to directory: /root/autodl-tmp/EasyVideo/ai-service/models/Wan-AI/Wan2.1-T2V-1.3B
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.17it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.36it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.33it/s]
-The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
-You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
-INFO:modules.prompt_optimizer:Qwen2.5-VL model loaded successfully
-INFO:     127.0.0.1:34608 - "GET /task/progress/video_1756188962409_vf1t0ytel HTTP/1.1" 200 OK
-INFO:modules.prompt_optimizer:AI optimized prompt: A stunning Chinese minority girl gracefully dances in exquisite traditional attire adorned with intricate patterns and vibrant colors. The dancer moves fluidly, her movements highlighted by shimmering fabrics that catch the light. The scene is bathed in soft, warm lighting, creating a dreamy atmosphere. The camera captures various angles of her dance, including close-ups of her elegant gestures and wide shots that showcase the beauty of the traditional dress against the background. The video should include dynamic transitions between different parts of the dance, such as slow pans over the fabrics or quick cuts to highlight specific elements like her flowing hair or the delicate details on her attire. Detailed textures of the fabrics and the overall composition should be emphasized throughout the sequence for a high-quality visual experience.
-INFO:modules.prompt_optimizer:Unloading Qwen2.5-VL model to free memory...
-INFO:modules.prompt_optimizer:Qwen2.5-VL model unloaded successfully
-INFO:modules.video_generator:Optimized prompt: A stunning Chinese minority girl gracefully dances in exquisite traditional attire adorned with intricate patterns and vibrant colors. The dancer moves fluidly, her movements highlighted by shimmering fabrics that catch the light. The scene is bathed in soft, warm lighting, creating a dreamy atmosphere. The camera captures various angles of her dance, including close-ups of her elegant gestures and wide shots that showcase the beauty of the traditional dress against the background. The video should include dynamic transitions between different parts of the dance, such as slow pans over the fabrics or quick cuts to highlight specific elements like her flowing hair or the delicate details on her attire. Detailed textures of the fabrics and the overall composition should be emphasized throughout the sequence for a high-quality visual experience.
-INFO:modules.video_generator:Generating video with prompt: A stunning Chinese minority girl gracefully dances in exquisite traditional attire adorned with intricate patterns and vibrant colors. The dancer moves fluidly, her movements highlighted by shimmering fabrics that catch the light. The scene is bathed in soft, warm lighting, creating a dreamy atmosphere. The camera captures various angles of her dance, including close-ups of her elegant gestures and wide shots that showcase the beauty of the traditional dress against the background. The video should include dynamic transitions between different parts of the dance, such as slow pans over the fabrics or quick cuts to highlight specific elements like her flowing hair or the delicate details on her attire. Detailed textures of the fabrics and the overall composition should be emphasized throughout the sequence for a high-quality visual experience., cinematic lighting, smooth motion, realistic, high quality
-INFO:modules.video_generator:Parameters: seed=826888, tiled=True, steps=20, cfg_scale=7.5
-VAE encoding:   0%|          | 0/9 [00:00<?, ?it/s]VAE encoding:  11%|█         | 1/9 [00:00<00:07,  1.09it/s]VAE encoding:  22%|██▏       | 2/9 [00:01<00:05,  1.26it/s]VAE encoding:  33%|███▎      | 3/9 [00:02<00:04,  1.33it/s]INFO:     127.0.0.1:46770 - "GET /task/progress/video_1756188962409_vf1t0ytel HTTP/1.1" 200 OK
-VAE encoding:  44%|████▍     | 4/9 [00:03<00:03,  1.36it/s]VAE encoding:  56%|█████▌    | 5/9 [00:03<00:02,  1.38it/s]VAE encoding:  67%|██████▋   | 6/9 [00:04<00:02,  1.37it/s]VAE encoding:  78%|███████▊  | 7/9 [00:05<00:01,  1.38it/s]VAE encoding:  89%|████████▉ | 8/9 [00:05<00:00,  1.39it/s]VAE encoding: 100%|██████████| 9/9 [00:06<00:00,  1.40it/s]VAE encoding: 100%|██████████| 9/9 [00:06<00:00,  1.36it/s]
-  0%|          | 0/20 [00:00<?, ?it/s]INFO:     127.0.0.1:45682 - "GET /task/progress/video_1756188962409_vf1t0ytel HTTP/1.1" 200 OK
-  5%|▌         | 1/20 [00:32<10:16, 32.45s/it]INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [12882]
-INFO:     Stopping reloader process [2949]
-/root/miniconda3/envs/demo/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 4 leaked semaphore objects to clean up at shutdown
-  warnings.warn('resource_tracker: There appear to be %d '
+INFO:     127.0.0.1:50668 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK

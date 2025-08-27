@@ -74,24 +74,10 @@ export interface GeneratedImage {
   id: string;
   url: string;
   thumbnail_url: string;
-  filename: string;
   width: number;
   height: number;
   file_size: number;
-  prompt: string;
-  negative_prompt?: string;
-  seed: number;
   created_at: string;
-  metadata: {
-    model: string;
-    steps: number;
-    guidance_scale: number;
-    scheduler: string;
-    width: number;
-    height: number;
-    cfg_scale: number;
-    seed?: number;
-  };
 }
 
 export interface GeneratedVideo {

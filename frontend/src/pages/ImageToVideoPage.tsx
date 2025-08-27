@@ -84,26 +84,50 @@ const ImageToVideoPage: React.FC = () => {
   const dragRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const pollTimeoutRef = useRef<number | null>(null);
-
+  
+  interface TaskResult {
+    videos: GeneratedVideo[];
+  }
+  
+  interface Task {
+    id: string;
+    status: string;
+    type: string;
+    progress: number;
+    prompt: string;
+    created_at: string;
+    updated_at: string;
+    result: TaskResult;
+  }
+  
+  interface ApiResponse {
+    data: Record<string, Task>;
+  }
+  
+  
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const response = await fetch('/api/generation/storage/video'); // 后端接口
-        if (!response.ok) {
-          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-        }
-        const data: GeneratedVideo[] = await response.json();
-        setGeneratedVideos(data); // ✅ 设置数据，触发渲染
+        const response = await fetch('/api/generation/storage/video');
+        if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+  
+        // 获取 JSON 对象
+        const json: ApiResponse = await response.json();
+  
+        // 取 data 部分，并拍平成 GeneratedVideo[]
+        const allVideos: GeneratedVideo[] = Object.values(json.data)
+          .flatMap(task => task.result.videos);
+  
+        setGeneratedVideos(allVideos);
       } catch (err) {
-        console.log(err instanceof Error ? err.message : '未知错误')
-      } finally {
+        console.error(err instanceof Error ? err.message : '未知错误');
         setGeneratedVideos([]);
       }
     };
   
-    fetchVideos(); // 执行异步请求
-  }, []);
-
+    fetchVideos();
+  }, []);  
+  
   // 清理定时器
   useEffect(() => {
     return () => {

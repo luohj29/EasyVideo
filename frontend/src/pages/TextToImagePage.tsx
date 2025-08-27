@@ -74,6 +74,46 @@ const TextToImagePage: React.FC = () => {
     const progressCleanupRef = useRef<(() => void) | null>(null);
 const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 
+  interface TaskResult {
+    images: GeneratedImage[];
+  }
+interface Task {
+  id: string;
+  status: string;
+  type: string;
+  progress: number;
+  prompt: string;
+  created_at: string;
+  updated_at: string;
+  result: TaskResult;
+}
+
+interface ApiResponse {
+  data: Record<string, Task>;
+}
+
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const response = await fetch('/api/generation/storage/image');
+        if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+  
+        // 获取 JSON 对象
+        const json: ApiResponse = await response.json();
+  
+        const allImages: GeneratedImage[] = Object.values(json.data)
+          .flatMap(task => task.result.images);
+  
+        setGeneratedImages(allImages);
+      } catch (err) {
+        console.error(err instanceof Error ? err.message : '未知错误');
+        setGeneratedImages([]);
+      }
+    };
+  
+    fetchImages();
+  }, []);  
+
   // 清理进度监听
   useEffect(() => {
     return () => {
