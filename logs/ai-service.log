@@ -1,96 +1,20 @@
 INFO:__main__:AI service started with lazy loading support
 INFO:     Will watch for changes in these directories: ['/root/autodl-tmp/EasyVideo/ai-service']
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [2395] using WatchFiles
+INFO:     Started reloader process [30355] using WatchFiles
 INFO:__mp_main__:AI service started with lazy loading support
 INFO:api_server:AI service started with lazy loading support
-INFO:     Started server process [2508]
+INFO:     Started server process [30648]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-INFO:     127.0.0.1:33430 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:33438 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:33438 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:44234 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53288 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59044 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40222 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:33394 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54788 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51594 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:36476 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:33934 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59762 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59778 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59778 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:39066 - "GET /health HTTP/1.1" 200 OK
-INFO:api_server:Video generation task queued for task_id: video_1756266970311_gcskekdub
-INFO:     127.0.0.1:46214 - "POST /video/generate HTTP/1.1" 200 OK
-INFO:modules.video_generator:Model path: /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B
-INFO:modules.video_generator:Output dir: /root/autodl-tmp/EasyVideo/outputs
-INFO:api_server:VideoGenerator initialized on demand
-Loading models from: ['/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00001-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00002-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00003-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00004-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00005-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00006-of-00006.safetensors']
-    model_name: wan_video_dit model_class: WanModel
-        This model is initialized with extra kwargs: {'has_image_input': False, 'patch_size': [1, 2, 2], 'in_dim': 36, 'dim': 5120, 'ffn_dim': 13824, 'freq_dim': 256, 'text_dim': 4096, 'out_dim': 16, 'num_heads': 40, 'num_layers': 40, 'eps': 1e-06, 'require_clip_embedding': False}
-    The following models are loaded: ['wan_video_dit'].
-Loading models from: ['/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00001-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00002-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00003-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00004-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00005-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00006-of-00006.safetensors']
-    model_name: wan_video_dit model_class: WanModel
-        This model is initialized with extra kwargs: {'has_image_input': False, 'patch_size': [1, 2, 2], 'in_dim': 36, 'dim': 5120, 'ffn_dim': 13824, 'freq_dim': 256, 'text_dim': 4096, 'out_dim': 16, 'num_heads': 40, 'num_layers': 40, 'eps': 1e-06, 'require_clip_embedding': False}
-    The following models are loaded: ['wan_video_dit'].
-Loading models from: /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/models_t5_umt5-xxl-enc-bf16.pth
-INFO:     127.0.0.1:48782 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
-2025-08-27 11:56:54,966 - modelscope - INFO - Target directory already exists, skipping creation.
-INFO:watchfiles.main:1 change detected
-INFO:modules.video_generator:Video generation model loaded on demand successfully
-INFO:modules.prompt_optimizer:Qwen model path configured: /root/autodl-tmp/Qwen/Qwen2.5-VL-3B-Instruct
-INFO:modules.prompt_optimizer:Optimizing prompt: 穿着中国民族传统服饰的美女,在和木门后面露出头,然后歪头温柔的笑了,眼睛眯起来像晚晚的月亮
-INFO:modules.prompt_optimizer:Optimization type: 通用型
-INFO:modules.prompt_optimizer:Task type: video
-INFO:modules.prompt_optimizer:Model not loaded, initializing now...
-INFO:modules.prompt_optimizer:Loading Qwen2.5-VL model on demand...
-INFO:accelerate.utils.modeling:We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
-    model_name: wan_video_text_encoder model_class: WanTextEncoder
-    The following models are loaded: ['wan_video_text_encoder'].
-Loading models from: /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/Wan2.1_VAE.pth
-    model_name: wan_video_vae model_class: WanVideoVAE
-    The following models are loaded: ['wan_video_vae'].
-Using wan_video_text_encoder from /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/models_t5_umt5-xxl-enc-bf16.pth.
-More than one wan_video_dit models are loaded in model manager: [['/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00001-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00002-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00003-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00004-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00005-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00006-of-00006.safetensors'], ['/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00001-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00002-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00003-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00004-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00005-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00006-of-00006.safetensors']]. Using wan_video_dit from [['/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00001-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00002-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00003-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00004-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00005-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00006-of-00006.safetensors'], ['/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00001-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00002-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00003-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00004-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00005-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00006-of-00006.safetensors']].
-Using wan_video_vae from /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/Wan2.1_VAE.pth.
-No wan_video_image_encoder models available.
-No wan_video_motion_controller models available.
-No wan_video_vace models available.
-Downloading Model from https://www.modelscope.cn to directory: /root/autodl-tmp/EasyVideo/ai-service/models/Wan-AI/Wan2.1-T2V-1.3B
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.01s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.12it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.10it/s]
-The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
-You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
-INFO:modules.prompt_optimizer:Qwen2.5-VL model loaded successfully
-INFO:modules.prompt_optimizer:AI optimized prompt: A beautiful woman wearing traditional Chinese attire stands in front of a wooden door. She slowly turns her head to the side, revealing a gentle and affectionate smile with her eyes slightly squinted like a crescent moon. The camera follows her as she moves gracefully, capturing the intricate details of her clothing and the texture of the wood. The scene transitions smoothly, focusing on her facial expressions and the subtle nuances of her movements, creating a serene and charming atmosphere.
-INFO:modules.prompt_optimizer:Unloading Qwen2.5-VL model to free memory...
-INFO:modules.prompt_optimizer:Qwen2.5-VL model unloaded successfully
-INFO:modules.video_generator:Optimized prompt: A beautiful woman wearing traditional Chinese attire stands in front of a wooden door. She slowly turns her head to the side, revealing a gentle and affectionate smile with her eyes slightly squinted like a crescent moon. The camera follows her as she moves gracefully, capturing the intricate details of her clothing and the texture of the wood. The scene transitions smoothly, focusing on her facial expressions and the subtle nuances of her movements, creating a serene and charming atmosphere.
-INFO:modules.video_generator:Generating video with prompt: A beautiful woman wearing traditional Chinese attire stands in front of a wooden door. She slowly turns her head to the side, revealing a gentle and affectionate smile with her eyes slightly squinted like a crescent moon. The camera follows her as she moves gracefully, capturing the intricate details of her clothing and the texture of the wood. The scene transitions smoothly, focusing on her facial expressions and the subtle nuances of her movements, creating a serene and charming atmosphere., cinematic lighting, smooth motion, realistic, high quality
-INFO:modules.video_generator:Parameters: seed=986849, tiled=True, steps=20, cfg_scale=7.5
-INFO:     127.0.0.1:53130 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
-VAE encoding:   0%|          | 0/9 [00:00<?, ?it/s]VAE encoding:  11%|█         | 1/9 [00:00<00:03,  2.07it/s]VAE encoding:  22%|██▏       | 2/9 [00:00<00:02,  2.55it/s]VAE encoding:  33%|███▎      | 3/9 [00:01<00:02,  2.77it/s]VAE encoding:  44%|████▍     | 4/9 [00:01<00:01,  2.88it/s]VAE encoding:  56%|█████▌    | 5/9 [00:01<00:01,  2.95it/s]VAE encoding:  67%|██████▋   | 6/9 [00:02<00:01,  2.99it/s]VAE encoding:  78%|███████▊  | 7/9 [00:02<00:00,  3.02it/s]VAE encoding:  89%|████████▉ | 8/9 [00:02<00:00,  3.02it/s]VAE encoding: 100%|██████████| 9/9 [00:03<00:00,  3.02it/s]VAE encoding: 100%|██████████| 9/9 [00:03<00:00,  2.91it/s]
-  0%|          | 0/20 [00:00<?, ?it/s]INFO:     127.0.0.1:32810 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
-  5%|▌         | 1/20 [00:17<05:28, 17.27s/it] 10%|█         | 2/20 [00:26<03:45, 12.51s/it] 15%|█▌        | 3/20 [00:35<03:07, 11.00s/it]INFO:     127.0.0.1:50844 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
- 20%|██        | 4/20 [00:44<02:44, 10.30s/it] 25%|██▌       | 5/20 [00:54<02:28,  9.92s/it] 30%|███       | 6/20 [01:03<02:15,  9.69s/it]INFO:     127.0.0.1:48154 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
- 35%|███▌      | 7/20 [01:12<02:04,  9.55s/it] 40%|████      | 8/20 [01:21<01:53,  9.46s/it] 45%|████▌     | 9/20 [01:31<01:43,  9.40s/it]INFO:     127.0.0.1:37642 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
- 50%|█████     | 10/20 [02:11<03:10, 19.00s/it]INFO:     127.0.0.1:42654 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
- 55%|█████▌    | 11/20 [02:20<02:24, 16.01s/it] 60%|██████    | 12/20 [02:30<01:51, 13.94s/it] 65%|██████▌   | 13/20 [02:39<01:27, 12.52s/it]INFO:     127.0.0.1:57974 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
- 70%|███████   | 14/20 [02:48<01:09, 11.54s/it] 75%|███████▌  | 15/20 [02:57<00:54, 10.85s/it] 80%|████████  | 16/20 [03:07<00:41, 10.38s/it]INFO:     127.0.0.1:46198 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
- 85%|████████▌ | 17/20 [03:16<00:30, 10.05s/it] 90%|█████████ | 18/20 [03:25<00:19,  9.82s/it] 95%|█████████▌| 19/20 [03:35<00:09,  9.66s/it]INFO:     127.0.0.1:52128 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
-100%|██████████| 20/20 [03:44<00:00,  9.54s/it]100%|██████████| 20/20 [03:44<00:00, 11.21s/it]
-VAE decoding:   0%|          | 0/9 [00:00<?, ?it/s]VAE decoding:  11%|█         | 1/9 [00:00<00:04,  1.65it/s]VAE decoding:  22%|██▏       | 2/9 [00:01<00:04,  1.75it/s]VAE decoding:  33%|███▎      | 3/9 [00:01<00:03,  1.78it/s]VAE decoding:  44%|████▍     | 4/9 [00:02<00:02,  1.78it/s]VAE decoding:  56%|█████▌    | 5/9 [00:02<00:02,  1.80it/s]VAE decoding:  67%|██████▋   | 6/9 [00:03<00:01,  1.81it/s]VAE decoding:  78%|███████▊  | 7/9 [00:03<00:01,  1.81it/s]INFO:     127.0.0.1:41802 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
-VAE decoding:  89%|████████▉ | 8/9 [00:04<00:00,  1.81it/s]VAE decoding: 100%|██████████| 9/9 [00:05<00:00,  1.81it/s]VAE decoding: 100%|██████████| 9/9 [00:05<00:00,  1.79it/s]
-Saving video:   0%|          | 0/37 [00:00<?, ?it/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-Saving video:   3%|▎         | 1/37 [00:02<01:22,  2.29s/it]Saving video: 100%|██████████| 37/37 [00:02<00:00, 15.78it/s]
-INFO:modules.video_generator:Unloading video generation model to free memory...
-INFO:modules.video_generator:Video generation model unloaded successfully
-INFO:modules.video_generator:Video generated successfully: /root/autodl-tmp/EasyVideo/outputs/videos/video_20250827_115655_video_1756266970311_gcskekdub.mp4
-INFO:api_server:Video generation completed for task_id: video_1756266970311_gcskekdub
-INFO:api_server:VideoGenerator model unloaded successfully
-INFO:     127.0.0.1:50668 - "GET /task/progress/video_1756266970311_gcskekdub HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46870 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46870 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46870 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46756 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35860 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53484 - "GET /health HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [30648]
+INFO:     Stopping reloader process [30355]

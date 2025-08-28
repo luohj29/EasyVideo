@@ -24,7 +24,7 @@ class VideoGenerator:
     """视频生成器，用于图生视频功能"""
     
     def __init__(self):
-        self.model_loaded = False
+        self.model_downloaded = False
         self.is_model_loaded = False
         self.model = None
         self.model_path = None
@@ -90,7 +90,7 @@ class VideoGenerator:
             # 检查模型路径
             if not self.model_path or not os.path.exists(self.model_path):
                 logger.error(f"Model path not found: {self.model_path}")
-                self.model_loaded = False
+                self.model_downloaded = False
                 return
             
             # 清理GPU内存
@@ -126,13 +126,13 @@ class VideoGenerator:
             gpu_limit = self.config.get('system', {}).get('gpu_memory_limit', 45)
             self.model.enable_vram_management(vram_limit=gpu_limit)
             
-            self.model_loaded = True
+            self.model_downloaded = True
             self.is_model_loaded = True
             logger.info("Video generation model loaded on demand successfully")
             
         except Exception as e:
             logger.error(f"Failed to initialize model: {e}")
-            self.model_loaded = False
+            self.model_downloaded = False
             self.is_model_loaded = False
             raise RuntimeError(f"Video generation model failed to load: {e}")
     
@@ -395,7 +395,7 @@ class VideoGenerator:
             # 强制垃圾回收
             gc.collect()
             
-            self.model_loaded = False
+            self.model_downloaded = False
             self.is_model_loaded = False
             logger.info("Video generation model unloaded successfully")
 

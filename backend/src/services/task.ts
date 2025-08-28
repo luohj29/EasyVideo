@@ -56,10 +56,10 @@ export class TasksPool {
 
     const task = jsonData[taskId];
     if (task.status === "completed") {
-      if (task.type === "text_to_video") {
-        fs.writeFileSync(JSON_VIDEO_PATH, JSON.stringify(task, null, 2));
-      } else if (task.type === "image_to_video") {
+      if (task.type === "text_to_image") {
         fs.writeFileSync(JSON_IMAGE_PATH, JSON.stringify(task, null, 2));
+      } else if (task.type === "image_to_video") {
+        fs.writeFileSync(JSON_VIDEO_PATH, JSON.stringify(task, null, 2));
       }
     }
 

@@ -87,9 +87,14 @@ class VideoGenerateResponse(BaseModel):
     task_id: str
 
 class StoryboardGenerateRequest(BaseModel):
-    story_description: str
-    num_scenes: int = 5
-    style: str = "现代风格"
+    script: str
+    scene_count: int
+    style: str # actually 'cinematic' | 'documentary' | 'commercial' | 'artistic'
+    duration: int
+    include_camera_movements: bool
+    include_lighting_notes: bool
+    include_audio_cues: bool
+    task_id : str
 
 class StoryboardScene(BaseModel):
     scene_number: int

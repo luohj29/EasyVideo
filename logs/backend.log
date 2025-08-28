@@ -7,11 +7,28 @@ Tasks pool: initialize successfully read from JSON
 📁 Static files served from outputs and projects directories
 🔗 API endpoints available at http://localhost:3002/api
 🔔 SSE notifications available at http://localhost:3002/api/notifications/stream
-加载 image_to_video 类型数据失败: SyntaxError: Unexpected end of JSON input
-    at JSON.parse (<anonymous>)
-    at getTypeFromJson (/root/autodl-tmp/EasyVideo/backend/src/services/storage.ts:14:23)
-    at async /root/autodl-tmp/EasyVideo/backend/src/routes/generation.ts:947:18
-Tasks Pool: Start to clean old tasks, found 1 tasks to delete.
+Storage: return stored images {
+  id: 'video_1756266970311_gcskekdub',
+  status: 'completed',
+  type: 'image_to_video',
+  progress: 100,
+  prompt: '穿着中国民族传统服饰的美女,在和木门后面露出头,然后歪头温柔的笑了,眼睛眯起来像晚晚的月亮',
+  created_at: '2025-08-27T03:56:10.406Z',
+  updated_at: '2025-08-27T04:02:10.563Z',
+  result: { videos: [ [Object] ] }
+}
+Tasks Pool: Start to clean old tasks, found 2 tasks to delete.
 Tasks Pool: Cleaning up old task: video_1756221612953_8gmb9ytw7
-Tasks Pool: Cleaned up 1 old tasks
+Tasks Pool: Cleaning up old task: video_1756266970311_gcskekdub
+Tasks Pool: Cleaned up 2 old tasks
 Tasks Pool: Start to clean old tasks, found 0 tasks to delete.
+Storage: return stored images {
+  id: 'video_1756266970311_gcskekdub',
+  status: 'completed',
+  type: 'image_to_video',
+  progress: 100,
+  prompt: '穿着中国民族传统服饰的美女,在和木门后面露出头,然后歪头温柔的笑了,眼睛眯起来像晚晚的月亮',
+  created_at: '2025-08-27T03:56:10.406Z',
+  updated_at: '2025-08-27T04:02:10.563Z',
+  result: { videos: [ [Object] ] }
+}

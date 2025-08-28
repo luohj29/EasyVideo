@@ -130,7 +130,7 @@ class PromptOptimizer:
                 if style_preferences:
                     user_message += f"\n风格偏好：{', '.join(style_preferences)}"
                 
-                user_message += "\n\n请将其优化为详细、具体、适合AI图像生成的英文提示词。包含具体的视觉细节（颜色、材质、光影、构图等）和画质提升关键词。请直接输出优化后的英文提示词，不要包含其他解释。"
+                user_message += "\n\n请尽量用名词,形容词(彼此之间用逗号隔开)的方式, 将其优化为详细、具体、适合AI图像生成的英文提示词。包含具体的视觉细节包含,人物主体, 构图, 情绪等。请直接输出优化后的英文提示词，不要包含其他解释。"
             else:  # video
                 user_message = f"请优化这个视频生成提示词：{prompt}"
                 if optimization_type != "通用型":
@@ -138,7 +138,7 @@ class PromptOptimizer:
                 if style_preferences:
                     user_message += f"\n风格偏好：{', '.join(style_preferences)}"
                 
-                user_message += "\n\n请将其优化为详细、具体、适合AI视频生成的英文提示词。包含动作描述、运动轨迹、场景转换、摄像机运动（推拉摇移）等动态元素。请直接输出优化后的英文提示词，不要包含其他解释。"
+                user_message += "\n\n请将其优化为详细、具体、适合AI视频生成的中文提示词。包含动作描述、运动轨迹、场景转换、摄像机运动（推拉摇移）等动态元素。请直接输出优化后的中文提示词，不要包含其他解释。"
             
             # 构建对话消息（纯文本模式）
             messages = [
