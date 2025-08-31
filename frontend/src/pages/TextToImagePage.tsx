@@ -47,7 +47,7 @@ const defaultSettings: GenerationSettings = {
   cfg_scale: 7.5,
   seed: -1,
   batch_size: 1,
-  negative_prompt: '',
+  negative_prompt: 'worst quality, normal quality, low quality, low res, blurry, distortion, text, watermark, logo, banner, extra digits, cropped, jpeg artifacts, signature, username, error, sketch, duplicate, ugly, monochrome, horror, geometry, mutation, disgusting, bad anatomy, bad proportions, bad quality, deformed, disconnected limbs, out of frame, out of focus, dehydrated, disfigured, extra arms, extra limbs, extra hands, fused fingers, gross proportions, long neck, jpeg, malformed limbs, mutated, mutated hands, mutated limbs, missing arms, missing fingers, picture frame, poorly drawn hands, poorly drawn face, collage, pixel, pixelated, grainy, color aberration, amputee, autograph, bad illustration, beyond the borders, blank background, body out of frame, boring background, branding, cut off, dismembered, disproportioned, distorted, draft, duplicated features, extra fingers, extra legs, fault, flaw, grains, hazy, identifying mark, improper scale, incorrect physiology, incorrect ratio, indistinct, kitsch, low resolution, macabre, malformed, mark, misshapen, missing hands, missing legs, mistake, morbid, mutilated, off-screen, outside the picture, poorly drawn feet, printed words, render, repellent, replicate, reproduce, revolting dimensions, script, shortened, sign, split image, squint, storyboard, tiling, trimmed, unfocused, unattractive, unnatural pose, unreal engine, unsightly, written language',
 };
 
 const presetSizes = [
@@ -71,48 +71,8 @@ const TextToImagePage: React.FC = () => {
   const [selectedImages, setSelectedImages] = useState<Set<string>>(new Set());
   const [progress, setProgress] = useState(0);
   const [progressStatus, setProgressStatus] = useState('');
-    const progressCleanupRef = useRef<(() => void) | null>(null);
-const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-
-  interface TaskResult {
-    images: GeneratedImage[];
-  }
-interface Task {
-  id: string;
-  status: string;
-  type: string;
-  progress: number;
-  prompt: string;
-  created_at: string;
-  updated_at: string;
-  result: TaskResult;
-}
-
-interface ApiResponse {
-  data: Record<string, Task>;
-}
-
-  useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        const response = await fetch('/api/generation/storage/image');
-        if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-  
-        // 获取 JSON 对象
-        const json: ApiResponse = await response.json();
-  
-        const allImages: GeneratedImage[] = Object.values(json.data)
-          .flatMap(task => task.result.images);
-  
-        setGeneratedImages(allImages);
-      } catch (err) {
-        console.error(err instanceof Error ? err.message : '未知错误');
-        setGeneratedImages([]);
-      }
-    };
-  
-    fetchImages();
-  }, []);  
+  const progressCleanupRef = useRef<(() => void) | null>(null);
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 
   // 清理进度监听
   useEffect(() => {
@@ -517,8 +477,8 @@ interface ApiResponse {
                 </label>
                 <textarea
                   value={settings.negative_prompt}
+                  placeholder = "worst quality, normal quality, low quality, low res, blurry, distortion, text, watermark, logo, banner, extra digits, cropped, jpeg artifacts, signature, username, error, sketch, duplicate, ugly, monochrome, horror, geometry, mutation, disgusting, bad anatomy, bad proportions, bad quality, deformed, disconnected limbs, out of frame, out of focus, dehydrated, disfigured, extra arms, extra limbs, extra hands, fused fingers, gross proportions, long neck, jpeg, malformed limbs, mutated, mutated hands, mutated limbs, missing arms, missing fingers, picture frame, poorly drawn hands, poorly drawn face, collage, pixel, pixelated, grainy, color aberration, amputee, autograph, bad illustration, beyond the borders, blank background, body out of frame, boring background, branding, cut off, dismembered, disproportioned, distorted, draft, duplicated features, extra fingers, extra legs, fault, flaw, grains, hazy, identifying mark, improper scale, incorrect physiology, incorrect ratio, indistinct, kitsch, low resolution, macabre, malformed, mark, misshapen, missing hands, missing legs, mistake, morbid, mutilated, off-screen, outside the picture, poorly drawn feet, printed words, render, repellent, replicate, reproduce, revolting dimensions, script, shortened, sign, split image, squint, storyboard, tiling, trimmed, unfocused, unattractive, unnatural pose, unreal engine, unsightly, written language"
                   onChange={(e) => setSettings(prev => ({ ...prev, negative_prompt: e.target.value }))}
-                  placeholder="描述您不希望在图像中出现的内容，例如：低质量，模糊，变形"
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none"
                   rows={2}
                 />
@@ -663,7 +623,6 @@ interface ApiResponse {
                     src={getFullImageUrl(image.url)}
                     alt={image.prompt}
                     className="w-full h-full object-cover"
-                    onClick={() => handlePreviewImage(image)}
                   />
                   
                   {/* Selection Checkbox */}
@@ -742,8 +701,8 @@ interface ApiResponse {
             ))}
           </div>
         </div>
-          )}
-          <ImagePreviewer url={previewUrl} onClose={() => setPreviewUrl(null)} />
+      )}
+      <ImagePreviewer url={previewUrl} onClose={() => setPreviewUrl(null)} />
     </div>
   );
 };

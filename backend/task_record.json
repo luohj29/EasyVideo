@@ -46,5 +46,101 @@
         }
       ]
     }
+  },
+  "video_1756391885604_ezscidmda": {
+    "id": "video_1756391885604_ezscidmda",
+    "status": "completed",
+    "type": "image_to_video",
+    "progress": 100,
+    "prompt": "帅气",
+    "created_at": "2025-08-28T14:38:05.773Z",
+    "updated_at": "2025-08-28T14:48:05.841Z",
+    "result": {
+      "videos": [
+        {
+          "id": "vid_video_1756391885604_ezscidmda",
+          "url": "/outputs/videos/video_20250828_223850_video_1756391885604_ezscidmda.mp4",
+          "thumbnail_url": "/outputs/videos/video_20250828_223850_video_1756391885604_ezscidmda_thumb.jpg",
+          "fps": 24,
+          "width": 640,
+          "height": 480,
+          "motion_prompt": "帅气",
+          "file_size": 0,
+          "created_at": "2025-08-28T14:48:05.841Z"
+        }
+      ]
+    }
+  },
+  "video_1756393702025_venru3luw": {
+    "id": "video_1756393702025_venru3luw",
+    "status": "completed",
+    "type": "image_to_video",
+    "progress": 100,
+    "prompt": "A Chinese woman wearing traditional ethnic attire, peering out from behind a wooden door with an upturned head and a content smile on her face, capturing a moment of joy and curiosity.",
+    "created_at": "2025-08-28T15:08:22.193Z",
+    "updated_at": "2025-08-28T15:17:52.246Z",
+    "result": {
+      "videos": [
+        {
+          "id": "vid_video_1756393702025_venru3luw",
+          "url": "/outputs/videos/video_20250828_230904_video_1756393702025_venru3luw.mp4",
+          "thumbnail_url": "/outputs/videos/video_20250828_230904_video_1756393702025_venru3luw_thumb.jpg",
+          "fps": 24,
+          "width": 640,
+          "height": 480,
+          "motion_prompt": "A Chinese woman wearing traditional ethnic attire, peering out from behind a wooden door with an upturned head and a content smile on her face, capturing a moment of joy and curiosity.",
+          "file_size": 0,
+          "created_at": "2025-08-28T15:17:52.246Z"
+        }
+      ]
+    }
+  },
+  "video_1756436209682_zux05ryaa": {
+    "id": "video_1756436209682_zux05ryaa",
+    "status": "completed",
+    "type": "image_to_video",
+    "progress": 100,
+    "prompt": "Black and white kitten, lying on table, smiling, cute, small, adorable, relaxed posture, simple background, warm lighting, cozy atmosphere, playful expression",
+    "created_at": "2025-08-29T02:56:49.764Z",
+    "updated_at": "2025-08-29T03:06:49.821Z",
+    "result": {
+      "videos": [
+        {
+          "id": "vid_video_1756436209682_zux05ryaa",
+          "url": "/outputs/videos/video_20250829_105730_video_1756436209682_zux05ryaa.mp4",
+          "thumbnail_url": "/outputs/videos/video_20250829_105730_video_1756436209682_zux05ryaa_thumb.jpg",
+          "fps": 24,
+          "width": 640,
+          "height": 480,
+          "motion_prompt": "Black and white kitten, lying on table, smiling, cute, small, adorable, relaxed posture, simple background, warm lighting, cozy atmosphere, playful expression",
+          "file_size": 0,
+          "created_at": "2025-08-29T03:06:49.822Z"
+        }
+      ]
+    }
+  },
+  "video_1756436950969_0y6k5j2ic": {
+    "id": "video_1756436950969_0y6k5j2ic",
+    "status": "completed",
+    "type": "image_to_video",
+    "progress": 100,
+    "prompt": "black and white cat lying on table, smiling, cute, small size, soft fur, playful expression, indoor setting, wooden surface, soft lighting, cozy atmosphere, relaxed posture, gentle gaze, charming appearance, adorable subject",
+    "created_at": "2025-08-29T03:09:11.080Z",
+    "updated_at": "2025-08-29T03:18:41.479Z",
+    "result": {
+      "videos": [
+        {
+          "id": "vid_video_1756436950969_0y6k5j2ic",
+          "url": "/outputs/videos/video_20250829_110954_video_1756436950969_0y6k5j2ic.mp4",
+          "thumbnail_url": "/outputs/videos/video_20250829_110954_video_1756436950969_0y6k5j2ic_thumb.jpg",
+          "fps": 24,
+          "width": 640,
+          "height": 480,
+          "motion_prompt": "black and white cat lying on table, smiling, cute, small size, soft fur, playful expression, indoor setting, wooden surface, soft lighting, cozy atmosphere, relaxed posture, gentle gaze, charming appearance, adorable subject",
+          "file_size": 0,
+          "created_at": "2025-08-29T03:18:41.479Z"
+        }
+      ]
+    }
   }
 }

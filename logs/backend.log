@@ -7,28 +7,131 @@ Tasks pool: initialize successfully read from JSON
 📁 Static files served from outputs and projects directories
 🔗 API endpoints available at http://localhost:3002/api
 🔔 SSE notifications available at http://localhost:3002/api/notifications/stream
-Storage: return stored images {
-  id: 'video_1756266970311_gcskekdub',
-  status: 'completed',
-  type: 'image_to_video',
-  progress: 100,
-  prompt: '穿着中国民族传统服饰的美女,在和木门后面露出头,然后歪头温柔的笑了,眼睛眯起来像晚晚的月亮',
-  created_at: '2025-08-27T03:56:10.406Z',
-  updated_at: '2025-08-27T04:02:10.563Z',
-  result: { videos: [ [Object] ] }
+Submitting video generation task: {
+  "image_path": "/root/autodl-tmp/EasyVideo/outputs/images/506245cf-b268-4e1b-a0f4-6c837b73e60d.png",
+  "prompt": "Black and white kitten, lying on table, smiling, cute, small, adorable, relaxed posture, simple background, warm lighting, cozy atmosphere, playful expression",
+  "negative_prompt": "static, blurry, low quality",
+  "fps": 24,
+  "num_frames": 73,
+  "seed": 63458,
+  "tiled": true,
+  "num_inference_steps": 20,
+  "cfg_scale": 5,
+  "motion_strength": 0.5,
+  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/videos",
+  "task_id": "video_1756436209682_zux05ryaa"
 }
-Tasks Pool: Start to clean old tasks, found 2 tasks to delete.
+AI service task creation response: { video_path: '', task_id: 'video_1756436209682_zux05ryaa' }
+Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
+AI-services response:  { progress: 5, status: '正在加载模型...' }
+Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
+AI-services response:  {
+  progress: 100,
+  status: 'completed',
+  video_path: '/root/autodl-tmp/EasyVideo/outputs/videos/video_20250829_105730_video_1756436209682_zux05ryaa.mp4'
+}
+Tasks pool: removing task video_1756436209682_zux05ryaa from pool (reason: completed)
+Tasks pool: write task video_1756436209682_zux05ryaa to JSON for it completed
+Tasks pool: Task video_1756436209682_zux05ryaa 已保存到 ./task_record.json
+Submitting video generation task: {
+  "image_path": "/root/autodl-tmp/EasyVideo/outputs/images/7a9fb3b9-03fd-4f59-8dd5-5a2605e9e74f.png",
+  "prompt": "black and white cat lying on table, smiling, cute, small size, soft fur, playful expression, indoor setting, wooden surface, soft lighting, cozy atmosphere, relaxed posture, gentle gaze, charming appearance, adorable subject",
+  "negative_prompt": "static, blurry, low quality",
+  "fps": 24,
+  "num_frames": 73,
+  "seed": 63458,
+  "tiled": true,
+  "num_inference_steps": 20,
+  "cfg_scale": 7.5,
+  "motion_strength": 0.5,
+  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/videos",
+  "task_id": "video_1756436950969_0y6k5j2ic"
+}
+AI service task creation response: { video_path: '', task_id: 'video_1756436950969_0y6k5j2ic' }
+Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
+AI-services response:  { progress: 5, status: '正在加载模型...' }
+Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
+AI-services response:  {
+  progress: 100,
+  status: 'completed',
+  video_path: '/root/autodl-tmp/EasyVideo/outputs/videos/video_20250829_110954_video_1756436950969_0y6k5j2ic.mp4'
+}
+Tasks pool: removing task video_1756436950969_0y6k5j2ic from pool (reason: completed)
+Tasks pool: write task video_1756436950969_0y6k5j2ic to JSON for it completed
+Tasks pool: Task video_1756436950969_0y6k5j2ic 已保存到 ./task_record.json
+Tasks Pool: Start to clean old tasks, found 4 tasks to delete.
 Tasks Pool: Cleaning up old task: video_1756221612953_8gmb9ytw7
 Tasks Pool: Cleaning up old task: video_1756266970311_gcskekdub
-Tasks Pool: Cleaned up 2 old tasks
-Tasks Pool: Start to clean old tasks, found 0 tasks to delete.
-Storage: return stored images {
-  id: 'video_1756266970311_gcskekdub',
-  status: 'completed',
-  type: 'image_to_video',
-  progress: 100,
-  prompt: '穿着中国民族传统服饰的美女,在和木门后面露出头,然后歪头温柔的笑了,眼睛眯起来像晚晚的月亮',
-  created_at: '2025-08-27T03:56:10.406Z',
-  updated_at: '2025-08-27T04:02:10.563Z',
-  result: { videos: [ [Object] ] }
-}
+Tasks Pool: Cleaning up old task: video_1756391885604_ezscidmda
+Tasks Pool: Cleaning up old task: video_1756393702025_venru3luw
+Tasks Pool: Cleaned up 4 old tasks

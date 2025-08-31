@@ -98,7 +98,7 @@ const StoryboardPage: React.FC = () => {
                     setGenerating(false);
                     toast.error('分镜脚本加载失败');
                 });
-        }, 800);
+        }, 10000);
     };
 
     const handleCancelGeneration = async () => {

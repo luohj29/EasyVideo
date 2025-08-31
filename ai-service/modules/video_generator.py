@@ -82,6 +82,7 @@ class VideoGenerator:
         gc.collect()
     
     def _initialize_model(self):
+        logger.info("Video gen: loading model")
         """初始化模型"""
         if self.is_model_loaded:
             return
@@ -108,10 +109,10 @@ class VideoGenerator:
             
             # 配置模型
             model_configs = [
-                ModelConfig(path=six_shards(f"{self.model_path}/high_noise_model"), offload_device="cpu", offload_dtype=torch.float16),
-                ModelConfig(path=six_shards(f"{self.model_path}/low_noise_model"), offload_device="cpu", offload_dtype=torch.float16),
-                ModelConfig(path=f"{self.model_path}/models_t5_umt5-xxl-enc-bf16.pth", offload_device="cpu", offload_dtype=torch.float16),
-                ModelConfig(path=f"{self.model_path}/Wan2.1_VAE.pth", offload_device="cpu", offload_dtype=torch.float16),
+                ModelConfig(path=f"{self.model_path}/models_t5_umt5-xxl-enc-bf16.pth", offload_device="cpu", offload_dtype=torch.float8_e4m3fn),
+                ModelConfig(path=six_shards(f"{self.model_path}/high_noise_model"), offload_device="cpu", offload_dtype=torch.float8_e4m3fn),
+                ModelConfig(path=six_shards(f"{self.model_path}/low_noise_model"), offload_device="cpu", offload_dtype=torch.float8_e4m3fn),
+                ModelConfig(path=f"{self.model_path}/Wan2.1_VAE.pth", offload_device="cpu", offload_dtype=torch.float8_e4m3fn),
             ]
             
             # 初始化模型
@@ -156,7 +157,7 @@ class VideoGenerator:
                 logger.error(f"Progress callback error: {e}")
     
     async def generate_from_image(self, image_path: str, prompt: str = "",
-                                 negative_prompt: str = "static, blurry, low quality",
+                                 negative_prompt: str | None = "static, blurry, low quality",
                                  num_frames: int = 81, fps: int = 16,
                                  seed: Optional[int] = None,
                                  tiled: bool = True,
@@ -172,10 +173,12 @@ class VideoGenerator:
                 self._initialize_model()
             
             if not self.is_model_loaded:
+                logger.error("视频生成模型未能成功加载，无法生成视频")
                 raise RuntimeError("视频生成模型未能成功加载，无法生成视频")
             
             # 检查输入文件
             if not os.path.exists(image_path):
+                logger.error(f"Input image not found: {image_path}")
                 raise FileNotFoundError(f"Input image not found: {image_path}")
             
             # 设置输出路径
@@ -402,7 +405,8 @@ class VideoGenerator:
 if __name__ == "__main__":
     async def test_generator():
         generator = VideoGenerator()
-        
+        generator._initialize_model()
+        print("model initialized")
         # 测试参数验证
         assert generator.validate_parameters(5.0, 24, 0.5) == True
         assert generator.validate_parameters(-1.0, 24, 0.5) == False
