@@ -202,7 +202,80 @@ async def optimize_prompt(request: PromptOptimizeRequest):
             except Exception as e:
                 logger.warning(f"Failed to unload PromptOptimizer model: {e}")
 
+async def initialize_and_generate_Image(request: ImageGenerateRequest):
+    """完全异步的图片生成初始化和执行"""
+    generator = None
+    try:
+        # 更新状态为初始化中
+        task_progress[request.task_id] = {"progress": 5, "status": "initializing"}
+        
+        # 异步初始化生成器
+        generator = await asyncio.get_event_loop().run_in_executor(
+            None, get_image_generator
+        )
+        
+        # 设置进度回调
+        def progress_callback(progress: int, status: str = "processing"):
+            task_progress[request.task_id] = {"progress": progress, "status": status}
+        
+        generator.set_progress_callback(request.task_id, progress_callback)
 
+        # 更新状态为生成中
+        task_progress[request.task_id] = {"progress": 10, "status": "processing"}
+        
+        # 异步执行视频生成
+        video_path = await asyncio.get_event_loop().run_in_executor(
+            None,
+            lambda: asyncio.run(generator.generate_from_image(
+                image_path=request.image_path,
+                prompt=request.prompt,
+                negative_prompt=request.negative_prompt,
+                fps=request.fps,
+                duration=request.duration,
+                seed=request.seed,
+                tiled=request.tiled,
+                num_inference_steps=request.num_inference_steps,
+                cfg_scale=request.cfg_scale,
+                motion_strength=request.motion_strength,
+                output_dir=request.output_dir,
+                task_id=request.task_id,
+
+            ))
+        )
+        
+        # Mark as completed and store video path
+        task_progress[request.task_id] = {
+            "progress": 100, 
+            "status": "completed",
+            "video_path": video_path
+        }
+        
+        logger.info(f"Video generation completed for task_id: {request.task_id}")
+        
+        # Clean up task progress after a delay
+        asyncio.create_task(cleanup_task_progress(request.task_id, delay=300))  # 5分钟后清理
+        
+    except Exception as e:
+        logger.error(f"Error in video generation pipeline: {e}")
+        task_progress[request.task_id] = {"progress": 0, "status": "failed", "error": str(e)}
+        
+        # Clean up task progress after a delay
+        asyncio.create_task(cleanup_task_progress(request.task_id, delay=60))
+    finally:
+        # 确保模型卸载
+        if generator and hasattr(generator, 'unload_model'):
+            try:
+                # 异步卸载模型
+                await asyncio.get_event_loop().run_in_executor(
+                    None, generator.unload_model
+                )
+                logger.info("VideoGenerator model unloaded successfully")
+            except Exception as e:
+                logger.warning(f"Failed to unload VideoGenerator model: {e}")    
+
+@app.post("/image/generate", response_model=ImageGenerateResponse)
+async def generate_image(request: ImageGenerateRequest):
+>>>>>>> d980f3b8e63a4b157919371d8d7ab34b7ae70955
     generator = None
     try:
         # Initialize task progress
@@ -396,7 +469,7 @@ async def initialize_and_generate_video(request: VideoGenerateRequest):
                 cfg_scale=request.cfg_scale,
                 motion_strength=request.motion_strength,
                 output_dir=request.output_dir,
-                task_id=request.task_id
+                task_id=request.task_id,
             ))
         )
         

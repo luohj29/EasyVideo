@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
 import {
   Image,
@@ -708,3 +709,4 @@ const TextToImagePage: React.FC = () => {
 };
 
 export default TextToImagePage;
+

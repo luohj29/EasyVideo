@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import {
   Video,
@@ -882,5 +883,4 @@ const ImageToVideoPage: React.FC = () => {
     </div>
   );
 };
-
 export default ImageToVideoPage;
