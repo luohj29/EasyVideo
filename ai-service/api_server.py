@@ -202,6 +202,7 @@ async def optimize_prompt(request: PromptOptimizeRequest):
             except Exception as e:
                 logger.warning(f"Failed to unload PromptOptimizer model: {e}")
 
+
 async def initialize_and_generate_Image(request: ImageGenerateRequest):
     """完全异步的图片生成初始化和执行"""
     generator = None
@@ -275,7 +276,6 @@ async def initialize_and_generate_Image(request: ImageGenerateRequest):
 
 @app.post("/image/generate", response_model=ImageGenerateResponse)
 async def generate_image(request: ImageGenerateRequest):
->>>>>>> d980f3b8e63a4b157919371d8d7ab34b7ae70955
     generator = None
     try:
         # Initialize task progress

@@ -7,131 +7,575 @@ Tasks pool: initialize successfully read from JSON
 📁 Static files served from outputs and projects directories
 🔗 API endpoints available at http://localhost:3002/api
 🔔 SSE notifications available at http://localhost:3002/api/notifications/stream
+AI service not available, checking local config: timeout of 3000ms exceeded
+AI service not available, checking local config: timeout of 3000ms exceeded
+AI service not available, checking local config: timeout of 3000ms exceeded
+Error optimizing prompt: Error: timeout of 30000ms exceeded
+    at createError (/root/autodl-tmp/EasyVideo/backend/node_modules/axios/lib/core/createError.js:16:15)
+    at RedirectableRequest.handleRequestTimeout (/root/autodl-tmp/EasyVideo/backend/node_modules/axios/lib/adapters/http.js:303:16)
+    at RedirectableRequest.emit (node:events:518:28)
+    at RedirectableRequest.emit (node:domain:489:12)
+    at Timeout.<anonymous> (/root/autodl-tmp/EasyVideo/backend/node_modules/follow-redirects/index.js:221:12)
+    at listOnTimeout (node:internal/timers:588:17)
+    at processTimers (node:internal/timers:523:7) {
+  config: {
+    url: 'http://localhost:8000/prompt/optimize',
+    method: 'post',
+    data: '{"prompt":"一只小猫","optimize_type":"text_to_image","enhance_details":true}',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+      'User-Agent': 'axios/0.21.4',
+      'Content-Length': 80
+    },
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 30000,
+    adapter: [Function: httpAdapter],
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    validateStatus: [Function: validateStatus],
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    }
+  },
+  code: 'ECONNABORTED',
+  request: <ref *1> Writable {
+    _events: {
+      close: undefined,
+      error: [Function: handleRequestError],
+      prefinish: undefined,
+      finish: undefined,
+      drain: undefined,
+      response: [Function: handleResponse],
+      timeout: undefined,
+      socket: [Function: destroyOnTimeout],
+      abort: undefined
+    },
+    _writableState: WritableState {
+      highWaterMark: 65536,
+      length: 0,
+      corked: 0,
+      onwrite: [Function: bound onwrite],
+      writelen: 0,
+      bufferedIndex: 0,
+      pendingcb: 0,
+      [Symbol(kState)]: 17580812,
+      [Symbol(kBufferedValue)]: null
+    },
+    _maxListeners: undefined,
+    _options: {
+      maxRedirects: 21,
+      maxBodyLength: 10485760,
+      protocol: 'http:',
+      path: '/prompt/optimize',
+      method: 'POST',
+      headers: [Object],
+      agent: undefined,
+      agents: [Object],
+      auth: undefined,
+      hostname: 'localhost',
+      port: '8000',
+      nativeProtocols: [Object],
+      pathname: '/prompt/optimize'
+    },
+    _ended: true,
+    _ending: true,
+    _redirectCount: 0,
+    _redirects: [],
+    _requestBodyLength: 80,
+    _requestBodyBuffers: [ [Object] ],
+    _eventsCount: 3,
+    _onNativeResponse: [Function (anonymous)],
+    _currentRequest: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 80,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'POST /prompt/optimize HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'Content-Type: application/json\r\n' +
+        'User-Agent: axios/0.21.4\r\n' +
+        'Content-Length: 80\r\n' +
+        'Host: localhost:8000\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/prompt/optimize',
+      _ended: false,
+      res: null,
+      aborted: true,
+      timeoutCb: [Function: emitRequestTimeout],
+      upgradeOrConnect: false,
+      parser: [HTTPParser],
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'localhost',
+      protocol: 'http:',
+      _redirectable: [Circular *1],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [Socket],
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null,
+      [Symbol(kError)]: undefined
+    },
+    _currentUrl: 'http://localhost:8000/prompt/optimize',
+    _timeout: null,
+    [Symbol(shapeMode)]: true,
+    [Symbol(kCapture)]: false
+  },
+  response: undefined,
+  isAxiosError: true,
+  toJSON: [Function: toJSON]
+}
+Sending request to AI service: {
+  "prompt": "a small kitten, fluffy fur, curious eyes, playful expression, sitting on a cozy blanket, surrounded by soft toys and pillows, warm and inviting atmosphere, natural lighting, soft shadows, vibrant colors, serene background, minimalist composition",
+  "negative_prompt": "worst quality, normal quality, low quality, low res, blurry, distortion, text, watermark, logo, banner, extra digits, cropped, jpeg artifacts, signature, username, error, sketch, duplicate, ugly, monochrome, horror, geometry, mutation, disgusting, bad anatomy, bad proportions, bad quality, deformed, disconnected limbs, out of frame, out of focus, dehydrated, disfigured, extra arms, extra limbs, extra hands, fused fingers, gross proportions, long neck, jpeg, malformed limbs, mutated, mutated hands, mutated limbs, missing arms, missing fingers, picture frame, poorly drawn hands, poorly drawn face, collage, pixel, pixelated, grainy, color aberration, amputee, autograph, bad illustration, beyond the borders, blank background, body out of frame, boring background, branding, cut off, dismembered, disproportioned, distorted, draft, duplicated features, extra fingers, extra legs, fault, flaw, grains, hazy, identifying mark, improper scale, incorrect physiology, incorrect ratio, indistinct, kitsch, low resolution, macabre, malformed, mark, misshapen, missing hands, missing legs, mistake, morbid, mutilated, off-screen, outside the picture, poorly drawn feet, printed words, render, repellent, replicate, reproduce, revolting dimensions, script, shortened, sign, split image, squint, storyboard, tiling, trimmed, unfocused, unattractive, unnatural pose, unreal engine, unsightly, written language",
+  "width": 512,
+  "height": 512,
+  "seed": 317896,
+  "num_images": 1,
+  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/images",
+  "task_id": "eab37fda-daaf-4745-90bf-527402a131f6"
+}
+AI service response: { image_path: '', task_id: 'eab37fda-daaf-4745-90bf-527402a131f6' }
+Error processing image generation: TypeError: Cannot read properties of undefined (reading 'map')
+    at processImageGeneration (/root/autodl-tmp/EasyVideo/backend/src/routes/generation.ts:311:36)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
 Submitting video generation task: {
-  "image_path": "/root/autodl-tmp/EasyVideo/outputs/images/506245cf-b268-4e1b-a0f4-6c837b73e60d.png",
-  "prompt": "Black and white kitten, lying on table, smiling, cute, small, adorable, relaxed posture, simple background, warm lighting, cozy atmosphere, playful expression",
+  "image_path": "/root/autodl-tmp/EasyVideo/outputs/images/f3a28a8a-2df1-4cc6-96e8-c978d8958c00.png",
+  "prompt": "a small white kitten with dark eyes sitting on a wooden floor, wearing a red collar and looking up at the camera with curiosity, surrounded by soft shadows creating a cozy atmosphere.",
   "negative_prompt": "static, blurry, low quality",
   "fps": 24,
   "num_frames": 73,
-  "seed": 63458,
-  "tiled": true,
-  "num_inference_steps": 20,
-  "cfg_scale": 5,
-  "motion_strength": 0.5,
-  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/videos",
-  "task_id": "video_1756436209682_zux05ryaa"
-}
-AI service task creation response: { video_path: '', task_id: 'video_1756436209682_zux05ryaa' }
-Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
-AI-services response:  { progress: 5, status: '正在加载模型...' }
-Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436209682_zux05ryaa
-AI-services response:  {
-  progress: 100,
-  status: 'completed',
-  video_path: '/root/autodl-tmp/EasyVideo/outputs/videos/video_20250829_105730_video_1756436209682_zux05ryaa.mp4'
-}
-Tasks pool: removing task video_1756436209682_zux05ryaa from pool (reason: completed)
-Tasks pool: write task video_1756436209682_zux05ryaa to JSON for it completed
-Tasks pool: Task video_1756436209682_zux05ryaa 已保存到 ./task_record.json
-Submitting video generation task: {
-  "image_path": "/root/autodl-tmp/EasyVideo/outputs/images/7a9fb3b9-03fd-4f59-8dd5-5a2605e9e74f.png",
-  "prompt": "black and white cat lying on table, smiling, cute, small size, soft fur, playful expression, indoor setting, wooden surface, soft lighting, cozy atmosphere, relaxed posture, gentle gaze, charming appearance, adorable subject",
-  "negative_prompt": "static, blurry, low quality",
-  "fps": 24,
-  "num_frames": 73,
-  "seed": 63458,
+  "seed": 751741,
   "tiled": true,
   "num_inference_steps": 20,
   "cfg_scale": 7.5,
   "motion_strength": 0.5,
   "output_dir": "/root/autodl-tmp/EasyVideo/outputs/videos",
-  "task_id": "video_1756436950969_0y6k5j2ic"
+  "task_id": "video_1757852766294_nixz2ckgp"
 }
-AI service task creation response: { video_path: '', task_id: 'video_1756436950969_0y6k5j2ic' }
-Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
-AI-services response:  { progress: 5, status: '正在加载模型...' }
-Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
-AI-services response:  { progress: 30, status: '正在生成视频...' }
-Trying to Update progress for task_id:  video_1756436950969_0y6k5j2ic
+AI service task creation response: { video_path: '', task_id: 'video_1757852766294_nixz2ckgp' }
+Trying to Update progress for task_id:  video_1757852766294_nixz2ckgp
 AI-services response:  {
-  progress: 100,
-  status: 'completed',
-  video_path: '/root/autodl-tmp/EasyVideo/outputs/videos/video_20250829_110954_video_1756436950969_0y6k5j2ic.mp4'
+  progress: 0,
+  status: 'failed',
+  error: "VideoGenerator.generate_from_image() got an unexpected keyword argument 'num_frames'"
 }
-Tasks pool: removing task video_1756436950969_0y6k5j2ic from pool (reason: completed)
-Tasks pool: write task video_1756436950969_0y6k5j2ic to JSON for it completed
-Tasks pool: Task video_1756436950969_0y6k5j2ic 已保存到 ./task_record.json
-Tasks Pool: Start to clean old tasks, found 4 tasks to delete.
+Submitting video generation task: {
+  "image_path": "/root/autodl-tmp/EasyVideo/outputs/images/3118f838-84d4-46dd-a6b4-f5b1c05311d9.png",
+  "prompt": "a small white kitten with dark eyes sitting on a wooden floor, wearing a red collar and looking up at the camera with curiosity, surrounded by soft shadows creating a cozy atmosphere.",
+  "negative_prompt": "static, blurry, low quality",
+  "fps": 24,
+  "num_frames": 73,
+  "seed": 544875,
+  "tiled": true,
+  "num_inference_steps": 20,
+  "cfg_scale": 7.5,
+  "motion_strength": 0.5,
+  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/videos",
+  "task_id": "video_1757853186646_kraifhosw"
+}
+AI service task creation response: { video_path: '', task_id: 'video_1757853186646_kraifhosw' }
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+AI-services response:  { progress: 5, status: '正在加载模型...' }
+Submitting video generation task: {
+  "image_path": "/root/autodl-tmp/EasyVideo/outputs/images/41a21842-7bce-450d-9674-5c1c1eb045fc.png",
+  "prompt": "a small white kitten with dark eyes sitting on a wooden floor, wearing a red collar and looking up at the camera with curiosity, surrounded by soft shadows creating a cozy atmosphere.",
+  "negative_prompt": "static, blurry, low quality",
+  "fps": 24,
+  "num_frames": 73,
+  "seed": 547550,
+  "tiled": true,
+  "num_inference_steps": 20,
+  "cfg_scale": 7.5,
+  "motion_strength": 0.5,
+  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/videos",
+  "task_id": "video_1757853304325_43re7w3u4"
+}
+AI service task creation response: { video_path: '', task_id: 'video_1757853304325_43re7w3u4' }
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+AI-services response:  { progress: 5, status: '正在加载模型...' }
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+AI-services response:  { progress: 32, status: 'generating' }
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+AI-services response:  { progress: 0, status: 'unknown' }
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Submitting video generation task: {
+  "image_path": "/root/autodl-tmp/EasyVideo/outputs/images/fb5bdf6c-1c09-4617-9e00-38b9f470c1e4.png",
+  "prompt": "一只小猫",
+  "negative_prompt": "static, blurry, low quality",
+  "fps": 24,
+  "num_frames": 73,
+  "seed": 467060,
+  "tiled": true,
+  "num_inference_steps": 20,
+  "cfg_scale": 7.5,
+  "motion_strength": 0.5,
+  "output_dir": "/root/autodl-tmp/EasyVideo/outputs/videos",
+  "task_id": "video_1757853621530_iuwbdih2y"
+}
+AI service task creation response: { video_path: '', task_id: 'video_1757853621530_iuwbdih2y' }
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853621530_iuwbdih2y
+AI-services response:  { progress: 5, status: '正在加载模型...' }
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853621530_iuwbdih2y
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853621530_iuwbdih2y
+AI-services response:  { progress: 30, status: '正在生成视频...' }
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853621530_iuwbdih2y
+AI-services response:  { progress: 32, status: 'generating' }
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853621530_iuwbdih2y
+AI-services response:  { progress: 35, status: 'generating' }
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853621530_iuwbdih2y
+AI-services response:  { progress: 37, status: 'generating' }
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853621530_iuwbdih2y
+AI-services response:  { progress: 42, status: 'generating' }
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853621530_iuwbdih2y
+AI-services response:  { progress: 45, status: 'generating' }
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853621530_iuwbdih2y
+AI-services response:  { progress: 50, status: 'generating' }
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853621530_iuwbdih2y
+AI-services response:  { progress: 52, status: 'generating' }
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853621530_iuwbdih2y
+AI-services response:  { progress: 52, status: 'generating' }
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853621530_iuwbdih2y
+AI-services response:  { progress: 57, status: 'generating' }
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853621530_iuwbdih2y
+AI-services response:  { progress: 60, status: 'generating' }
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853621530_iuwbdih2y
+AI-services response:  { progress: 62, status: 'generating' }
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Tasks Pool: Start to clean old tasks, found 6 tasks to delete.
 Tasks Pool: Cleaning up old task: video_1756221612953_8gmb9ytw7
 Tasks Pool: Cleaning up old task: video_1756266970311_gcskekdub
 Tasks Pool: Cleaning up old task: video_1756391885604_ezscidmda
 Tasks Pool: Cleaning up old task: video_1756393702025_venru3luw
-Tasks Pool: Cleaned up 4 old tasks
+Tasks Pool: Cleaning up old task: video_1756436209682_zux05ryaa
+Tasks Pool: Cleaning up old task: video_1756436950969_0y6k5j2ic
+Tasks Pool: Cleaned up 6 old tasks
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853621530_iuwbdih2y
+AI-services response:  { progress: 67, status: 'generating' }
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853621530_iuwbdih2y
+AI-services response:  { progress: 70, status: 'generating' }
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853621530_iuwbdih2y
+AI-services response:  { progress: 75, status: 'generating' }
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853621530_iuwbdih2y
+AI-services response:  { progress: 77, status: 'generating' }
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853621530_iuwbdih2y
+AI-services response:  { progress: 80, status: 'generating' }
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853621530_iuwbdih2y
+AI-services response:  {
+  progress: 100,
+  status: 'completed',
+  video_path: '/root/autodl-tmp/EasyVideo/outputs/videos/video_20250914_204109_video_1757853621530_iuwbdih2y.mp4'
+}
+Tasks pool: removing task video_1757853621530_iuwbdih2y from pool (reason: completed)
+Tasks pool: write task video_1757853621530_iuwbdih2y to JSON for it completed
+Tasks pool: Task video_1757853621530_iuwbdih2y 已保存到 ./task_record.json
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853304325_43re7w3u4
+Progress check error for video_1757853304325_43re7w3u4: Cannot read properties of undefined (reading 'progress')
+Trying to Update progress for task_id:  video_1757853186646_kraifhosw
+Progress check error for video_1757853186646_kraifhosw: Cannot read properties of undefined (reading 'progress')

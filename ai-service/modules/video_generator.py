@@ -161,11 +161,11 @@ class VideoGenerator:
                                 prompt: str = "",
                                 negative_prompt: str = "static, blurry, low quality",
                                 height: int = 480, width: int = 832,
-                                duration: float = 5.0,
                                 fps: int = 24,
                                 seed: Optional[int] = None,
                                 tiled: bool = True,
                                 tile_size: tuple = (30, 52),
+                                num_frames: int = 81,
                                 num_inference_steps: int = 20,
                                 cfg_scale: float = 7.5,
                                 cfg_merge: bool = False,
@@ -211,14 +211,14 @@ class VideoGenerator:
             self._update_progress(task_id, 20, "正在优化提示词...")
             
             # 优化prompt
-            optimized_prompt = prompt
-            try:
-                from .prompt_optimizer import PromptOptimizer
-                optimizer = PromptOptimizer()
-                optimized_prompt = await optimizer.optimize(prompt, task_type="video")
-                logger.info(f"Optimized prompt: {optimized_prompt}")
-            except Exception as e:
-                logger.warning(f"Prompt optimization failed: {e}")
+            # optimized_prompt = prompt
+            # try:
+            #     from .prompt_optimizer import PromptOptimizer
+            #     optimizer = PromptOptimizer()
+            #     optimized_prompt = await optimizer.optimize(prompt, task_type="video")
+            #     logger.info(f"Optimized prompt: {optimized_prompt}")
+            # except Exception as e:
+            #     logger.warning(f"Prompt optimization failed: {e}")
             
             self._update_progress(task_id, 30, "正在生成视频...")
             
@@ -226,9 +226,6 @@ class VideoGenerator:
             if seed is None:
                 seed = random.randint(0, sys.maxsize)
             full_prompt = f"{optimized_prompt}, cinematic lighting, smooth motion, realistic, high quality"
-
-            #帧数,需设置为 4 的倍数 + 1，不满足时向上取整，最小值为 1。
-            num_frames = ((int(fps * duration) - 1) // 4 + 1) * 4 + 1
 
             logger.info(f"Generating video with prompt: {full_prompt}")
             logger.info(f"Parameters: seed={seed}, tiled={tiled}, steps={num_inference_steps}, cfg_scale={cfg_scale}")
@@ -239,10 +236,10 @@ class VideoGenerator:
                     prompt=full_prompt,
                     negative_prompt=negative_prompt,
                     width=width,height=height,
-                    num_frames=num_frames,
                     seed=seed,
                     tiled=tiled,
                     tile_size=tile_size,
+                    num_frames=num_frames,
                     num_inference_steps=num_inference_steps,
                     cfg_scale=cfg_scale,
                     cfg_merge=cfg_merge,
@@ -252,6 +249,7 @@ class VideoGenerator:
                     rand_device="cpu",
                     switch_DiT_boundary=switch_DiT_boundary,
                     progress_bar_cmd=lambda x:NewTqdm(x, callback=progress_callbacks[task_id]),
+                    tea_cache_model_id = "Wan2.2-I2V-A14B",
                 )
             #未添加的参数：
             #sliding_window_size: DiT 部分的滑动窗口大小。实验性功能，效果不稳定。

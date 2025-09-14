@@ -944,6 +944,7 @@ router.get('/queue/status', async (req, res) => {
 
 //get storage video
 router.get("/storage/video", async (req: Request, res: Response) => {
+  console.log("Storage: return stored videos");
   const result = await getTypeFromJson("image_to_video", JSON_VIDEO_PATH);
   return res.json({data: result });
 });

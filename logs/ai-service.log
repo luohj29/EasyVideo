@@ -1,38 +1,232 @@
 INFO:__main__:AI service started with lazy loading support
 INFO:     Will watch for changes in these directories: ['/root/autodl-tmp/EasyVideo/ai-service']
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [3619] using WatchFiles
+INFO:     Started reloader process [22668] using WatchFiles
 INFO:__mp_main__:AI service started with lazy loading support
 INFO:api_server:AI service started with lazy loading support
-INFO:     Started server process [3716]
+INFO:     Started server process [22818]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-INFO:     127.0.0.1:57378 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57390 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57390 - "GET /health HTTP/1.1" 200 OK
+INFO:watchfiles.main:3 changes detected
+INFO:     127.0.0.1:44248 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44248 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44248 - "GET /health HTTP/1.1" 200 OK
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22818]
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/miniconda3/envs/demo/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/miniconda3/envs/demo/lib/python3.10/multiprocessing/spawn.py", line 125, in _main
+    prepare(preparation_data)
+  File "/root/miniconda3/envs/demo/lib/python3.10/multiprocessing/spawn.py", line 236, in prepare
+    _fixup_main_from_path(data['init_main_from_path'])
+  File "/root/miniconda3/envs/demo/lib/python3.10/multiprocessing/spawn.py", line 287, in _fixup_main_from_path
+    main_content = runpy.run_path(main_path,
+  File "/root/miniconda3/envs/demo/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/root/miniconda3/envs/demo/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/root/miniconda3/envs/demo/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/root/autodl-tmp/EasyVideo/ai-service/api_server.py", line 20, in <module>
+    from modules.video_generator import VideoGenerator
+  File "/root/autodl-tmp/EasyVideo/ai-service/modules/video_generator.py", line 244
+    tiled=tiled,aQxS1lPYaGOA
+                
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
+INFO:__mp_main__:AI service started with lazy loading support
+INFO:api_server:AI service started with lazy loading support
+INFO:     Started server process [24352]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:37292 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40276 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40284 - "GET /health HTTP/1.1" 200 OK
 INFO:modules.prompt_optimizer:Qwen model path configured: /root/autodl-tmp/Qwen/Qwen2.5-VL-3B-Instruct
 INFO:api_server:PromptOptimizer initialized on demand
-INFO:modules.prompt_optimizer:Optimizing prompt: 黑白相间的小猫趴在桌子上,微笑, 可爱, 
+INFO:modules.prompt_optimizer:Optimizing prompt: 一只小猫
+INFO:modules.prompt_optimizer:Optimization type: 通用型
+INFO:modules.prompt_optimizer:Task type: image
+INFO:modules.prompt_optimizer:Model not loaded, initializing now...
+INFO:modules.prompt_optimizer:Loading Qwen2.5-VL model on demand...
+INFO:watchfiles.main:3 changes detected
+INFO:accelerate.utils.modeling:We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.12it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.30it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.27it/s]
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+INFO:modules.prompt_optimizer:Qwen2.5-VL model loaded successfully
+INFO:modules.prompt_optimizer:AI optimized prompt: small cat, fluffy fur, bright eyes, blue collar, sitting on soft cushion, cozy living room, warm lighting, playful expression, small toy in front of it, minimalist background, serene atmosphere, cute and charming
+INFO:modules.prompt_optimizer:Unloading Qwen2.5-VL model to free memory...
+INFO:modules.prompt_optimizer:Qwen2.5-VL model unloaded successfully
+INFO:api_server:PromptOptimizer model unloaded successfully
+INFO:     127.0.0.1:41308 - "POST /prompt/optimize HTTP/1.1" 200 OK
+INFO:modules.prompt_optimizer:Optimizing prompt: 一只小猫
 INFO:modules.prompt_optimizer:Optimization type: 通用型
 INFO:modules.prompt_optimizer:Task type: image
 INFO:modules.prompt_optimizer:Model not loaded, initializing now...
 INFO:modules.prompt_optimizer:Loading Qwen2.5-VL model on demand...
 INFO:accelerate.utils.modeling:We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.89s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.70s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:03<00:00,  1.73s/it]
-The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
-You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.05s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.11it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.08it/s]
 INFO:modules.prompt_optimizer:Qwen2.5-VL model loaded successfully
-INFO:modules.prompt_optimizer:AI optimized prompt: Black and white kitten, lying on table, smiling, cute, small, adorable, relaxed posture, simple background, warm lighting, cozy atmosphere, playful expression
+INFO:modules.prompt_optimizer:AI optimized prompt: a small kitten, fluffy fur, curious eyes, playful expression, sitting on a cozy blanket, surrounded by soft toys and pillows, warm and inviting atmosphere, natural lighting, soft shadows, vibrant colors, serene background, minimalist composition
 INFO:modules.prompt_optimizer:Unloading Qwen2.5-VL model to free memory...
 INFO:modules.prompt_optimizer:Qwen2.5-VL model unloaded successfully
 INFO:api_server:PromptOptimizer model unloaded successfully
-INFO:     127.0.0.1:42640 - "POST /prompt/optimize HTTP/1.1" 200 OK
-INFO:api_server:Video generation task queued for task_id: video_1756436209682_zux05ryaa
-INFO:     127.0.0.1:42014 - "POST /video/generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36500 - "POST /prompt/optimize HTTP/1.1" 200 OK
+INFO:modules.image_generator:FLUX model path configured: /root/autodl-tmp/black-forest-labs/FLUX.1-Kontext-dev
+INFO:api_server:ImageGenerator initialized on demand
+INFO:modules.image_generator:Loading FLUX.1-Krea-dev model on demand from: /root/autodl-tmp/black-forest-labs/FLUX.1-Kontext-dev
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]Loading pipeline components...:  29%|██▊       | 2/7 [00:00<00:00, 13.45it/s]
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s][A
+Loading checkpoint shards:  67%|██████▋   | 2/3 [00:00<00:00, 19.30it/s][ALoading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 23.38it/s]
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 53.61it/s]
+Loading pipeline components...:  57%|█████▋    | 4/7 [00:00<00:00,  8.81it/s]You set `add_prefix_space`. The tokenizer needs to be converted from the slow tokenizers
+Loading pipeline components...: 100%|██████████| 7/7 [00:00<00:00,  8.12it/s]Loading pipeline components...: 100%|██████████| 7/7 [00:00<00:00,  8.50it/s]
+INFO:modules.image_generator:FLUX.1-Krea-dev model loaded successfully
+INFO:modules.prompt_optimizer:Qwen model path configured: /root/autodl-tmp/Qwen/Qwen2.5-VL-3B-Instruct
+INFO:modules.prompt_optimizer:Optimizing prompt: a small kitten, fluffy fur, curious eyes, playful expression, sitting on a cozy blanket, surrounded by soft toys and pillows, warm and inviting atmosphere, natural lighting, soft shadows, vibrant colors, serene background, minimalist composition
+INFO:modules.prompt_optimizer:Optimization type: 通用型
+INFO:modules.prompt_optimizer:Task type: image
+INFO:modules.prompt_optimizer:Model not loaded, initializing now...
+INFO:modules.prompt_optimizer:Loading Qwen2.5-VL model on demand...
+INFO:accelerate.utils.modeling:We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.07s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.09it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.06it/s]
+INFO:modules.prompt_optimizer:Qwen2.5-VL model loaded successfully
+INFO:modules.prompt_optimizer:AI optimized prompt: A tiny kitten with fluffy fur, curious eyes, and a playful expression. Sitting on a cozy blanket, surrounded by soft toys and pillows. The scene is set in a warm and inviting atmosphere with natural lighting creating soft shadows. Vibrant colors add to the serenity of the background. The image has a minimalist composition.
+INFO:modules.prompt_optimizer:Unloading Qwen2.5-VL model to free memory...
+INFO:modules.prompt_optimizer:Qwen2.5-VL model unloaded successfully
+INFO:modules.image_generator:Original prompt: a small kitten, fluffy fur, curious eyes, playful expression, sitting on a cozy blanket, surrounded by soft toys and pillows, warm and inviting atmosphere, natural lighting, soft shadows, vibrant colors, serene background, minimalist composition
+INFO:modules.image_generator:Optimized prompt: A tiny kitten with fluffy fur, curious eyes, and a playful expression. Sitting on a cozy blanket, surrounded by soft toys and pillows. The scene is set in a warm and inviting atmosphere with natural lighting creating soft shadows. Vibrant colors add to the serenity of the background. The image has a minimalist composition.
+INFO:modules.image_generator:Generating 1 images with FLUX model
+INFO:modules.image_generator:Prompt: A tiny kitten with fluffy fur, curious eyes, and a playful expression. Sitting on a cozy blanket, surrounded by soft toys and pillows. The scene is set in a warm and inviting atmosphere with natural lighting creating soft shadows. Vibrant colors add to the serenity of the background. The image has a minimalist composition.
+INFO:modules.image_generator:Size: 512x512, Seed: 317896
+INFO:modules.image_generator:Generating image 1/1 with seed 317896
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:04<01:25,  4.48s/it] 10%|█         | 2/20 [00:07<01:05,  3.65s/it] 15%|█▌        | 3/20 [00:10<00:57,  3.39s/it] 20%|██        | 4/20 [00:13<00:52,  3.31s/it] 25%|██▌       | 5/20 [00:16<00:48,  3.25s/it] 30%|███       | 6/20 [00:20<00:44,  3.20s/it] 35%|███▌      | 7/20 [00:23<00:41,  3.19s/it] 40%|████      | 8/20 [00:26<00:38,  3.17s/it] 45%|████▌     | 9/20 [00:29<00:34,  3.15s/it] 50%|█████     | 10/20 [00:32<00:31,  3.13s/it] 55%|█████▌    | 11/20 [00:35<00:28,  3.15s/it] 60%|██████    | 12/20 [00:38<00:25,  3.16s/it] 65%|██████▌   | 13/20 [00:41<00:21,  3.12s/it] 70%|███████   | 14/20 [00:44<00:18,  3.08s/it] 75%|███████▌  | 15/20 [00:47<00:15,  3.06s/it] 80%|████████  | 16/20 [00:50<00:12,  3.05s/it] 85%|████████▌ | 17/20 [00:53<00:09,  3.04s/it] 90%|█████████ | 18/20 [00:56<00:06,  3.02s/it] 95%|█████████▌| 19/20 [00:59<00:03,  3.01s/it]100%|██████████| 20/20 [01:02<00:00,  2.92s/it]100%|██████████| 20/20 [01:02<00:00,  3.13s/it]
+INFO:modules.image_generator:Unloading FLUX model to free memory...
+INFO:modules.image_generator:FLUX model unloaded successfully
+INFO:api_server:ImageGenerator model unloaded successfully
+INFO:     127.0.0.1:36500 - "POST /image/generate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51842 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51856 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51862 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51874 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56504 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56514 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56522 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56536 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56542 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57456 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57464 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57480 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57482 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57486 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54998 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55004 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55012 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55016 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55024 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59406 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59410 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59416 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59426 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59440 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49758 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49766 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49768 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49770 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49784 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43892 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43906 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43914 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43922 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43932 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41604 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41610 - "GET /task/progress/eab37fda-daaf-4745-90bf-527402a131f6 HTTP/1.1" 200 OK
+INFO:api_server:Cleaned up task progress for task_id: eab37fda-daaf-4745-90bf-527402a131f6
+INFO:modules.prompt_optimizer:Optimizing prompt: 一只小猫
+INFO:modules.prompt_optimizer:Optimization type: 通用型
+INFO:modules.prompt_optimizer:Task type: image
+INFO:modules.prompt_optimizer:Model not loaded, initializing now...
+INFO:modules.prompt_optimizer:Loading Qwen2.5-VL model on demand...
+INFO:accelerate.utils.modeling:We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.01s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.17it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.14it/s]
+INFO:modules.prompt_optimizer:Qwen2.5-VL model loaded successfully
+INFO:modules.prompt_optimizer:AI optimized prompt: a small white kitten with dark eyes sitting on a wooden floor, wearing a red collar and looking up at the camera with curiosity, surrounded by soft shadows creating a cozy atmosphere.
+INFO:modules.prompt_optimizer:Unloading Qwen2.5-VL model to free memory...
+INFO:modules.prompt_optimizer:Qwen2.5-VL model unloaded successfully
+INFO:api_server:PromptOptimizer model unloaded successfully
+INFO:     127.0.0.1:38342 - "POST /prompt/optimize HTTP/1.1" 200 OK
+INFO:api_server:Video generation task queued for task_id: video_1757852766294_nixz2ckgp
+INFO:     127.0.0.1:59962 - "POST /video/generate HTTP/1.1" 200 OK
+INFO:modules.video_generator:Model path: /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B
+INFO:modules.video_generator:Output dir: /root/autodl-tmp/EasyVideo/outputs
+INFO:api_server:VideoGenerator initialized on demand
+ERROR:api_server:Error in video generation pipeline: VideoGenerator.generate_from_image() got an unexpected keyword argument 'num_frames'
+INFO:api_server:VideoGenerator model unloaded successfully
+INFO:     127.0.0.1:60832 - "GET /task/progress/video_1757852766294_nixz2ckgp HTTP/1.1" 200 OK
+INFO:api_server:Cleaned up task progress for task_id: video_1757852766294_nixz2ckgp
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24352]
+INFO:__mp_main__:AI service started with lazy loading support
+INFO:api_server:AI service started with lazy loading support
+INFO:     Started server process [26842]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:watchfiles.main:3 changes detected
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [26842]
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/miniconda3/envs/demo/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/root/miniconda3/envs/demo/lib/python3.10/multiprocessing/spawn.py", line 125, in _main
+    prepare(preparation_data)
+  File "/root/miniconda3/envs/demo/lib/python3.10/multiprocessing/spawn.py", line 236, in prepare
+    _fixup_main_from_path(data['init_main_from_path'])
+  File "/root/miniconda3/envs/demo/lib/python3.10/multiprocessing/spawn.py", line 287, in _fixup_main_from_path
+    main_content = runpy.run_path(main_path,
+  File "/root/miniconda3/envs/demo/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/root/miniconda3/envs/demo/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/root/miniconda3/envs/demo/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/root/autodl-tmp/EasyVideo/ai-service/api_server.py", line 20, in <module>
+    from modules.video_generator import VideoGenerator
+  File "/root/autodl-tmp/EasyVideo/ai-service/modules/video_generator.py", line 247
+    num_frames=num_frames,
+    ^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: keyword argument repeated: num_frames
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
+INFO:__mp_main__:AI service started with lazy loading support
+INFO:api_server:AI service started with lazy loading support
+INFO:     Started server process [27261]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:api_server:Video generation task queued for task_id: video_1757853186646_kraifhosw
+INFO:     127.0.0.1:38918 - "POST /video/generate HTTP/1.1" 200 OK
 INFO:modules.video_generator:Model path: /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B
 INFO:modules.video_generator:Output dir: /root/autodl-tmp/EasyVideo/outputs
 INFO:api_server:VideoGenerator initialized on demand
 INFO:modules.video_generator:Video gen: loading model
+INFO:watchfiles.main:3 changes detected
 Loading models from: /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/models_t5_umt5-xxl-enc-bf16.pth
     model_name: wan_video_text_encoder model_class: WanTextEncoder
     The following models are loaded: ['wan_video_text_encoder'].
@@ -43,12 +237,56 @@ Loading models from: ['/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/
 Loading models from: ['/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00001-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00002-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00003-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00004-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00005-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00006-of-00006.safetensors']
     model_name: wan_video_dit model_class: WanModel
         This model is initialized with extra kwargs: {'has_image_input': False, 'patch_size': [1, 2, 2], 'in_dim': 36, 'dim': 5120, 'ffn_dim': 13824, 'freq_dim': 256, 'text_dim': 4096, 'out_dim': 16, 'num_heads': 40, 'num_layers': 40, 'eps': 1e-06, 'require_clip_embedding': False}
-INFO:     127.0.0.1:52386 - "GET /task/progress/video_1756436209682_zux05ryaa HTTP/1.1" 200 OK
-2025-08-29 10:57:29,733 - modelscope - INFO - Target directory already exists, skipping creation.
+INFO:     127.0.0.1:49200 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [27261]
+INFO:__mp_main__:AI service started with lazy loading support
+INFO:api_server:AI service started with lazy loading support
+INFO:     Started server process [27543]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:watchfiles.main:3 changes detected
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [27543]
+INFO:__mp_main__:AI service started with lazy loading support
+INFO:api_server:AI service started with lazy loading support
+INFO:     Started server process [27631]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:watchfiles.main:3 changes detected
+INFO:api_server:Video generation task queued for task_id: video_1757853304325_43re7w3u4
+INFO:     127.0.0.1:55234 - "POST /video/generate HTTP/1.1" 200 OK
+INFO:modules.video_generator:Model path: /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B
+INFO:modules.video_generator:Output dir: /root/autodl-tmp/EasyVideo/outputs
+INFO:api_server:VideoGenerator initialized on demand
+INFO:modules.video_generator:Video gen: loading model
+Loading models from: /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/models_t5_umt5-xxl-enc-bf16.pth
+INFO:     127.0.0.1:55234 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+    model_name: wan_video_text_encoder model_class: WanTextEncoder
+    The following models are loaded: ['wan_video_text_encoder'].
+Loading models from: ['/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00001-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00002-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00003-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00004-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00005-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00006-of-00006.safetensors']
+    model_name: wan_video_dit model_class: WanModel
+        This model is initialized with extra kwargs: {'has_image_input': False, 'patch_size': [1, 2, 2], 'in_dim': 36, 'dim': 5120, 'ffn_dim': 13824, 'freq_dim': 256, 'text_dim': 4096, 'out_dim': 16, 'num_heads': 40, 'num_layers': 40, 'eps': 1e-06, 'require_clip_embedding': False}
+    The following models are loaded: ['wan_video_dit'].
+Loading models from: ['/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00001-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00002-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00003-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00004-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00005-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00006-of-00006.safetensors']
+    model_name: wan_video_dit model_class: WanModel
+        This model is initialized with extra kwargs: {'has_image_input': False, 'patch_size': [1, 2, 2], 'in_dim': 36, 'dim': 5120, 'ffn_dim': 13824, 'freq_dim': 256, 'text_dim': 4096, 'out_dim': 16, 'num_heads': 40, 'num_layers': 40, 'eps': 1e-06, 'require_clip_embedding': False}
+INFO:     127.0.0.1:58332 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58332 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:watchfiles.main:1 change detected
+2025-09-14 20:35:51,237 - modelscope - INFO - Target directory already exists, skipping creation.
 INFO:watchfiles.main:1 change detected
 INFO:modules.video_generator:Video generation model loaded on demand successfully
 INFO:modules.prompt_optimizer:Qwen model path configured: /root/autodl-tmp/Qwen/Qwen2.5-VL-3B-Instruct
-INFO:modules.prompt_optimizer:Optimizing prompt: Black and white kitten, lying on table, smiling, cute, small, adorable, relaxed posture, simple background, warm lighting, cozy atmosphere, playful expression
+INFO:modules.prompt_optimizer:Optimizing prompt: a small white kitten with dark eyes sitting on a wooden floor, wearing a red collar and looking up at the camera with curiosity, surrounded by soft shadows creating a cozy atmosphere.
 INFO:modules.prompt_optimizer:Optimization type: 通用型
 INFO:modules.prompt_optimizer:Task type: video
 INFO:modules.prompt_optimizer:Model not loaded, initializing now...
@@ -65,62 +303,106 @@ No wan_video_image_encoder models available.
 No wan_video_motion_controller models available.
 No wan_video_vace models available.
 Downloading Model from https://www.modelscope.cn to directory: /root/autodl-tmp/EasyVideo/ai-service/models/Wan-AI/Wan2.1-T2V-1.3B
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.77s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.60s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.62s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.92s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.73s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.76s/it]
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
 INFO:modules.prompt_optimizer:Qwen2.5-VL model loaded successfully
-INFO:modules.prompt_optimizer:AI optimized prompt: 一只黑白相间的可爱小猫，躺在桌子上面，面带微笑，非常小巧和萌，姿势放松，背景简单而温馨，光线温暖柔和，营造出一种舒适宜人的氛围，同时表现出它顽皮的表情。
+INFO:modules.prompt_optimizer:AI optimized prompt: 一只小白色的小猫，深邃的眼睛，坐在木质地板上，脖子上戴着红色项圈，好奇地向上看着镜头，周围是柔和的阴影，营造出一种温馨的氛围。
+
+这只小猫微微前倾，尾巴轻轻摆动，显得非常可爱和活泼。它的眼神充满了好奇与期待，仿佛在等待着什么有趣的事情发生。随着画面逐渐放大，可以看到它的耳朵稍微竖起，似乎听到了某种声音或感受到了某些动静。
+
+背景中可以隐约看到一些家具轮廓，可能是书架或柜子，但主要焦点仍然集中在小猫身上。整体光线较为柔和，给人一种温暖的感觉。通过不断调整相机的位置，可以让观众感受到空间的变化和层次感，使整个画面更加生动有趣。
 INFO:modules.prompt_optimizer:Unloading Qwen2.5-VL model to free memory...
 INFO:modules.prompt_optimizer:Qwen2.5-VL model unloaded successfully
-INFO:modules.video_generator:Optimized prompt: 一只黑白相间的可爱小猫，躺在桌子上面，面带微笑，非常小巧和萌，姿势放松，背景简单而温馨，光线温暖柔和，营造出一种舒适宜人的氛围，同时表现出它顽皮的表情。
-INFO:modules.video_generator:Generating video with prompt: 一只黑白相间的可爱小猫，躺在桌子上面，面带微笑，非常小巧和萌，姿势放松，背景简单而温馨，光线温暖柔和，营造出一种舒适宜人的氛围，同时表现出它顽皮的表情。, cinematic lighting, smooth motion, realistic, high quality
-INFO:modules.video_generator:Parameters: seed=63458, tiled=True, steps=20, cfg_scale=5.0
-INFO:     127.0.0.1:56438 - "GET /task/progress/video_1756436209682_zux05ryaa HTTP/1.1" 200 OK
-VAE encoding:   0%|          | 0/9 [00:00<?, ?it/s]VAE encoding:  11%|█         | 1/9 [00:00<00:07,  1.14it/s]VAE encoding:  22%|██▏       | 2/9 [00:01<00:05,  1.35it/s]VAE encoding:  33%|███▎      | 3/9 [00:02<00:04,  1.43it/s]VAE encoding:  44%|████▍     | 4/9 [00:02<00:03,  1.47it/s]VAE encoding:  56%|█████▌    | 5/9 [00:03<00:02,  1.49it/s]VAE encoding:  67%|██████▋   | 6/9 [00:04<00:01,  1.51it/s]VAE encoding:  78%|███████▊  | 7/9 [00:04<00:01,  1.52it/s]VAE encoding:  89%|████████▉ | 8/9 [00:05<00:00,  1.53it/s]VAE encoding: 100%|██████████| 9/9 [00:06<00:00,  1.53it/s]VAE encoding: 100%|██████████| 9/9 [00:06<00:00,  1.48it/s]
-  0%|          | 0/20 [00:00<?, ?it/s]INFO:     127.0.0.1:39266 - "GET /task/progress/video_1756436209682_zux05ryaa HTTP/1.1" 200 OK
-  5%|▌         | 1/20 [00:30<09:30, 30.02s/it]INFO:     127.0.0.1:47254 - "GET /task/progress/video_1756436209682_zux05ryaa HTTP/1.1" 200 OK
- 10%|█         | 2/20 [00:51<07:32, 25.13s/it] 15%|█▌        | 3/20 [01:13<06:41, 23.60s/it]INFO:     127.0.0.1:41496 - "GET /task/progress/video_1756436209682_zux05ryaa HTTP/1.1" 200 OK
- 20%|██        | 4/20 [01:35<06:06, 22.91s/it]INFO:     127.0.0.1:60142 - "GET /task/progress/video_1756436209682_zux05ryaa HTTP/1.1" 200 OK
- 25%|██▌       | 5/20 [01:57<05:38, 22.54s/it]INFO:     127.0.0.1:44240 - "GET /task/progress/video_1756436209682_zux05ryaa HTTP/1.1" 200 OK
- 30%|███       | 6/20 [02:19<05:12, 22.33s/it] 35%|███▌      | 7/20 [02:41<04:48, 22.20s/it]INFO:     127.0.0.1:60954 - "GET /task/progress/video_1756436209682_zux05ryaa HTTP/1.1" 200 OK
- 40%|████      | 8/20 [03:03<04:25, 22.11s/it]INFO:     127.0.0.1:51784 - "GET /task/progress/video_1756436209682_zux05ryaa HTTP/1.1" 200 OK
- 45%|████▌     | 9/20 [03:24<04:02, 22.05s/it]INFO:     127.0.0.1:39874 - "GET /task/progress/video_1756436209682_zux05ryaa HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55816 - "GET /task/progress/video_1756436209682_zux05ryaa HTTP/1.1" 200 OK
- 50%|█████     | 10/20 [04:15<05:08, 30.81s/it] 55%|█████▌    | 11/20 [04:37<04:12, 28.06s/it]INFO:     127.0.0.1:46610 - "GET /task/progress/video_1756436209682_zux05ryaa HTTP/1.1" 200 OK
- 60%|██████    | 12/20 [04:59<03:29, 26.17s/it]INFO:     127.0.0.1:48074 - "GET /task/progress/video_1756436209682_zux05ryaa HTTP/1.1" 200 OK
- 65%|██████▌   | 13/20 [05:20<02:54, 24.86s/it] 70%|███████   | 14/20 [05:42<02:23, 23.96s/it]INFO:     127.0.0.1:56776 - "GET /task/progress/video_1756436209682_zux05ryaa HTTP/1.1" 200 OK
- 75%|███████▌  | 15/20 [06:04<01:56, 23.34s/it]INFO:     127.0.0.1:51582 - "GET /task/progress/video_1756436209682_zux05ryaa HTTP/1.1" 200 OK
- 80%|████████  | 16/20 [06:26<01:31, 22.90s/it]INFO:     127.0.0.1:39932 - "GET /task/progress/video_1756436209682_zux05ryaa HTTP/1.1" 200 OK
- 85%|████████▌ | 17/20 [06:48<01:07, 22.60s/it] 90%|█████████ | 18/20 [07:10<00:44, 22.38s/it]INFO:     127.0.0.1:56464 - "GET /task/progress/video_1756436209682_zux05ryaa HTTP/1.1" 200 OK
- 95%|█████████▌| 19/20 [07:32<00:22, 22.23s/it]INFO:     127.0.0.1:39400 - "GET /task/progress/video_1756436209682_zux05ryaa HTTP/1.1" 200 OK
-100%|██████████| 20/20 [07:54<00:00, 22.12s/it]100%|██████████| 20/20 [07:54<00:00, 23.70s/it]
-INFO:     127.0.0.1:40946 - "GET /task/progress/video_1756436209682_zux05ryaa HTTP/1.1" 200 OK
-VAE decoding:   0%|          | 0/9 [00:00<?, ?it/s]VAE decoding:  11%|█         | 1/9 [00:01<00:09,  1.21s/it]VAE decoding:  22%|██▏       | 2/9 [00:02<00:08,  1.15s/it]VAE decoding:  33%|███▎      | 3/9 [00:03<00:06,  1.13s/it]VAE decoding:  44%|████▍     | 4/9 [00:04<00:05,  1.12s/it]VAE decoding:  56%|█████▌    | 5/9 [00:05<00:04,  1.11s/it]VAE decoding:  67%|██████▋   | 6/9 [00:06<00:03,  1.11s/it]VAE decoding:  78%|███████▊  | 7/9 [00:07<00:02,  1.11s/it]VAE decoding:  89%|████████▉ | 8/9 [00:08<00:01,  1.11s/it]VAE decoding: 100%|██████████| 9/9 [00:10<00:00,  1.11s/it]VAE decoding: 100%|██████████| 9/9 [00:10<00:00,  1.12s/it]
-Saving video:   0%|          | 0/73 [00:00<?, ?it/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-Saving video:   1%|▏         | 1/73 [00:01<01:20,  1.11s/it]Saving video:  79%|███████▉  | 58/73 [00:01<00:00, 65.58it/s]Saving video: 100%|██████████| 73/73 [00:01<00:00, 58.54it/s]
-INFO:modules.video_generator:Unloading video generation model to free memory...
-INFO:modules.video_generator:Video generation model unloaded successfully
-INFO:modules.video_generator:Video generated successfully: /root/autodl-tmp/EasyVideo/outputs/videos/video_20250829_105730_video_1756436209682_zux05ryaa.mp4
-INFO:api_server:Video generation completed for task_id: video_1756436209682_zux05ryaa
-INFO:api_server:VideoGenerator model unloaded successfully
-INFO:     127.0.0.1:42220 - "GET /task/progress/video_1756436209682_zux05ryaa HTTP/1.1" 200 OK
-INFO:     127.0.0.1:42452 - "GET /health HTTP/1.1" 200 OK
-INFO:modules.prompt_optimizer:Optimizing prompt: 黑白相间的小猫趴在桌子上,微笑, 可爱
-INFO:modules.prompt_optimizer:Optimization type: 通用型
-INFO:modules.prompt_optimizer:Task type: image
-INFO:modules.prompt_optimizer:Model not loaded, initializing now...
-INFO:modules.prompt_optimizer:Loading Qwen2.5-VL model on demand...
-INFO:accelerate.utils.modeling:We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.09s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.04it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.02it/s]
-INFO:modules.prompt_optimizer:Qwen2.5-VL model loaded successfully
-INFO:modules.prompt_optimizer:AI optimized prompt: black and white cat lying on table, smiling, cute, small size, soft fur, playful expression, indoor setting, wooden surface, soft lighting, cozy atmosphere, relaxed posture, gentle gaze, charming appearance, adorable subject
-INFO:modules.prompt_optimizer:Unloading Qwen2.5-VL model to free memory...
-INFO:modules.prompt_optimizer:Qwen2.5-VL model unloaded successfully
-INFO:api_server:PromptOptimizer model unloaded successfully
-INFO:     127.0.0.1:45308 - "POST /prompt/optimize HTTP/1.1" 200 OK
-INFO:api_server:Video generation task queued for task_id: video_1756436950969_0y6k5j2ic
-INFO:     127.0.0.1:54376 - "POST /video/generate HTTP/1.1" 200 OK
+INFO:modules.video_generator:Optimized prompt: 一只小白色的小猫，深邃的眼睛，坐在木质地板上，脖子上戴着红色项圈，好奇地向上看着镜头，周围是柔和的阴影，营造出一种温馨的氛围。
+
+这只小猫微微前倾，尾巴轻轻摆动，显得非常可爱和活泼。它的眼神充满了好奇与期待，仿佛在等待着什么有趣的事情发生。随着画面逐渐放大，可以看到它的耳朵稍微竖起，似乎听到了某种声音或感受到了某些动静。
+
+背景中可以隐约看到一些家具轮廓，可能是书架或柜子，但主要焦点仍然集中在小猫身上。整体光线较为柔和，给人一种温暖的感觉。通过不断调整相机的位置，可以让观众感受到空间的变化和层次感，使整个画面更加生动有趣。
+INFO:modules.video_generator:Generating video with prompt: 一只小白色的小猫，深邃的眼睛，坐在木质地板上，脖子上戴着红色项圈，好奇地向上看着镜头，周围是柔和的阴影，营造出一种温馨的氛围。
+
+这只小猫微微前倾，尾巴轻轻摆动，显得非常可爱和活泼。它的眼神充满了好奇与期待，仿佛在等待着什么有趣的事情发生。随着画面逐渐放大，可以看到它的耳朵稍微竖起，似乎听到了某种声音或感受到了某些动静。
+
+背景中可以隐约看到一些家具轮廓，可能是书架或柜子，但主要焦点仍然集中在小猫身上。整体光线较为柔和，给人一种温暖的感觉。通过不断调整相机的位置，可以让观众感受到空间的变化和层次感，使整个画面更加生动有趣。, cinematic lighting, smooth motion, realistic, high quality
+INFO:modules.video_generator:Parameters: seed=547550, tiled=True, steps=20, cfg_scale=7.5
+INFO:     127.0.0.1:50348 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50348 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+VAE encoding:   0%|          | 0/9 [00:00<?, ?it/s]VAE encoding:  11%|█         | 1/9 [00:00<00:06,  1.26it/s]VAE encoding:  22%|██▏       | 2/9 [00:01<00:04,  1.43it/s]VAE encoding:  33%|███▎      | 3/9 [00:02<00:04,  1.49it/s]VAE encoding:  44%|████▍     | 4/9 [00:02<00:03,  1.51it/s]VAE encoding:  56%|█████▌    | 5/9 [00:03<00:02,  1.53it/s]VAE encoding:  67%|██████▋   | 6/9 [00:03<00:01,  1.55it/s]VAE encoding:  78%|███████▊  | 7/9 [00:04<00:01,  1.55it/s]VAE encoding:  89%|████████▉ | 8/9 [00:05<00:00,  1.56it/s]VAE encoding: 100%|██████████| 9/9 [00:05<00:00,  1.56it/s]VAE encoding: 100%|██████████| 9/9 [00:05<00:00,  1.53it/s]
+  0%|          | 0/20 [00:00<?, ?it/s]INFO:     127.0.0.1:40198 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40198 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+  5%|▌         | 1/20 [00:28<08:58, 28.34s/it]INFO:     127.0.0.1:40622 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40622 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [27631]
+INFO:__mp_main__:AI service started with lazy loading support
+INFO:api_server:AI service started with lazy loading support
+INFO:     Started server process [28654]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:watchfiles.main:3 changes detected
+INFO:     127.0.0.1:40716 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40716 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57432 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57432 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [28654]
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
+INFO:__mp_main__:AI service started with lazy loading support
+INFO:api_server:AI service started with lazy loading support
+INFO:     Started server process [29161]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:watchfiles.main:3 changes detected
+INFO:     127.0.0.1:46386 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46386 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [29161]
+INFO:__mp_main__:AI service started with lazy loading support
+INFO:api_server:AI service started with lazy loading support
+INFO:     Started server process [29275]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:watchfiles.main:3 changes detected
+INFO:     127.0.0.1:55042 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55042 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57824 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57824 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [29275]
+INFO:__mp_main__:AI service started with lazy loading support
+INFO:api_server:AI service started with lazy loading support
+INFO:     Started server process [29671]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:watchfiles.main:3 changes detected
+INFO:     127.0.0.1:47448 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47448 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:api_server:Video generation task queued for task_id: video_1757853621530_iuwbdih2y
+INFO:     127.0.0.1:55898 - "POST /video/generate HTTP/1.1" 200 OK
+INFO:modules.video_generator:Model path: /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B
+INFO:modules.video_generator:Output dir: /root/autodl-tmp/EasyVideo/outputs
+INFO:api_server:VideoGenerator initialized on demand
 INFO:modules.video_generator:Video gen: loading model
 Loading models from: /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/models_t5_umt5-xxl-enc-bf16.pth
     model_name: wan_video_text_encoder model_class: WanTextEncoder
@@ -128,19 +410,14 @@ Loading models from: /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/models_t5_umt5-xxl-
 Loading models from: ['/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00001-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00002-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00003-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00004-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00005-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/high_noise_model/diffusion_pytorch_model-00006-of-00006.safetensors']
     model_name: wan_video_dit model_class: WanModel
         This model is initialized with extra kwargs: {'has_image_input': False, 'patch_size': [1, 2, 2], 'in_dim': 36, 'dim': 5120, 'ffn_dim': 13824, 'freq_dim': 256, 'text_dim': 4096, 'out_dim': 16, 'num_heads': 40, 'num_layers': 40, 'eps': 1e-06, 'require_clip_embedding': False}
+INFO:     127.0.0.1:36420 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36420 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
     The following models are loaded: ['wan_video_dit'].
 Loading models from: ['/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00001-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00002-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00003-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00004-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00005-of-00006.safetensors', '/root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/low_noise_model/diffusion_pytorch_model-00006-of-00006.safetensors']
     model_name: wan_video_dit model_class: WanModel
         This model is initialized with extra kwargs: {'has_image_input': False, 'patch_size': [1, 2, 2], 'in_dim': 36, 'dim': 5120, 'ffn_dim': 13824, 'freq_dim': 256, 'text_dim': 4096, 'out_dim': 16, 'num_heads': 40, 'num_layers': 40, 'eps': 1e-06, 'require_clip_embedding': False}
-INFO:     127.0.0.1:44710 - "GET /task/progress/video_1756436950969_0y6k5j2ic HTTP/1.1" 200 OK
-INFO:modules.video_generator:Video generation model loaded on demand successfully
-INFO:modules.prompt_optimizer:Qwen model path configured: /root/autodl-tmp/Qwen/Qwen2.5-VL-3B-Instruct
-INFO:modules.prompt_optimizer:Optimizing prompt: black and white cat lying on table, smiling, cute, small size, soft fur, playful expression, indoor setting, wooden surface, soft lighting, cozy atmosphere, relaxed posture, gentle gaze, charming appearance, adorable subject
-INFO:modules.prompt_optimizer:Optimization type: 通用型
-INFO:modules.prompt_optimizer:Task type: video
-INFO:modules.prompt_optimizer:Model not loaded, initializing now...
-INFO:modules.prompt_optimizer:Loading Qwen2.5-VL model on demand...
-INFO:accelerate.utils.modeling:We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+INFO:     127.0.0.1:36858 - "GET /task/progress/video_1757853621530_iuwbdih2y HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46178 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
     The following models are loaded: ['wan_video_dit'].
 Loading models from: /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/Wan2.1_VAE.pth
     model_name: wan_video_vae model_class: WanVideoVAE
@@ -151,48 +428,190 @@ Using wan_video_vae from /root/autodl-tmp/Wan-AI/Wan2.2-I2V-A14B/Wan2.1_VAE.pth.
 No wan_video_image_encoder models available.
 No wan_video_motion_controller models available.
 No wan_video_vace models available.
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.24it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.41it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.38it/s]
+Downloading Model from https://www.modelscope.cn to directory: /root/autodl-tmp/EasyVideo/ai-service/models/Wan-AI/Wan2.1-T2V-1.3B
+INFO:     127.0.0.1:46178 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+2025-09-14 20:41:08,501 - modelscope - INFO - Target directory already exists, skipping creation.
+INFO:watchfiles.main:1 change detected
+INFO:modules.video_generator:Video generation model loaded on demand successfully
+INFO:modules.prompt_optimizer:Qwen model path configured: /root/autodl-tmp/Qwen/Qwen2.5-VL-3B-Instruct
+INFO:modules.prompt_optimizer:Optimizing prompt: 一只小猫
+INFO:modules.prompt_optimizer:Optimization type: 通用型
+INFO:modules.prompt_optimizer:Task type: video
+INFO:modules.prompt_optimizer:Model not loaded, initializing now...
+INFO:modules.prompt_optimizer:Loading Qwen2.5-VL model on demand...
+INFO:accelerate.utils.modeling:We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.92s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.82s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.83s/it]
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+You have video processor config saved in `preprocessor.json` file which is deprecated. Video processor configs should be saved in their own `video_preprocessor.json` file. You can rename the file or load and save the processor back which renames it automatically. Loading from `preprocessor.json` will be removed in v5.0.
 INFO:modules.prompt_optimizer:Qwen2.5-VL model loaded successfully
-INFO:modules.prompt_optimizer:AI optimized prompt: 一只黑白相间的猫咪躺在木桌上，面带微笑，可爱的小体型，柔软的毛发，活泼的表情，在室内环境中，木质表面，柔和的灯光，舒适的氛围，放松的姿态，温柔的眼神，迷人的外表，可爱的主题
+INFO:modules.prompt_optimizer:AI optimized prompt: 一只毛茸茸的小猫，正在一个阳光明媚的花园里玩耍。它先是静静地躺在草地上，享受着温暖的阳光。随后，它跳起来追逐一只飞舞的蝴蝶，在空中盘旋并迅速地跃起。接着，小猫沿着一条蜿蜒的小路跑向一座古老的石桥，它的身影在夕阳下变得剪影般美丽。最后，它停在一个木制长椅上，眯着眼睛欣赏周围宁静的风景，并缓缓闭上了眼睛，仿佛进入了梦乡。整个画面从地面拍摄到天空视角，以慢镜头捕捉每一个细节，营造出温馨和宁静的氛围。
 INFO:modules.prompt_optimizer:Unloading Qwen2.5-VL model to free memory...
 INFO:modules.prompt_optimizer:Qwen2.5-VL model unloaded successfully
-INFO:modules.video_generator:Optimized prompt: 一只黑白相间的猫咪躺在木桌上，面带微笑，可爱的小体型，柔软的毛发，活泼的表情，在室内环境中，木质表面，柔和的灯光，舒适的氛围，放松的姿态，温柔的眼神，迷人的外表，可爱的主题
-INFO:modules.video_generator:Generating video with prompt: 一只黑白相间的猫咪躺在木桌上，面带微笑，可爱的小体型，柔软的毛发，活泼的表情，在室内环境中，木质表面，柔和的灯光，舒适的氛围，放松的姿态，温柔的眼神，迷人的外表，可爱的主题, cinematic lighting, smooth motion, realistic, high quality
-INFO:modules.video_generator:Parameters: seed=63458, tiled=True, steps=20, cfg_scale=7.5
-INFO:     127.0.0.1:35250 - "GET /task/progress/video_1756436950969_0y6k5j2ic HTTP/1.1" 200 OK
-VAE encoding:   0%|          | 0/9 [00:00<?, ?it/s]VAE encoding:  11%|█         | 1/9 [00:00<00:05,  1.53it/s]VAE encoding:  22%|██▏       | 2/9 [00:01<00:04,  1.54it/s]VAE encoding:  33%|███▎      | 3/9 [00:01<00:03,  1.54it/s]VAE encoding:  44%|████▍     | 4/9 [00:02<00:03,  1.54it/s]VAE encoding:  56%|█████▌    | 5/9 [00:03<00:02,  1.54it/s]VAE encoding:  67%|██████▋   | 6/9 [00:03<00:01,  1.54it/s]VAE encoding:  78%|███████▊  | 7/9 [00:04<00:01,  1.54it/s]VAE encoding:  89%|████████▉ | 8/9 [00:05<00:00,  1.54it/s]VAE encoding: 100%|██████████| 9/9 [00:05<00:00,  1.54it/s]VAE encoding: 100%|██████████| 9/9 [00:05<00:00,  1.54it/s]
-  0%|          | 0/20 [00:00<?, ?it/s]INFO:     127.0.0.1:35426 - "GET /task/progress/video_1756436950969_0y6k5j2ic HTTP/1.1" 200 OK
-  5%|▌         | 1/20 [00:27<08:45, 27.65s/it]INFO:     127.0.0.1:48322 - "GET /task/progress/video_1756436950969_0y6k5j2ic HTTP/1.1" 200 OK
- 10%|█         | 2/20 [00:49<07:15, 24.18s/it]INFO:api_server:Cleaned up task progress for task_id: video_1756436209682_zux05ryaa
- 15%|█▌        | 3/20 [01:11<06:32, 23.10s/it]INFO:     127.0.0.1:57358 - "GET /task/progress/video_1756436950969_0y6k5j2ic HTTP/1.1" 200 OK
- 20%|██        | 4/20 [01:33<06:01, 22.61s/it]INFO:     127.0.0.1:53696 - "GET /task/progress/video_1756436950969_0y6k5j2ic HTTP/1.1" 200 OK
- 25%|██▌       | 5/20 [01:54<05:35, 22.35s/it]INFO:     127.0.0.1:41290 - "GET /task/progress/video_1756436950969_0y6k5j2ic HTTP/1.1" 200 OK
- 30%|███       | 6/20 [02:16<05:10, 22.21s/it] 35%|███▌      | 7/20 [02:38<04:47, 22.11s/it]INFO:     127.0.0.1:40704 - "GET /task/progress/video_1756436950969_0y6k5j2ic HTTP/1.1" 200 OK
- 40%|████      | 8/20 [03:00<04:24, 22.06s/it]INFO:     127.0.0.1:59426 - "GET /task/progress/video_1756436950969_0y6k5j2ic HTTP/1.1" 200 OK
- 45%|████▌     | 9/20 [03:22<04:02, 22.02s/it]INFO:     127.0.0.1:60516 - "GET /task/progress/video_1756436950969_0y6k5j2ic HTTP/1.1" 200 OK
- 50%|█████     | 10/20 [04:02<04:35, 27.52s/it]INFO:     127.0.0.1:52080 - "GET /task/progress/video_1756436950969_0y6k5j2ic HTTP/1.1" 200 OK
- 55%|█████▌    | 11/20 [04:24<03:52, 25.78s/it]INFO:     127.0.0.1:51540 - "GET /task/progress/video_1756436950969_0y6k5j2ic HTTP/1.1" 200 OK
- 60%|██████    | 12/20 [04:46<03:16, 24.59s/it] 65%|██████▌   | 13/20 [05:08<02:46, 23.76s/it]INFO:     127.0.0.1:46404 - "GET /task/progress/video_1756436950969_0y6k5j2ic HTTP/1.1" 200 OK
- 70%|███████   | 14/20 [05:29<02:19, 23.18s/it]INFO:     127.0.0.1:58680 - "GET /task/progress/video_1756436950969_0y6k5j2ic HTTP/1.1" 200 OK
- 75%|███████▌  | 15/20 [05:51<01:53, 22.78s/it] 80%|████████  | 16/20 [06:13<01:29, 22.49s/it]INFO:     127.0.0.1:44050 - "GET /task/progress/video_1756436950969_0y6k5j2ic HTTP/1.1" 200 OK
- 85%|████████▌ | 17/20 [06:35<01:06, 22.29s/it]INFO:     127.0.0.1:55620 - "GET /task/progress/video_1756436950969_0y6k5j2ic HTTP/1.1" 200 OK
- 90%|█████████ | 18/20 [06:57<00:44, 22.15s/it]INFO:     127.0.0.1:51048 - "GET /task/progress/video_1756436950969_0y6k5j2ic HTTP/1.1" 200 OK
- 95%|█████████▌| 19/20 [07:19<00:22, 22.05s/it]100%|██████████| 20/20 [07:40<00:00, 21.98s/it]100%|██████████| 20/20 [07:40<00:00, 23.04s/it]
-INFO:     127.0.0.1:56828 - "GET /task/progress/video_1756436950969_0y6k5j2ic HTTP/1.1" 200 OK
-VAE decoding:   0%|          | 0/9 [00:00<?, ?it/s]VAE decoding:  11%|█         | 1/9 [00:01<00:08,  1.11s/it]VAE decoding:  22%|██▏       | 2/9 [00:02<00:07,  1.11s/it]VAE decoding:  33%|███▎      | 3/9 [00:03<00:06,  1.10s/it]VAE decoding:  44%|████▍     | 4/9 [00:04<00:05,  1.10s/it]VAE decoding:  56%|█████▌    | 5/9 [00:05<00:04,  1.11s/it]VAE decoding:  67%|██████▋   | 6/9 [00:06<00:03,  1.11s/it]VAE decoding:  78%|███████▊  | 7/9 [00:07<00:02,  1.11s/it]VAE decoding:  89%|████████▉ | 8/9 [00:08<00:01,  1.11s/it]VAE decoding: 100%|██████████| 9/9 [00:09<00:00,  1.11s/it]VAE decoding: 100%|██████████| 9/9 [00:09<00:00,  1.11s/it]
+INFO:modules.video_generator:Optimized prompt: 一只毛茸茸的小猫，正在一个阳光明媚的花园里玩耍。它先是静静地躺在草地上，享受着温暖的阳光。随后，它跳起来追逐一只飞舞的蝴蝶，在空中盘旋并迅速地跃起。接着，小猫沿着一条蜿蜒的小路跑向一座古老的石桥，它的身影在夕阳下变得剪影般美丽。最后，它停在一个木制长椅上，眯着眼睛欣赏周围宁静的风景，并缓缓闭上了眼睛，仿佛进入了梦乡。整个画面从地面拍摄到天空视角，以慢镜头捕捉每一个细节，营造出温馨和宁静的氛围。
+INFO:modules.video_generator:Generating video with prompt: 一只毛茸茸的小猫，正在一个阳光明媚的花园里玩耍。它先是静静地躺在草地上，享受着温暖的阳光。随后，它跳起来追逐一只飞舞的蝴蝶，在空中盘旋并迅速地跃起。接着，小猫沿着一条蜿蜒的小路跑向一座古老的石桥，它的身影在夕阳下变得剪影般美丽。最后，它停在一个木制长椅上，眯着眼睛欣赏周围宁静的风景，并缓缓闭上了眼睛，仿佛进入了梦乡。整个画面从地面拍摄到天空视角，以慢镜头捕捉每一个细节，营造出温馨和宁静的氛围。, cinematic lighting, smooth motion, realistic, high quality
+INFO:modules.video_generator:Parameters: seed=467060, tiled=True, steps=20, cfg_scale=7.5
+INFO:     127.0.0.1:34524 - "GET /task/progress/video_1757853621530_iuwbdih2y HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40802 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40802 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+VAE encoding:   0%|          | 0/9 [00:00<?, ?it/s]VAE encoding:  11%|█         | 1/9 [00:00<00:06,  1.31it/s]VAE encoding:  22%|██▏       | 2/9 [00:01<00:04,  1.46it/s]VAE encoding:  33%|███▎      | 3/9 [00:02<00:03,  1.51it/s]VAE encoding:  44%|████▍     | 4/9 [00:02<00:03,  1.53it/s]VAE encoding:  56%|█████▌    | 5/9 [00:03<00:02,  1.55it/s]VAE encoding:  67%|██████▋   | 6/9 [00:03<00:01,  1.55it/s]VAE encoding:  78%|███████▊  | 7/9 [00:04<00:01,  1.56it/s]VAE encoding:  89%|████████▉ | 8/9 [00:05<00:00,  1.56it/s]VAE encoding: 100%|██████████| 9/9 [00:05<00:00,  1.56it/s]VAE encoding: 100%|██████████| 9/9 [00:05<00:00,  1.54it/s]
+  0%|          | 0/20 [00:00<?, ?it/s]INFO:     127.0.0.1:50298 - "GET /task/progress/video_1757853621530_iuwbdih2y HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45942 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45942 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+  5%|▌         | 1/20 [00:28<09:04, 28.66s/it]INFO:     127.0.0.1:58344 - "GET /task/progress/video_1757853621530_iuwbdih2y HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34696 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34696 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+ 10%|█         | 2/20 [00:49<07:17, 24.32s/it]INFO:     127.0.0.1:37634 - "GET /task/progress/video_1757853621530_iuwbdih2y HTTP/1.1" 200 OK
+ 15%|█▌        | 3/20 [01:11<06:30, 22.96s/it]INFO:     127.0.0.1:37122 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37122 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33248 - "GET /task/progress/video_1757853621530_iuwbdih2y HTTP/1.1" 200 OK
+ 20%|██        | 4/20 [01:32<05:57, 22.34s/it]INFO:     127.0.0.1:57984 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57984 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+ 25%|██▌       | 5/20 [01:54<05:29, 21.99s/it]INFO:     127.0.0.1:46014 - "GET /task/progress/video_1757853621530_iuwbdih2y HTTP/1.1" 200 OK
+ 30%|███       | 6/20 [02:15<05:05, 21.79s/it]INFO:     127.0.0.1:54058 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54058 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32808 - "GET /task/progress/video_1757853621530_iuwbdih2y HTTP/1.1" 200 OK
+ 35%|███▌      | 7/20 [02:36<04:41, 21.67s/it]INFO:     127.0.0.1:34412 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34412 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+ 40%|████      | 8/20 [02:58<04:19, 21.59s/it]INFO:     127.0.0.1:41592 - "GET /task/progress/video_1757853621530_iuwbdih2y HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48506 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48506 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+ 45%|████▌     | 9/20 [03:19<03:56, 21.53s/it]INFO:     127.0.0.1:40626 - "GET /task/progress/video_1757853621530_iuwbdih2y HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56560 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56560 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40844 - "GET /task/progress/video_1757853621530_iuwbdih2y HTTP/1.1" 200 OK
+ 50%|█████     | 10/20 [04:11<05:07, 30.78s/it]INFO:     127.0.0.1:40166 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40166 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+ 55%|█████▌    | 11/20 [04:32<04:10, 27.88s/it]INFO:     127.0.0.1:36774 - "GET /task/progress/video_1757853621530_iuwbdih2y HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54840 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54840 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+ 60%|██████    | 12/20 [04:53<03:27, 25.89s/it]INFO:     127.0.0.1:32812 - "GET /task/progress/video_1757853621530_iuwbdih2y HTTP/1.1" 200 OK
+ 65%|██████▌   | 13/20 [05:15<02:51, 24.53s/it]INFO:     127.0.0.1:60094 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60094 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37504 - "GET /task/progress/video_1757853621530_iuwbdih2y HTTP/1.1" 200 OK
+ 70%|███████   | 14/20 [05:36<02:21, 23.58s/it]INFO:     127.0.0.1:56762 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56762 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+ 75%|███████▌  | 15/20 [05:58<01:54, 22.93s/it]INFO:     127.0.0.1:39972 - "GET /task/progress/video_1757853621530_iuwbdih2y HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35544 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35544 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+ 80%|████████  | 16/20 [06:19<01:29, 22.47s/it]INFO:     127.0.0.1:49564 - "GET /task/progress/video_1757853621530_iuwbdih2y HTTP/1.1" 200 OK
+ 85%|████████▌ | 17/20 [06:40<01:06, 22.15s/it]INFO:     127.0.0.1:34370 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34370 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+ 90%|█████████ | 18/20 [07:02<00:43, 21.93s/it]INFO:     127.0.0.1:36786 - "GET /task/progress/video_1757853621530_iuwbdih2y HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56242 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56242 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+ 95%|█████████▌| 19/20 [07:23<00:21, 21.77s/it]INFO:     127.0.0.1:36240 - "GET /task/progress/video_1757853621530_iuwbdih2y HTTP/1.1" 200 OK
+100%|██████████| 20/20 [07:45<00:00, 21.66s/it]100%|██████████| 20/20 [07:45<00:00, 23.25s/it]
+INFO:     127.0.0.1:39628 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39628 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52914 - "GET /task/progress/video_1757853621530_iuwbdih2y HTTP/1.1" 200 OK
+VAE decoding:   0%|          | 0/9 [00:00<?, ?it/s]VAE decoding:  11%|█         | 1/9 [00:01<00:09,  1.15s/it]VAE decoding:  22%|██▏       | 2/9 [00:02<00:07,  1.11s/it]VAE decoding:  33%|███▎      | 3/9 [00:03<00:06,  1.10s/it]VAE decoding:  44%|████▍     | 4/9 [00:04<00:05,  1.09s/it]VAE decoding:  56%|█████▌    | 5/9 [00:05<00:04,  1.09s/it]VAE decoding:  67%|██████▋   | 6/9 [00:06<00:03,  1.09s/it]VAE decoding:  78%|███████▊  | 7/9 [00:07<00:02,  1.09s/it]VAE decoding:  89%|████████▉ | 8/9 [00:08<00:01,  1.09s/it]INFO:     127.0.0.1:35038 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+VAE decoding: 100%|██████████| 9/9 [00:09<00:00,  1.09s/it]VAE decoding: 100%|██████████| 9/9 [00:09<00:00,  1.09s/it]
 Saving video:   0%|          | 0/73 [00:00<?, ?it/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-Saving video:   1%|▏         | 1/73 [00:01<01:46,  1.48s/it]Saving video:  77%|███████▋  | 56/73 [00:01<00:00, 49.07it/s]Saving video: 100%|██████████| 73/73 [00:01<00:00, 44.98it/s]
+Saving video:   1%|▏         | 1/73 [00:01<01:31,  1.27s/it]Saving video:  59%|█████▉    | 43/73 [00:01<00:00, 43.03it/s]Saving video: 100%|██████████| 73/73 [00:01<00:00, 49.98it/s]
 INFO:modules.video_generator:Unloading video generation model to free memory...
+INFO:     127.0.0.1:35038 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
 INFO:modules.video_generator:Video generation model unloaded successfully
-INFO:modules.video_generator:Video generated successfully: /root/autodl-tmp/EasyVideo/outputs/videos/video_20250829_110954_video_1756436950969_0y6k5j2ic.mp4
-INFO:api_server:Video generation completed for task_id: video_1756436950969_0y6k5j2ic
+INFO:modules.video_generator:Video generated successfully: /root/autodl-tmp/EasyVideo/outputs/videos/video_20250914_204109_video_1757853621530_iuwbdih2y.mp4
+INFO:api_server:Video generation completed for task_id: video_1757853621530_iuwbdih2y
 INFO:api_server:VideoGenerator model unloaded successfully
-INFO:     127.0.0.1:33740 - "GET /task/progress/video_1756436950969_0y6k5j2ic HTTP/1.1" 200 OK
-INFO:     127.0.0.1:39056 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:48760 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54844 - "GET /health HTTP/1.1" 200 OK
-INFO:api_server:Cleaned up task progress for task_id: video_1756436950969_0y6k5j2ic
-INFO:     127.0.0.1:59438 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34628 - "GET /task/progress/video_1757853621530_iuwbdih2y HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51350 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51350 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33728 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33728 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54946 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54946 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34980 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34980 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:watchfiles.main:1 change detected
+WARNING:  WatchFiles detected changes in 'modules/video_generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [29671]
+INFO:__mp_main__:AI service started with lazy loading support
+INFO:api_server:AI service started with lazy loading support
+INFO:     Started server process [33184]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:watchfiles.main:3 changes detected
+INFO:     127.0.0.1:56186 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56186 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60334 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60334 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51096 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51096 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40334 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40334 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47626 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47626 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41894 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41894 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42842 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42842 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36352 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36352 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52134 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52134 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51536 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51536 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45754 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45754 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38600 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38600 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56354 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56354 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56354 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52378 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52378 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58228 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58228 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43926 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43926 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35102 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35106 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34688 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34688 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34688 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53432 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53432 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60952 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60952 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49338 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51460 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51460 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59668 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59668 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45448 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45448 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49088 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49088 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49088 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60856 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60856 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47334 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47334 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38068 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38068 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38240 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38240 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44886 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44886 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50288 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50288 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38192 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38192 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60884 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60884 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51568 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51568 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50602 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50602 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59764 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59764 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59764 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59006 - "GET /task/progress/video_1757853304325_43re7w3u4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59006 - "GET /task/progress/video_1757853186646_kraifhosw HTTP/1.1" 200 OK

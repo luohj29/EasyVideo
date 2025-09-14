@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import {
   Video,
@@ -127,6 +126,7 @@ const ImageToVideoPage: React.FC = () => {
     };
   
     fetchVideos();
+    console.log('generatedVideos', generatedVideos);
   }, []);  
   
   // 清理定时器
